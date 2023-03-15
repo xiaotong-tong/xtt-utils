@@ -9,7 +9,7 @@ const utilsFilesNames = [
 	"reversestr",
 	"shuffle",
 	"str2num",
-	"stringToCodePointsList",
+	"stringToCodePointList",
 	"weightedrandom"
 ];
 

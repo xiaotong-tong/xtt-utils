@@ -6,7 +6,7 @@ export const str2Num = (text: string): number => {
 	if (!~text.search(/\d/)) {
 		return NaN;
 	}
-	const removeNaNChar = (str) => {
+	const removeNaNChar = (str: string): string => {
 		return str.replace(/\D/g, "");
 	};
 	if (text.startsWith("-")) {
@@ -23,6 +23,6 @@ export const str2Num = (text: string): number => {
 			)
 		);
 	} else {
-		return sign * removeNaNChar(text);
+		return sign * parseInt(removeNaNChar(text));
 	}
 };

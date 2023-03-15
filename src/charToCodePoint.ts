@@ -1,9 +1,9 @@
 import { conversionBase } from "./conversionBase";
 import { stringToCodePointList } from "./stringToCodePointList";
 
-export const charToCodePoint = (char, base, numAsChar) => {
+export const charToCodePoint = (char: number | string, base: number, numAsChar?: boolean):number |string => {
 	if (isNaN(Number(char)) || numAsChar) {
-		return stringToCodePointList(char)
+		return stringToCodePointList(char.toString())
 			.map((charPoint) => conversionBase(charPoint, base))
 			.join("");
 	} else {
