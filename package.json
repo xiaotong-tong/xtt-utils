@@ -9,6 +9,16 @@
 		"test": "jest",
 		"build": "rollup -c rollup.config.js"
 	},
+	"exports": {
+		"./*": {
+			"import": {
+				"types": "./dist/types/*.d.ts",
+				"default": "./dist/esm/*.js"
+			},
+			"require": "./dist/cjs/*.cjs"
+		}
+	},
+	
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/xiaotong-tong/xtt-utils.git"

@@ -13,19 +13,32 @@ const utilsFilesNames = [
 	"weightedrandom"
 ];
 
-const utilsFiles = utilsFilesNames.map((name) => ({
-	input: `src/${name}.ts`,
+let utilsFilesInput = {};
+
+utilsFilesNames.forEach((name) => (utilsFilesInput[name] = `src/${name}.ts`));
+
+const utilsFiles = {
+	input: utilsFilesInput,
 	output: [
 		{
-			file: `dist/cjs/${name}.cjs`,
-			format: "cjs"
+			dir: "dist",
+			format: "cjs",
+			preserveModules: true,
+			entryFileNames: "cjs/[name].cjs"
 		},
 		{
-			file: `dist/esm/${name}.mjs`,
-			format: "esm"
+			dir: "dist",
+			format: "esm",
+			preserveModules: true,
+			entryFileNames: "esm/[name].js"
 		}
 	],
-	plugins: [typescript()]
-}));
+	plugins: [
+		typescript({
+			outDir: "dist/types",
+			declaration: true
+		})
+	]
+};
 
-export default [...utilsFiles];
+export default utilsFiles;
