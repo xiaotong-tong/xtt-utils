@@ -1,4 +1,4 @@
-# [random](../../src/random.ts)
+# [random](../../../src/number/random.ts)
 
 返回一个介于 min 和 max 之间的整数 (包含 min 和 max)。
 

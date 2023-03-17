@@ -1,4 +1,4 @@
-const { random } = require("../dist/cjs/random.cjs");
+const { random } = require("xtt-utils/number/random");
 
 describe("random module", () => {
 	test("success", () => {

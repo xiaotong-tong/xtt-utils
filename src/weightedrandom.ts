@@ -1,4 +1,4 @@
-import { random } from "./random";
+import { random } from "./number/random.js";
 
 const getListSum = (list: number[]): number => {
 	return list.reduce((a, b) => a + b);

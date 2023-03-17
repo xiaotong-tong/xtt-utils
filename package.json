@@ -5,6 +5,7 @@
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
+		"postinstall": "npm run build",
 		"pretest": "rollup -c rollup.config.js",
 		"test": "jest",
 		"prebuild": "rimraf dist",

@@ -1,6 +1,9 @@
-import { conversionBase } from "./conversionBase";
+import { conversionBase } from "./conversionBase.js";
 
-export const codePointToChar = (codePoint: number, isNumber: boolean):number| string => {
+export const codePointToChar = (
+	codePoint: number,
+	isNumber: boolean
+): number | string => {
 	if (isNumber) {
 		return conversionBase(Number(codePoint), 10);
 	}

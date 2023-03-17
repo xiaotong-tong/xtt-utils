@@ -1,16 +1,16 @@
 import typescript from "@rollup/plugin-typescript";
 
 const utilsFilesNames = [
-	"charToCodePoint",
-	"codePointToChar",
-	"conversionBase",
-	"getNonrandom",
-	"random",
-	"reversestr",
-	"shuffle",
-	"str2num",
-	"stringToCodePointList",
-	"weightedrandom"
+	// "charToCodePoint",
+	// "codePointToChar",
+	// "conversionBase",
+	// "getNonrandom",
+	"number/random",
+	"string/reverse"
+	// "shuffle",
+	// "str2num",
+	// "stringToCodePointList",
+	// "weightedrandom"
 ];
 
 let utilsFilesInput = {};
