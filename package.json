@@ -1,11 +1,11 @@
 {
 	"name": "xtt-utils",
 	"version": "0.0.0",
-	"description": "",
+	"description": "typescript & javascript utils",
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
-		"postinstall": "npm run build",
+		"postinstall": "rollup -c rollup.config.js",
 		"pretest": "rollup -c rollup.config.js",
 		"test": "jest",
 		"prebuild": "rimraf dist",
@@ -22,9 +22,13 @@
 		"type": "git",
 		"url": "git+https://github.com/xiaotong-tong/xtt-utils.git"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": [
+		"utils",
+		"typescript",
+		"javascript"
+	],
+	"author": "xtt",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/xiaotong-tong/xtt-utils/issues"
 	},
