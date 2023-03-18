@@ -9,7 +9,6 @@
  * random() // 1 ~ 100
  * random(1, 10.5) // 1 ~ 10
  * random(1, Number.MAX_SAFE_INTEGER) // 1 ~ Number.MAX_SAFE_INTEGER
- *
  */
 
 export const random = (min: number, max: number): number => {

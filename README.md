@@ -93,3 +93,17 @@ reverse(""); // ''
 ```
 
 详见 [reverse](./doc/api/string/reverse.md)
+
+### array
+
+#### shuffle
+
+返回一个数组的随机排序。
+
+##### example
+
+```javascript
+shuffle([1, 2, 3, 4, 5]); // [2, 4, 1, 5, 3]
+```
+
+详见 [shuffle](./doc/api/array/shuffle.md)

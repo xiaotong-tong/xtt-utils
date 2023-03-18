@@ -1,4 +1,4 @@
-import { shuffle } from "./shuffle.js";
+import { shuffle } from "./array/shuffle.js";
 
 export const getNonrandom = (min: number, max: number): number[] => {
 	if (min === max) {

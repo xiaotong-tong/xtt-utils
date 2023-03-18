@@ -6,8 +6,8 @@ const utilsFilesNames = [
 	// "conversionBase",
 	// "getNonrandom",
 	"number/random",
-	"string/reverse"
-	// "shuffle",
+	"string/reverse",
+	"array/shuffle"
 	// "str2num",
 	// "stringToCodePointList",
 	// "weightedrandom"
