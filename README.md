@@ -94,6 +94,20 @@ reverse(""); // ''
 
 详见 [reverse](./doc/api/string/reverse.md)
 
+#### str2Num
+
+将字符串转换为数字。
+
+##### example
+
+```javascript
+str2Num("123"); // 123
+str2Num("123.456"); // 123.456
+str2Num("123.456.789"); // 123.456789
+```
+
+详见 [str2Num](./doc/api/string/str2num.md)
+
 ### array
 
 #### shuffle

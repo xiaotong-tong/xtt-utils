@@ -1,5 +1,4 @@
 /**
- *
  * @description 反转字符串
  * @param {string} text
  * @returns {string} reverse text

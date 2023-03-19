@@ -7,8 +7,8 @@ const utilsFilesNames = [
 	// "getNonrandom",
 	"number/random",
 	"string/reverse",
+	"string/str2num",
 	"array/shuffle"
-	// "str2num",
 	// "stringToCodePointList",
 	// "weightedrandom"
 ];
