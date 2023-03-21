@@ -3,12 +3,12 @@
  * @param {string} text
  * @returns {number} 返回一个数字
  * @example
- * str2Num("123") // 123
- * str2Num("123.456") // 123.456
- * str2Num("123.456.789") // 123.456789
+ * strToNum("123") // 123
+ * strToNum("123.456") // 123.456
+ * strToNum("123.456.789") // 123.456789
  */
 
-export const str2Num = (text: string): number => {
+export const strToNum = (text: string): number => {
 	if (text === undefined || text === "" || Number.isNaN(text)) {
 		return NaN;
 	}

@@ -1,4 +1,4 @@
-# [random](../../../src/number/random.ts)
+# [random](../../../src/random/random.ts)
 
 返回一个介于 min 和 max 之间的整数 (包含 min 和 max)。
 
@@ -20,12 +20,12 @@
 
 ## 参数
 
-- `min` (number) (可选)：最小值
-- `max` (number) (可选)：最大值
+-   `min` (number) (可选)：最小值
+-   `max` (number) (可选)：最大值
 
 ## 返回值
 
-- `number`：介于 min 和 max 之间的整数 (包含 min 和 max)。
+-   `number`：介于 min 和 max 之间的整数 (包含 min 和 max)。
 
 ## 示例
 

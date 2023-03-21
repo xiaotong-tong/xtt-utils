@@ -1,4 +1,4 @@
-const { random } = require("xtt-utils/number/random");
+const { random } = require("xtt-utils/random/random");
 
 describe("random module", () => {
 	test("success", () => {

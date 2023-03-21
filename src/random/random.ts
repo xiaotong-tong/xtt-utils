@@ -11,29 +11,22 @@
  * random(1, Number.MAX_SAFE_INTEGER) // 1 ~ Number.MAX_SAFE_INTEGER
  */
 
-export const random = (min: number, max: number): number => {
+import { getMinAndMaxOfInt } from "../_internal/getminandmaxofint.js";
+
+export const random = (min?: number, max?: number): number => {
 	if (min === undefined && max === undefined) {
 		min = 1;
 		max = 100;
-	} else {
-		if (max === undefined) {
-			max = min;
-			min = 1;
-		}
-		if (isNaN(min) || isNaN(max)) {
-			return NaN;
-		}
-		max =
-			max > Number.MAX_SAFE_INTEGER ? Number.MAX_SAFE_INTEGER : Math.floor(max);
-		min =
-			min < Number.MIN_SAFE_INTEGER ? Number.MIN_SAFE_INTEGER : Math.ceil(min);
-
-		if (min > max) {
-			const temp = min;
-			min = max;
-			max = temp;
-		}
 	}
+	if (max === undefined) {
+		max = min;
+		min = 1;
+	}
+	// 可以保证在这之后的 min 和 max 不为 undefined
+	if (isNaN(min as number) || isNaN(max as number)) {
+		return NaN;
+	}
+	[min, max] = getMinAndMaxOfInt(min as number, max as number);
 
 	return min + Math.floor(Math.random() * (max - min + 1));
 };

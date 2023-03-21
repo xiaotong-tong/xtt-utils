@@ -62,7 +62,7 @@ random();
 
 ## API
 
-### number
+### random
 
 #### random
 
@@ -79,6 +79,42 @@ random(-Infinity, Infinity); // -9007199254740991 - 9007199254740991
 
 详见 [random](./doc/api/number/random.md)
 
+#### nonDuplicateRandomList
+
+返回一个不重复的随机数列表。
+
+##### example
+
+```javascript
+nonDuplicateRandomList(1, 10, 5); // [4, 5, 6, 7, 8]
+```
+
+详见 [nonDuplicateRandomList](./doc/api/random/nonDuplicateRandomList.md)
+
+#### randomList
+
+返回一个随机数列表。
+
+##### example
+
+```javascript
+randomList(1, 10, 5); // [8, 9, 10, 8, 10]
+```
+
+详见 [randomList](./doc/api/random/randomList.md)
+
+#### weightedRandom
+
+返回一个带权重的随机数。
+
+##### example
+
+```javascript
+weightedRandom([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]); // 5
+```
+
+详见 [weightedRandom](./doc/api/random/weightedRandom.md)
+
 ### string
 
 #### reverse
@@ -94,19 +130,32 @@ reverse(""); // ''
 
 详见 [reverse](./doc/api/string/reverse.md)
 
-#### str2Num
+#### strToNum
 
 将字符串转换为数字。
 
 ##### example
 
 ```javascript
-str2Num("123"); // 123
-str2Num("123.456"); // 123.456
-str2Num("123.456.789"); // 123.456789
+strToNum("123"); // 123
+strToNum("123.456"); // 123.456
+strToNum("123.456.789"); // 123.456789
 ```
 
-详见 [str2Num](./doc/api/string/str2num.md)
+详见 [strToNum](./doc/api/string/strTonum.md)
+
+#### charToCodePoint
+
+将字符转换为 Unicode 编码。
+
+##### example
+
+```javascript
+charToCodePoint("a"); // "0x61"
+charToCodePoint("Hello"); // "0x480x650x6c0x6c0x6f"
+```
+
+详见 [charToCodePoint](./doc/api/string/chartocodepoint.md)
 
 ### array
 
@@ -121,3 +170,20 @@ shuffle([1, 2, 3, 4, 5]); // [2, 4, 1, 5, 3]
 ```
 
 详见 [shuffle](./doc/api/array/shuffle.md)
+
+### number
+
+#### conversionBase
+
+将数字转换为指定进制的字符串。
+
+##### example
+
+```javascript
+conversionBase(10, 2); // '0b1010'
+conversionBase(10, 8); // '0o12'
+conversionBase(10, 16); // '0xa'
+conversionBase(0xa, 10); // '10'
+```
+
+详见 [conversionBase](./doc/api/number/conversionbase.md)

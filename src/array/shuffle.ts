@@ -7,7 +7,7 @@
  * shuffle([]) // []
  */
 
-import { random } from "../number/random.js";
+import { random } from "../random/random.js";
 
 export const shuffle = (list: any[]): any[] => {
 	if (!list?.length) {
