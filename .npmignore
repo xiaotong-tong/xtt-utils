@@ -1,0 +1,7 @@
+doc/
+src/
+test/
+jest.config.js
+rollup.config.js
+tscconfig.json
+TODO.md

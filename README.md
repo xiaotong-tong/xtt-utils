@@ -4,31 +4,8 @@ xtt-utils 是一个工具库，包含了一些常用的工具函数。
 
 ## 安装
 
-暂定使用 git 或 file 安装，后续会发布到 npm 上。
-
-### git 安装
-
 ```bash
-# 安装依赖 git 安装是默认没有打包dist文件夹的，需要自己打包。
-# 这里暂时使用 postinstall 脚本来运行 rollup 打包。
-
-npm i -D rollup @rollup/plugin-typescript typescript
-
-npm i -S github:xiaotong-tong/xtt-utils.git
-```
-
-### file 安装
-
-```bash
-# 新建 xtt-utils 文件夹，然后将 xtt-utils 仓库克隆到该文件夹下。
-
-git clone https://github.com/xiaotong-tong/xtt-utils.git
-cd xtt-utils
-npm i
-npm run build
-# 保存 xtt-utils 目录，然后在需要使用的项目中安装。
-
-npm i -S file:<xtt-utils> # xtt-utils 为 xtt-utils 目录的绝对路径
+npm i xtt-utils
 ```
 
 ## 使用
@@ -36,29 +13,40 @@ npm i -S file:<xtt-utils> # xtt-utils 为 xtt-utils 目录的绝对路径
 ### module
 
 ```javascript
-import { random } from "xtt-utils/number/random";
+// 整体引入
+import xttUtils from "xtt-utils";
+xttUtils.random.random();
 
+// 按需引入
+import { random } from "xtt-utils/random/random";
 random();
 ```
 
 ### commonjs
 
 ```javascript
-const { random } = require("xtt-utils/number/random");
+// 整体引入
+const xttUtils = require("xtt-utils");
+xttUtils.random.random();
 
+// 按需引入
+const { random } = require("xtt-utils/random/random");
 random();
+```
+
+### browser
+
+```html
+<script src=".../xtt-utils/dist/index.min.js"></script>
+<script>
+	console.log(xttUtils.random.random());
+</script>
 ```
 
 ### Typescript
 
-为了正确引入 typescript 类型，需要安装 4.7 以上版本的 typescript。
+为了正确引入 typescript 类型，可能需要安装 4.7 以上版本的 typescript。
 且需要在 `tsconfig.json` 中配置 `moduleResolution` 为 `node16`
-
-```typescript
-import { random } from "xtt-utils/number/random";
-
-random();
-```
 
 ## API
 

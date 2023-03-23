@@ -1,14 +1,16 @@
 {
 	"name": "xtt-utils",
-	"version": "0.0.0",
+	"version": "0.0.1-beta.0",
 	"description": "typescript & javascript utils",
 	"type": "module",
 	"main": "dist/index.cjs",
 	"module": "dist/index.esm.js",
-	"browser": "dist/index.js",
+	"browser": "dist/index.min.js",
 	"types": "dist/types/index.d.ts",
+	"files": [
+		"dist"
+	],
 	"scripts": {
-		"postinstall": "rollup -c rollup.config.js",
 		"pretest": "rollup -c rollup.config.js",
 		"test": "jest",
 		"prebuild": "rimraf dist",
@@ -18,7 +20,7 @@
 		".": {
 			"import": "./dist/index.esm.js",
 			"require": "./dist/index.cjs",
-			"default": "./dist/index.js",
+			"default": "./dist/index.min.js",
 			"types": "./dist/types/index.d.ts"
 		},
 		"./*": {
