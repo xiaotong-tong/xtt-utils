@@ -1,4 +1,5 @@
 import typescript from "@rollup/plugin-typescript";
+import terser from "@rollup/plugin-terser";
 
 const utilsFilesNames = [
 	"number/conversionbase",
@@ -35,9 +36,41 @@ const utilsFiles = {
 	plugins: [
 		typescript({
 			outDir: "dist/types",
-			declaration: true
-		})
-	]
+			declaration: true,
+		}),
+	],
 };
 
-export default utilsFiles;
+const indexFile = {
+	input: "src/index.ts",
+	output: [
+		{
+			file: "dist/index.js",
+			format: "umd",
+			name: "xttUtils",
+		},
+		{
+			file: "dist/index.cjs",
+			format: "cjs",
+		},
+		{
+			file: "dist/index.esm.js",
+			format: "esm",
+		},
+	],
+	plugins: [typescript()],
+};
+
+const indexMinFile = {
+	input: "src/index.ts",
+	output: [
+		{
+			file: "dist/index.min.js",
+			format: "umd",
+			name: "xttUtils",
+		},
+	],
+	plugins: [typescript(), terser()],
+};
+
+export default [indexFile, utilsFiles, indexMinFile];
