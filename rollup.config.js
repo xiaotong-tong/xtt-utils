@@ -2,14 +2,18 @@ import typescript from "@rollup/plugin-typescript";
 import terser from "@rollup/plugin-terser";
 
 const utilsFilesNames = [
+	"number",
 	"number/conversionbase",
+	"random",
 	"random/random",
 	"random/randomlist",
 	"random/nonduplicaterandomlist",
 	"random/weightedrandom",
+	"string",
 	"string/reverse",
 	"string/strtonum",
 	"string/chartocodepoint",
+	"array",
 	"array/shuffle"
 ];
 
@@ -36,9 +40,9 @@ const utilsFiles = {
 	plugins: [
 		typescript({
 			outDir: "dist/types",
-			declaration: true,
-		}),
-	],
+			declaration: true
+		})
+	]
 };
 
 const indexFile = {
@@ -47,18 +51,18 @@ const indexFile = {
 		{
 			file: "dist/index.js",
 			format: "umd",
-			name: "xttUtils",
+			name: "xttUtils"
 		},
 		{
 			file: "dist/index.cjs",
-			format: "cjs",
+			format: "cjs"
 		},
 		{
 			file: "dist/index.esm.js",
-			format: "esm",
-		},
+			format: "esm"
+		}
 	],
-	plugins: [typescript()],
+	plugins: [typescript()]
 };
 
 const indexMinFile = {
@@ -67,10 +71,10 @@ const indexMinFile = {
 		{
 			file: "dist/index.min.js",
 			format: "umd",
-			name: "xttUtils",
-		},
+			name: "xttUtils"
+		}
 	],
-	plugins: [typescript(), terser()],
+	plugins: [typescript(), terser()]
 };
 
 export default [indexFile, utilsFiles, indexMinFile];
