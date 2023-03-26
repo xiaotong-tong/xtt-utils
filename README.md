@@ -127,8 +127,8 @@ strToNum("123.456.789"); // 123.456789
 ##### example
 
 ```javascript
-charToCodePoint("a"); // "0x61"
 charToCodePoint("Hello"); // "0x480x650x6c0x6c0x6f"
+charToCodePoint("Hello World!", { base: 2, separator: " " }); // "0b1001000 0b1100101 0b1101100 0b1101100 0b1101111 0b100000 0b1010111 0b1101111 0b1110010 0b1101100 0b1100100 0b100001"
 ```
 
 ### array
