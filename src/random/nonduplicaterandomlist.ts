@@ -13,15 +13,15 @@ import { shuffle } from "../array/shuffle.js";
 import { getMinAndMaxOfInt } from "../_internal/getminandmaxofint.js";
 
 export const nonDuplicateRandomList = (
-	min: number = 0,
-	max: number = 9,
+	min = 0,
+	max = 9,
 	count?: number
 ): number[] => {
 	if (typeof count === "number" && count <= 0) {
 		return [];
 	}
 
-	[min, max] = getMinAndMaxOfInt(min as number, max as number);
+	[min, max] = getMinAndMaxOfInt(min, max);
 
 	if (min === max) {
 		return [max];

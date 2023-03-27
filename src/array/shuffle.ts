@@ -15,7 +15,7 @@ export const shuffle = (list: any[]): any[] => {
 	}
 
 	// 复制原数组，防止修改直接影响原数组的值
-	let resList = [...list];
+	const resList = [...list];
 	for (let i = resList.length - 1; i >= 0; i--) {
 		const r = random(0, i);
 		const temp = resList[r];

@@ -11,11 +11,7 @@
 
 import { random } from "./random.js";
 
-export const randomList = (
-	min: number = 1,
-	max: number = 100,
-	count: number = 1
-): number[] => {
+export const randomList = (min = 1, max = 100, count = 1): number[] => {
 	if (count <= 0) {
 		return [];
 	}
