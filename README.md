@@ -131,6 +131,32 @@ charToCodePoint("Hello"); // "0x480x650x6c0x6c0x6f"
 charToCodePoint("Hello World!", { base: 2, separator: " " }); // "0b1001000 0b1100101 0b1101100 0b1101100 0b1101111 0b100000 0b1010111 0b1101111 0b1110010 0b1101100 0b1100100 0b100001"
 ```
 
+#### [startsWith](./docs/api/string/startswith.md)
+
+判断字符串是否以指定字符串开头。
+
+##### example
+
+```javascript
+startsWith("Hello World!", "Hello"); // true
+startsWith("Hello World!", "World", 6); // true
+startsWith("Hello World!", /Hello/); // true
+startsWith("Hello World!", /World/, 6); // true
+```
+
+#### [endsWith](./docs/api/string/endswith.md)
+
+判断字符串是否以指定字符串结尾。
+
+##### example
+
+```javascript
+endsWith("Hello World!", "World!"); // true
+endsWith("Hello World!", "Hello", 5); // true
+endsWith("Hello World!", /World!/); // true
+endsWith("Hello World!", /Hello/, 5); // true
+```
+
 ### array
 
 #### [shuffle](./docs/api/array/shuffle.md)

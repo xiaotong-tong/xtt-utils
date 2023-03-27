@@ -13,6 +13,8 @@ const utilsFilesNames = [
 	"string/reverse",
 	"string/strtonum",
 	"string/chartocodepoint",
+	"string/startswith",
+	"string/endswith",
 	"array",
 	"array/shuffle"
 ];
