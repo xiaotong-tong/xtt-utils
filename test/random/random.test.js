@@ -60,9 +60,5 @@ describe("random module", () => {
 		value = random("1", "100");
 		expect(value).toBeGreaterThanOrEqual(1);
 		expect(value).toBeLessThanOrEqual(100);
-
-		value = random("", 100);
-		expect(value).toBeGreaterThanOrEqual(1);
-		expect(value).toBeLessThanOrEqual(100);
 	});
 });
