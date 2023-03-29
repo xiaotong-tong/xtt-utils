@@ -9,7 +9,8 @@
  */
 
 export const thousandth = (num: number): string => {
-	return new Intl.NumberFormat("en-US", { maximumFractionDigits: 20 }).format(
-		num
-	);
+	const numberFormat = new Intl.NumberFormat("en-US", {
+		maximumFractionDigits: 20
+	});
+	return numberFormat.format(num);
 };

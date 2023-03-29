@@ -1,7 +1,9 @@
 import { conversionBase } from "./number/conversionbase.js";
+import { thousandth } from "./number/thousandth.js";
 
 const number = {
-	conversionBase
+	conversionBase,
+	thousandth
 };
 
 export default number;

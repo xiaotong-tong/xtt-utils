@@ -34,6 +34,8 @@ export const charToCodePoint = (str: string, options?: Options): string => {
 	}
 
 	return [...str]
-		.map((char) => conversionBase(char.codePointAt(0) as number, options?.base))
+		.map((char) =>
+			conversionBase(char.codePointAt(0) as number, options?.base)
+		)
 		.join(options.separator);
 };

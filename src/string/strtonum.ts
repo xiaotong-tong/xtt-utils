@@ -16,18 +16,22 @@ export const strToNum = (text: string): number => {
 	if (!Number.isNaN(Number(text))) {
 		return Number(text);
 	}
-	// 如果字符串中没有数字，直接返回 NaN
+
+	// If the string contains no numbers, return NaN.
 	if (!~text.search(/\d/)) {
 		return NaN;
 	}
+
 	const removeNaNChar = (str: string): string => {
 		return str.replace(/\D/g, "");
 	};
-	// 如果字符串以 - 开头，代表这个数是负数， 将 sign 设置为 -1
+
+	// If the string starts with a -, it means the number is negative. Set sign to -1.
 	let sign = 1;
 	if (text.startsWith("-")) {
 		sign = -1;
 	}
+
 	const pointIndex = text.indexOf(".");
 	if (~pointIndex) {
 		return (

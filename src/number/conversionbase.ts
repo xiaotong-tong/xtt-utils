@@ -10,14 +10,12 @@
  * conversionBase(0xa) // "10"
  */
 
-export const conversionBase = (num: number, base?: 2 | 8 | 10 | 16): string => {
-	if (base === 16) {
-		return "0x" + num.toString(16);
-	} else if (base === 8) {
-		return "0o" + num.toString(8);
-	} else if (base === 2) {
-		return "0b" + num.toString(2);
-	} else {
-		return "" + num.toString(10);
-	}
+export const conversionBase = (
+	num: number,
+	base: 2 | 8 | 10 | 16 = 10
+): string => {
+	// 根据基数选择前缀
+	const basePrefix =
+		base === 16 ? "0x" : base === 8 ? "0o" : base === 2 ? "0b" : "";
+	return basePrefix + num.toString(base);
 };

@@ -33,8 +33,10 @@ export function weightedRandom(
 	let sum = 0;
 
 	if (Array.isArray(randomList) && Array.isArray(weightedList)) {
-		if (weightedList.length > randomList.length) {
+		if (weightedList.length < randomList.length) {
 			weightedList.length = randomList.length;
+		} else {
+			randomList.length = weightedList.length;
 		}
 		const r = random(1, getListSum(weightedList));
 		for (let i = 0; i < randomList.length; i++) {
@@ -44,4 +46,6 @@ export function weightedRandom(
 			}
 		}
 	}
+
+	return randomList[0];
 }

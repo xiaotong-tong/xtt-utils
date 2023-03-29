@@ -9,18 +9,20 @@
 
 import { random } from "../random/random.js";
 
-export const shuffle = (list: any[]): any[] => {
+export const shuffle = <T>(list: T[]): T[] => {
 	if (!list?.length) {
 		return [];
 	}
 
 	// 复制原数组，防止修改直接影响原数组的值
-	const resList = [...list];
-	for (let i = resList.length - 1; i >= 0; i--) {
-		const r = random(0, i);
-		const temp = resList[r];
-		resList[r] = resList[i];
-		resList[i] = temp;
+	const copy = [...list];
+
+	for (let i = copy.length - 1; i > 0; i--) {
+		const randomIndex = random(0, i);
+		const temp = copy[randomIndex];
+		copy[randomIndex] = copy[i];
+		copy[i] = temp;
 	}
-	return resList;
+
+	return copy;
 };
