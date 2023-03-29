@@ -4,6 +4,7 @@ import terser from "@rollup/plugin-terser";
 const utilsFilesNames = [
 	"number",
 	"number/conversionbase",
+	"number/thousandth",
 	"random",
 	"random/random",
 	"random/randomlist",

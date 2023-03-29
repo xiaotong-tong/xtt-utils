@@ -183,3 +183,13 @@ conversionBase(10, 8); // '0o12'
 conversionBase(10, 16); // '0xa'
 conversionBase(0xa, 10); // '10'
 ```
+
+#### [thousandth](./docs/api/number/thousandth.md)
+
+将数字转换为千分位格式。
+
+##### example
+
+```javascript
+thousandth(123456789); // '123,456,789'
+```
