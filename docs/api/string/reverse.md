@@ -2,15 +2,15 @@
 
 返回一个字符串的反转字符串。
 
-## 参数
+## params
 
-- `str` (string)：要反转的字符串
+-   `str` (string)：要反转的字符串
 
-## 返回值
+## returns
 
-- `string`：反转后的字符串
+-   `string`：反转后的字符串
 
-## 示例
+## example
 
 ```js
 reverse("hello"); // 'olleh'

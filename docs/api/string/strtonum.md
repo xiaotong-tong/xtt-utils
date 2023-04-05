@@ -2,15 +2,15 @@
 
 将字符串转换为数字
 
-## 参数
+## params
 
-- `text` (string)：要转换的字符串
+-   `text` (string)：要转换的字符串
 
-## 返回值
+## returns
 
-- `number`：转换后的数字
+-   `number`：转换后的数字
 
-## 示例
+## example
 
 ```js
 strToNum("123"); // 123

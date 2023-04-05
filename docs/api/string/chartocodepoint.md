@@ -2,18 +2,18 @@
 
 返回一个字符串的 Unicode 编码点。
 
-## 参数
+## params
 
-- `str` (string)：要转换的字符串
-- `options` (object)：可选参数
-  - `separator` (string)：分隔符，默认为 `""`
-  - `base` (2 | 8 | 10 | 16)：进制，默认为 `16`
+-   `str` (string)：要转换的字符串
+-   `options` (object)：可选参数
+    -   `separator` (string)：分隔符，默认为 `""`
+    -   `base` (2 | 8 | 10 | 16)：进制，默认为 `16`
 
-## 返回值
+## returns
 
-- `string`：Unicode 编码点
+-   `string`：Unicode 编码点
 
-## 示例
+## example
 
 ```js
 charToCodePoint("Hello"); // "0x480x650x6c0x6c0x6f"

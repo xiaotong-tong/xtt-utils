@@ -2,17 +2,17 @@
 
 返回一个不重复的随机数列表
 
-## 参数
+## params
 
-- `min` (number)：最小值
-- `max` (number)：最大值
-- `count` (?number)：随机数个数
+-   `min` (number)：最小值
+-   `max` (number)：最大值
+-   `count` (?number)：随机数个数
 
-## 返回值
+## returns
 
-- `number[]`：随机数列表
+-   `number[]`：随机数列表
 
-## 示例
+## example
 
 ```js
 nonDuplicateRandomList(1, 10, 5); // [4, 5, 6, 7, 8]

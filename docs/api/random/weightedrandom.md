@@ -2,23 +2,27 @@
 
 返回一个带权重的随机数
 
-## 参数
+## params
 
-- `randomList` (number[])：随机数列表
+-   `randomList` (number[])：随机数列表
 
-- `weightList` (number[])：权重列表
+-   `weightList` (number[])：权重列表
 
 或者
 
-- `randomList` ({random: weight})：随机数与权重的键值对
+-   `randomList` ({random: weight})：随机数与权重的键值对
 
-## 返回值
+## returns
 
-- `any`：随机数
+-   `any`：随机数列表中的某一项
 
-## 示例
+## example
 
 ```js
-weightedRandom([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]); // 5
-weightedRandom([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]); // 4
+weightedRandom([4, 2, 5, 1, 3], [1, 2, 3, 4, 5]);
+// 返回 4 的概率为 1/15
+// 返回 2 的概率为 2/15
+// 返回 5 的概率为 3/15
+// 返回 1 的概率为 4/15
+// 返回 3 的概率为 5/15
 ```

@@ -2,15 +2,15 @@
 
 Converts a number to a thousandth format
 
-## Parameters
+## params
 
 -   `num` (number): The number to convert
 
-## Returns
+## returns
 
 -   `string`: The converted string
 
-## Examples
+## example
 
 ```js
 thousandth(1000); // "1,000"
@@ -18,6 +18,6 @@ thousandth(1000000); // "1,000,000"
 thousandth(1000000.1234); // "1,000,000.1234"
 ```
 
-## References
+## references
 
 -   MDN [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)

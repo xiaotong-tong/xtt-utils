@@ -2,16 +2,16 @@
 
 将数字转换为指定进制的字符串
 
-## 参数
+## params
 
-- `num` (number)：要转换的数字
-- `base` (number)：进制
+-   `num` (number)：要转换的数字
+-   `base` (number)：进制
 
-## 返回值
+## returns
 
-- `string`：转换后的字符串
+-   `string`：转换后的字符串
 
-## 示例
+## example
 
 ```js
 conversionBase(10, 2); // '0b1010'

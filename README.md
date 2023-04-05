@@ -1,7 +1,5 @@
 # xtt-utils
 
-[Docs](./docs/api/api.md)
-
 xtt-utils 是一个工具库，包含了一些常用的工具函数。
 
 ## 安装
@@ -49,3 +47,9 @@ random();
 
 为了正确引入 typescript 类型，可能需要安装 4.7 以上版本的 typescript。
 且需要在 `tsconfig.json` 中配置 `moduleResolution` 为 `node16`
+
+## docs
+
+可以查看 docs 文件夹内的 md 文档 [Docs](./docs/api/api.md)
+
+或者访问该 [网页](https://xiaotong-tong.github.io/xtt-utils-docs/index.html)

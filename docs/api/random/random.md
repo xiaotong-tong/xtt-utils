@@ -18,16 +18,16 @@
 >
 > Number.MIN_SAFE_INTEGER = -9007199254740991 = -(2^53 - 1)
 
-## 参数
+## params
 
 -   `min` (number) (可选)：最小值
 -   `max` (number) (可选)：最大值
 
-## 返回值
+## returns
 
 -   `number`：介于 min 和 max 之间的整数 (包含 min 和 max)。
 
-## 示例
+## example
 
 ```js
 random(1, 10); // 1 - 10
