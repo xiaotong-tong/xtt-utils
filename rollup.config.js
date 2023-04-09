@@ -17,12 +17,20 @@ const utilsFilesNames = [
 	"string/startswith",
 	"string/endswith",
 	"array",
-	"array/shuffle"
+	"array/shuffle",
+	{ value: "function", alias: "fn" },
+	{ value: "function/throttle", alias: "fn/throttle" }
 ];
 
 let utilsFilesInput = {};
 
-utilsFilesNames.forEach((name) => (utilsFilesInput[name] = `src/${name}.ts`));
+utilsFilesNames.forEach((name) => {
+	if (typeof name === "object") {
+		utilsFilesInput[name.alias] = `src/${name.value}.ts`;
+	} else if (typeof name === "string") {
+		utilsFilesInput[name] = `src/${name}.ts`;
+	}
+});
 
 const utilsFiles = {
 	input: utilsFilesInput,

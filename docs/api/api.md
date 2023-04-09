@@ -143,3 +143,20 @@ conversionBase(0xa, 10); // '10'
 ```javascript
 thousandth(123456789); // '123,456,789'
 ```
+
+## function
+
+### [throttle](./function/throttle.md)
+
+节流函数, 在调用函数时, 如果处于空闲状态, 则立即执行函数, 并进入等待状态,
+在等待时间内, 如果再次调用函数, 则保存当前调用值, 直到等待时间结束,
+如果多次调用函数,最后一次调用值会覆盖前面的调用值,
+等待时间结束后, 会以调用值为参数调用函数, 并进入空闲状态
+
+## example
+
+```js
+const foo = (a) => console.log(a);
+const throttled = throttle(foo, 3000);
+throttled();
+```
