@@ -16,6 +16,7 @@ const utilsFilesNames = [
 	"string/chartocodepoint",
 	"string/startswith",
 	"string/endswith",
+	"string/gettermleft",
 	"array",
 	"array/shuffle",
 	{ value: "function", alias: "fn" },
