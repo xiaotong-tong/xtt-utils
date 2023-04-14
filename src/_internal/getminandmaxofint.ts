@@ -3,6 +3,7 @@
  * @param {number} min
  * @param {number} max
  * @returns {number[min, max]}
+ * @private
  * @example
  * getMinAndMaxOfInt(1, 10) // [1, 10]
  * getMinAndMaxOfInt(10, 1) // [1, 10]
@@ -17,9 +18,13 @@ export const getMinAndMaxOfInt = (min: number, max: number): number[] => {
 		max = temp;
 	}
 	max =
-		max > Number.MAX_SAFE_INTEGER ? Number.MAX_SAFE_INTEGER : Math.floor(max);
+		max > Number.MAX_SAFE_INTEGER
+			? Number.MAX_SAFE_INTEGER
+			: Math.floor(max);
 	min =
-		min < Number.MIN_SAFE_INTEGER ? Number.MIN_SAFE_INTEGER : Math.ceil(min);
+		min < Number.MIN_SAFE_INTEGER
+			? Number.MIN_SAFE_INTEGER
+			: Math.ceil(min);
 
 	return [min, max];
 };

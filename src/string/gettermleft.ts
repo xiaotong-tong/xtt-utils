@@ -28,6 +28,10 @@ export const getTermLeft = (
 		beforeWhichTimes = 1;
 	}
 
+	if (beforeWhichTimes === 0) {
+		return "";
+	}
+
 	if (startsWith(str, searchTerm)) {
 		if (beforeWhichTimes <= 1) {
 			return "";
@@ -46,6 +50,10 @@ export const getTermLeft = (
 
 	if (result === null) {
 		return "";
+	}
+
+	if (beforeWhichTimes <= -result.length) {
+		beforeWhichTimes = result.length === 1 ? 1 : -result.length + 1;
 	}
 
 	return result.slice(0, beforeWhichTimes).join("");
