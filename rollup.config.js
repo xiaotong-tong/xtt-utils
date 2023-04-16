@@ -21,7 +21,10 @@ const utilsFilesNames = [
 	"array",
 	"array/shuffle",
 	{ value: "function", alias: "fn" },
-	{ value: "function/throttle", alias: "fn/throttle" }
+	{ value: "function/throttle", alias: "fn/throttle" },
+	"file",
+	"file/b64toblob",
+	"file/filetob64"
 ];
 
 let utilsFilesInput = {};
