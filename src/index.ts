@@ -6,12 +6,12 @@ import fn from "./function.js";
 import file from "./file.js";
 
 const xttUtils = {
-	array,
-	number,
-	random,
-	string,
-	fn,
-	file
+	...array,
+	...number,
+	...random,
+	...string,
+	...fn,
+	...file
 };
 
 export default xttUtils;
