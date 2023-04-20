@@ -1,6 +1,6 @@
 /**
  * @description 将字符串转换为数字
- * @param {string} text
+ * @param {string} str
  * @returns {number} 返回一个数字
  * @example
  * strToNum("123") // 123
@@ -8,41 +8,41 @@
  * strToNum("123.456.789") // 123.456789
  */
 
-export const strToNum = (text: string): number => {
-	if (text === undefined || text === "" || Number.isNaN(text)) {
+export const strToNum = (str) => {
+	if (str === undefined || str === "" || Number.isNaN(str)) {
 		return NaN;
 	}
 
-	if (!Number.isNaN(Number(text))) {
-		return Number(text);
+	if (!Number.isNaN(Number(str))) {
+		return Number(str);
 	}
 
 	// If the string contains no numbers, return NaN.
-	if (!~text.search(/\d/)) {
+	if (!~str.search(/\d/)) {
 		return NaN;
 	}
 
-	const removeNaNChar = (str: string): string => {
+	const removeNaNChar = (str) => {
 		return str.replace(/\D/g, "");
 	};
 
 	// If the string starts with a -, it means the number is negative. Set sign to -1.
 	let sign = 1;
-	if (text.startsWith("-")) {
+	if (str.startsWith("-")) {
 		sign = -1;
 	}
 
-	const pointIndex = text.indexOf(".");
+	const pointIndex = str.indexOf(".");
 	if (~pointIndex) {
 		return (
 			sign *
 			parseFloat(
-				`${removeNaNChar(text.slice(0, pointIndex))}.${removeNaNChar(
-					text.slice(pointIndex + 1)
+				`${removeNaNChar(str.slice(0, pointIndex))}.${removeNaNChar(
+					str.slice(pointIndex + 1)
 				)}`
 			)
 		);
 	} else {
-		return sign * parseInt(removeNaNChar(text));
+		return sign * parseInt(removeNaNChar(str));
 	}
 };

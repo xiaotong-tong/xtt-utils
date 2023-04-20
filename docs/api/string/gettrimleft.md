@@ -1,18 +1,18 @@
-# [getTrimLeft](../../../src/string/gettermleft.ts)
+# getTrimLeft
 
 获取字符串中匹配项左侧的字符串
 
 ## params
 
--   `str` (string)：要获取的字符串
+-   str (string)：要获取的字符串
 
--   `searchTerm` (string | RegExp)：要匹配的字符串或正则表达式
+-   searchTerm (string | RegExp)：要匹配的字符串或正则表达式
 
--   `beforeWhichTimes` (number)：匹配到几次后停止，默认为 1, 如果数字大于匹配到的次数，则返回最后一个匹配项左侧的字符串
+-   [beforeWhichTimes=1] (number)：匹配到几次后停止，默认为 1, 如果数字大于匹配到的次数，则返回最后一个匹配项左侧的字符串
 
 ## returns
 
--   `string`：返回匹配项左侧的字符串
+-   (string)：返回匹配项左侧的字符串
 
 ## example
 

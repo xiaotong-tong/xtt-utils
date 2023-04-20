@@ -43,11 +43,6 @@ const { random } = require("xtt-utils/random/random");
 random();
 ```
 
-### Typescript
-
-为了正确引入 typescript 类型，可能需要安装 4.7 以上版本的 typescript。
-且需要在 `tsconfig.json` 中配置 `moduleResolution` 为 `node16`
-
 ## docs
 
 可以查看 docs 文件夹内的 md 文档 [Docs](./docs/api/api.md)

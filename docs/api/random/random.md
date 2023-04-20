@@ -1,12 +1,6 @@
-# [random](../../../src/random/random.ts)
+# random
 
 返回一个介于 min 和 max 之间的整数 (包含 min 和 max)。
-
-如果不传递参数，返回一个介于 1 和 100 之间的整数 (包含 0 和 100)。
-
-如果包含一个参数，则返回一个介于 1 和参数之间的整数 (包含 1 和 max)。
-
-如果包含两个参数，则返回一个介于 min 和 max 之间的整数 (包含 min 和 max)。
 
 ## note
 
@@ -20,12 +14,18 @@
 
 ## params
 
--   `min` (number) (可选)：最小值
--   `max` (number) (可选)：最大值
+-   [min=1] (number) (可选)：最小值
+-   [max=100] (number) (可选)：最大值
+
+如果不传递参数，返回一个介于 1 和 100 之间的整数 (包含 0 和 100)。
+
+如果包含一个参数，则返回一个介于 1 和参数之间的整数 (包含 1 和 max)。
+
+如果包含两个参数，则返回一个介于 min 和 max 之间的整数 (包含 min 和 max)。
 
 ## returns
 
--   `number`：介于 min 和 max 之间的整数 (包含 min 和 max)。
+-   (number)：介于 min 和 max 之间的随机整数 (包含 min 和 max)。
 
 ## example
 

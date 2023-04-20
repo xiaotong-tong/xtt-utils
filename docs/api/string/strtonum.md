@@ -1,14 +1,14 @@
-# [strToNum](../../../src/string/strtonum.ts)
+# strToNum
 
 将字符串转换为数字
 
 ## params
 
--   `text` (string)：要转换的字符串
+-   text (string)：要转换的字符串
 
 ## returns
 
--   `number`：转换后的数字
+-   (number)：转换后的数字
 
 ## example
 

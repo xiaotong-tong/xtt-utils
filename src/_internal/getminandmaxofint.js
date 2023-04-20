@@ -1,8 +1,8 @@
 /**
- * @description 获取一个整数的最大值和最小值
+ * 获取一个整数的最大值和最小值
  * @param {number} min
  * @param {number} max
- * @returns {number[min, max]}
+ * @returns {[number, number]} [min, max] 保证min <= max 且min和max都是js 中安全的整数范围内的整数
  * @private
  * @example
  * getMinAndMaxOfInt(1, 10) // [1, 10]
@@ -11,7 +11,7 @@
  * getMinAndMaxOfInt(-Infinity, Infinity) // [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER]
  */
 
-export const getMinAndMaxOfInt = (min: number, max: number): number[] => {
+export const getMinAndMaxOfInt = (min, max) => {
 	if (min > max) {
 		const temp = min;
 		min = max;

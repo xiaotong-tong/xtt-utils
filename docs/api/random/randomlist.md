@@ -1,16 +1,18 @@
-# [randomList](../../../src//random//randomlist.ts)
+# randomList
 
-返回一个随机数列表
+生成一个随机数列表
 
 ## params
 
--   `min` (number)：最小值
--   `max` (number)：最大值
--   `count` (number)：随机数个数
+-   [min=1] (number)：最小值
+-   [max=100] (number)：最大值
+-   [count=1] (number)：列表个数
+
+min 和 max 参数的作用与 [random](./random.md) 方法一致。
 
 ## returns
 
--   `number[]`：随机数列表
+-   (number[])：每项均介于 min 和 max 之间的 length 为 count 的随机数列表
 
 ## example
 

@@ -30,6 +30,14 @@
 
         存放数组相关的工具函数。
 
+    -   file
+
+        存放文件相关的工具函数。
+
+    -   function
+
+        存放函数相关的工具函数。
+
     -   number
 
         存放数字相关的工具函数。
@@ -42,11 +50,13 @@
 
         存放字符串相关的工具函数。
 
-    -   index.ts
-    -   array.ts
-    -   number.ts
-    -   random.ts
-    -   string.ts
+    -   index.js
+    -   array.js
+    -   file.js
+    -   function.js
+    -   number.js
+    -   random.js
+    -   string.js
 
         汇总文件，用于导出一个范围内的所有工具函数。
 
@@ -93,7 +103,3 @@
 -   TODO.md
 
     该文件包含项目的待办事项。
-
--   tsconfig.json
-
-    该文件包含项目的 TypeScript 配置。

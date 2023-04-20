@@ -1,16 +1,16 @@
-# [nonDuplicateRandomList](../../../src/random/nonduplicaterandomlist.ts)
+# nonDuplicateRandomList
 
-返回一个不重复的随机数列表
+生成一个没有重复值的随机数列表
 
 ## params
 
--   `min` (number)：最小值
--   `max` (number)：最大值
--   `count` (?number)：随机数个数
+-   [min=0] (number)：最小值
+-   [max=9] (number)：最大值
+-   [count=max-min+1] (number)：生成的随机数的个数
 
 ## returns
 
--   `number[]`：随机数列表
+-   (number[])：随机数列表
 
 ## example
 

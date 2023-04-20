@@ -1,18 +1,18 @@
-# [endsWith](../../../src/string/endwith.ts)
+# endsWith
 
 判断字符串是否以指定的字符串或正则表达式结尾
 
 ## params
 
--   `str` (string)：要判断的字符串
+-   str (string)：要判断的字符串
 
--   `suffix` (string | RegExp)：要判断的字符串或正则表达式
+-   suffix (string | RegExp)：要判断的字符串或正则表达式
 
--   `endPosition` (number)：结束判断的位置
+-   [endPosition] (number)：结束判断的位置
 
 ## returns
 
--   `boolean`：如果字符串以指定的字符串或正则表达式结尾，则返回 `true`，否则返回 `false`
+-   (boolean)：如果字符串以指定的字符串或正则表达式结尾，则返回 `true`，否则返回 `false`
 
 ## example
 

@@ -1,14 +1,14 @@
-# [b64ToBlob](../../../src/file/b64toblob.ts)
+# b64ToBlob
 
 Converts a base64 string to a Blob object.
 
 ## params
 
--   `b64Data` (string)：base64 string
+-   b64Data (string)：base64 string
 
 ## returns
 
--   `Promise<Blob>`：promise of Blob object
+-   (Promise<Blob>)：promise of Blob object
 
 ## notes
 

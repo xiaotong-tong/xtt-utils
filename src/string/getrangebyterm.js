@@ -1,7 +1,7 @@
 /**
- * @description 获取字符串中某个范围内的字符串
+ * 获取字符串中某个范围内的字符串
  * @param {string} str 要处理的字符串
- * @param {[string | RegExp, string | RegExp]} term 要匹配的字符串或正则表达式
+ * @param {[string | RegExp, string | RegExp]} term 要匹配的字符串或正则表达式范围
  * @returns {string} 返回匹配范围内的字符串
  * @example
  * getRangeByTerm("abcde", ["b", "d"]) // "c"
@@ -9,10 +9,7 @@
  * getRangeByTerm("a1bcd2e", [/\d/, /\d/]) // "bcd"
  */
 
-export const getRangeByTerm = (
-	str: string,
-	term: [string | RegExp, string | RegExp]
-): string => {
+export const getRangeByTerm = (str, term) => {
 	if (typeof str !== "string" || term === undefined) {
 		return "";
 	}

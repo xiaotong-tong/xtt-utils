@@ -1,14 +1,14 @@
-# [shuffle](../../../src/array/shuffle.ts)
+# shuffle
 
-返回一个数组的随机排序。
+乱序数组
 
 ## params
 
-- `list` (array)：要随机排序的数组
+-   list (array): 需要打乱的数组
 
 ## returns
 
-- `array`：随机排序后的数组
+-   (array): 乱序后的数组
 
 ## example
 

@@ -1,5 +1,5 @@
 /**
- * @description 获取字符串中匹配项右侧的字符串
+ *  获取字符串中匹配项右侧的字符串
  * @param {string} str 要处理的字符串
  * @param {string | RegExp} searchTerm 要匹配的字符串或正则表达式
  * @param {number} afterWhichTimes 匹配到几次后停止，默认为1, 如果数字大于匹配到的次数，则返回最后一个匹配项右侧的字符串
@@ -13,11 +13,7 @@
  * getTermRight("abc1de2", /\d/, 3) // ""
  */
 
-export const getTermRight = (
-	str: string,
-	searchTerm: string | RegExp,
-	afterWhichTimes = 1
-) => {
+export const getTermRight = (str, searchTerm, afterWhichTimes) => {
 	if (typeof str !== "string" || searchTerm === undefined) {
 		return "";
 	}

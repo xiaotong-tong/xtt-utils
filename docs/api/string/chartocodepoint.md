@@ -1,17 +1,17 @@
-# [charToCodePoint](../../../src/string//chartocodepoint.ts)
+# charToCodePoint
 
 返回一个字符串的 Unicode 编码点。
 
 ## params
 
--   `str` (string)：要转换的字符串
--   `options` (object)：可选参数
-    -   `separator` (string)：分隔符，默认为 `""`
-    -   `base` (2 | 8 | 10 | 16)：进制，默认为 `16`
+-   str (string)：要转换的字符串
+-   [options] (Object)：可选参数
+    -   [separator=""] (string)：分隔符
+    -   [base=16] (2 | 8 | 10 | 16)：进制
 
 ## returns
 
--   `string`：Unicode 编码点
+-   (string)：Unicode 编码点
 
 ## example
 

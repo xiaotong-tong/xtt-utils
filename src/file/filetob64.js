@@ -1,13 +1,11 @@
 /**
- * @support browser
+ * @support only support browser, because FileReader is not supported in nodejs
  * @description Convert file to base64
- * @param {File} file
- * @returns {Promise<string>} base64
- * @example
- * fileToB64(file)
+ * @param {File} file File Object
+ * @returns {Promise<string>} promise of base64 string
  */
 
-export const fileToB64 = async (file: File) => {
+export const fileToB64 = async (file) => {
 	if (typeof FileReader === "undefined") {
 		return Promise.reject(new Error("FileReader is not supported"));
 	}

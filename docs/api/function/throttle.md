@@ -1,4 +1,4 @@
-# [throttle](../../../src/function/throttle.md)
+# throttle
 
 节流函数, 在调用函数时, 如果处于空闲状态, 则立即执行函数, 并进入等待状态,
 在等待时间内, 如果再次调用函数, 则保存当前调用值, 直到等待时间结束,
@@ -9,12 +9,12 @@
 
 ## params
 
--   `func` {function}：要节流的函数
--   `delay` {number}：等待时间
+-   func (function)：要节流的函数
+-   delay (number)：等待时间
 
 ## returns
 
--   `function`：节流后的函数
+-   (function)：节流后的函数
 
 ## example
 

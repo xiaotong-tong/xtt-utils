@@ -1,7 +1,7 @@
 doc/
 src/
 test/
-jest.config.js
+CHANGELOG.md
+jest.config.mjs
 rollup.config.js
-tscconfig.json
 TODO.md

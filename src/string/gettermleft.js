@@ -1,8 +1,10 @@
+import { startsWith } from "./startswith.js";
+
 /**
- * @description 获取字符串中匹配项左侧的字符串
+ * 获取字符串中匹配项左侧的字符串
  * @param {string} str 要处理的字符串
  * @param {string | RegExp} searchTerm 要匹配的字符串或正则表达式
- * @param {number} beforeWhichTimes 匹配到几次后停止，默认为1, 如果数字大于匹配到的次数，则返回最后一个匹配项左侧的字符串
+ * @param {number} [beforeWhichTimes=1] 匹配到几次后停止，默认为1, 如果数字大于匹配到的次数，则返回最后一个匹配项左侧的字符串
  * @returns {string} 返回匹配项左侧的字符串
  * @example
  * getTermLeft("abcde", "c") // "ab"
@@ -13,13 +15,7 @@
  * getTermLeft("abc1de2", /\d/, 3) // "abc1de"
  */
 
-import { startsWith } from "./startswith.js";
-
-export const getTermLeft = (
-	str: string,
-	searchTerm: string | RegExp,
-	beforeWhichTimes?: number
-): string => {
+export const getTermLeft = (str, searchTerm, beforeWhichTimes) => {
 	if (typeof str !== "string" || searchTerm === undefined) {
 		return "";
 	}

@@ -7,7 +7,7 @@
  * reverse("hello world!") // !dlrow olleh
  */
 
-export const reverse = (text: string): string => {
+export const reverse = (text) => {
 	if (!text?.length) {
 		return "";
 	}

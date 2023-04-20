@@ -1,15 +1,14 @@
-/**
- * @description 返回一个数组的随机排序。
- * @param {any[]} list 需要打乱的数组
- * @returns {any[]} 返回一个打乱后的数组
- * @example
- * shuffle([1, 2, 3, 4, 5]) // [2, 4, 1, 5, 3]
- * shuffle([]) // []
- */
-
 import { random } from "../random/random.js";
 
-export const shuffle = <T>(list: T[]): T[] => {
+/**
+ * 乱序数组
+ * @param {any[]} list 需要打乱的数组
+ * @returns {any[]} 乱序后的数组
+ * @example
+ * shuffle([1, 2, 3, 4, 5]) // [2, 4, 1, 5, 3]
+ */
+
+export const shuffle = (list) => {
 	if (!list?.length) {
 		return [];
 	}

@@ -1,4 +1,3 @@
-import typescript from "@rollup/plugin-typescript";
 import terser from "@rollup/plugin-terser";
 
 const utilsFilesNames = [
@@ -31,9 +30,9 @@ let utilsFilesInput = {};
 
 utilsFilesNames.forEach((name) => {
 	if (typeof name === "object") {
-		utilsFilesInput[name.alias] = `src/${name.value}.ts`;
+		utilsFilesInput[name.alias] = `src/${name.value}.js`;
 	} else if (typeof name === "string") {
-		utilsFilesInput[name] = `src/${name}.ts`;
+		utilsFilesInput[name] = `src/${name}.js`;
 	}
 });
 
@@ -52,17 +51,11 @@ const utilsFiles = {
 			preserveModules: true,
 			entryFileNames: "esm/[name].js"
 		}
-	],
-	plugins: [
-		typescript({
-			outDir: "dist/types",
-			declaration: true
-		})
 	]
 };
 
 const indexFile = {
-	input: "src/index.ts",
+	input: "src/index.js",
 	output: [
 		{
 			file: "dist/index.js",
@@ -77,12 +70,11 @@ const indexFile = {
 			file: "dist/index.esm.js",
 			format: "esm"
 		}
-	],
-	plugins: [typescript()]
+	]
 };
 
 const indexMinFile = {
-	input: "src/index.ts",
+	input: "src/index.js",
 	output: [
 		{
 			file: "dist/index.min.js",
@@ -90,7 +82,7 @@ const indexMinFile = {
 			name: "xttUtils"
 		}
 	],
-	plugins: [typescript(), terser()]
+	plugins: [terser()]
 };
 
 export default [indexFile, utilsFiles, indexMinFile];
