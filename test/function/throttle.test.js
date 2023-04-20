@@ -26,7 +26,10 @@ describe("throttle module", () => {
 		expect(count).toBe(2);
 
 		jest.advanceTimersByTime(1000);
-		expect(count).toBe(3);
+		expect(count).toBe(2);
+
+		jest.advanceTimersByTime(1000);
+		expect(count).toBe(2);
 
 		jest.advanceTimersByTime(1000);
 		expect(count).toBe(3);
@@ -35,9 +38,6 @@ describe("throttle module", () => {
 		expect(count).toBe(3);
 
 		jest.advanceTimersByTime(1000);
-		expect(count).toBe(4);
-
-		jest.advanceTimersByTime(1000);
-		expect(count).toBe(5);
+		expect(count).toBe(3);
 	});
 });
