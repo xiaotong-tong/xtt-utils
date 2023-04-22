@@ -1,4 +1,4 @@
-# getTrimLeft
+# getTermLeft
 
 获取字符串中匹配项左侧的字符串
 

@@ -4,13 +4,13 @@
 
 ## params
 
--   randomList (any[] | Object<string,number>)：随机数列表
--   当 randomList 为 Object 时，权重列表将被忽略，Object 的 key 为随机数列表，value 为权重列表
+-   randomList (any[] | Object<string,number>)：随机数列表。
+    当 randomList 为 Object 时，权重列表将被忽略，Object 的 key 为随机数列表，value 为权重列表
 -   [weightList] (number[])：权重列表
 
 ## returns
 
--   `any`：随机数列表中的某一项
+-   (any)：随机数列表中的某一项
 
 ## example
 
