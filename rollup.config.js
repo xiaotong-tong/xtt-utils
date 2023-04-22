@@ -21,6 +21,9 @@ const utilsFilesNames = [
 	"array/shuffle",
 	{ value: "function", alias: "fn" },
 	{ value: "function/throttle", alias: "fn/throttle" },
+	{ value: "function/chain", alias: "fn/chain" },
+	{ value: "function/curry", alias: "fn/curry" },
+	{ value: "function/compose", alias: "fn/compose" },
 	"file",
 	"file/b64toblob",
 	"file/filetob64"

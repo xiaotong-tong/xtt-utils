@@ -2,7 +2,7 @@
  *  获取字符串中匹配项右侧的字符串
  * @param {string} str 要处理的字符串
  * @param {string | RegExp} searchTerm 要匹配的字符串或正则表达式
- * @param {number} afterWhichTimes 匹配到几次后停止，默认为1, 如果数字大于匹配到的次数，则返回最后一个匹配项右侧的字符串
+ * @param {number} [afterWhichTimes] 匹配到几次后停止，默认为1, 如果数字大于匹配到的次数，则返回最后一个匹配项右侧的字符串
  * @returns {string} 返回匹配项右侧的字符串
  * @example
  * getTermRight("abcde", "c") // "de"
