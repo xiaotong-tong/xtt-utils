@@ -1,5 +1,17 @@
 # 变更日志
 
+## 0.1.0 / 2023-04-22
+
+-   移除 TypeScript，改用 JavaScript 编写
+-   新增功能：getRangeByTerm
+-   新增功能：b64ToBlob
+-   新增功能：fileToB64
+-   新增功能：chain
+-   新增功能：curry
+-   新增功能：compose
+-   修改功能：throttle 修改等待规则
+-   新增功能：为 thousandth 添加新参数 maximumFractionDigits
+
 ## 0.0.2 / 2023-04-14
 
 -   新增功能：getTermRight
