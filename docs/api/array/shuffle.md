@@ -8,7 +8,7 @@
 
 ## returns
 
--   (array): 乱序后的数组
+-   (array): 乱序后的数组，如果传入的参数没有 length 属性或者 length 为 0，返回空数组
 
 ## example
 

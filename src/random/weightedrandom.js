@@ -24,7 +24,7 @@ export function weightedRandom(randomList, weightedList) {
 	let sum = 0;
 
 	if (Array.isArray(randomList) && Array.isArray(weightedList)) {
-		if (weightedList.length < randomList.length) {
+		if (weightedList.length > randomList.length) {
 			weightedList.length = randomList.length;
 		} else {
 			randomList.length = weightedList.length;

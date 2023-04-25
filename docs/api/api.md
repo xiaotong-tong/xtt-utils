@@ -2,7 +2,6 @@
 
 -   random
     -   [random](./random/random.md) 获取随机数
-    -   [nonDuplicateRandomList](./random/nonDuplicateRandomList.md) 获取不重复的随机数列表
     -   [randomList](./random/randomList.md) 获取随机数列表
     -   [weightedRandom](./random/weightedRandom.md) 获取带权重的随机数
 -   string

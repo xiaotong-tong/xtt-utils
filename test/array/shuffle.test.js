@@ -37,8 +37,33 @@ describe("shuffle module", () => {
 	test("success", () => {
 		expect(shuffle([1, 2, 3, 4, 5])).toBeShuffleArray([1, 2, 3, 4, 5]);
 		expect(shuffle([])).toBeShuffleArray([]);
+
+		const value = [1, "2", { 3: 3 }, [4, 4], 5];
+		expect(shuffle(value)).toBeShuffleArray(value);
+		// 测试是否会修改原数组
+		expect(value).toEqual([1, "2", { 3: 3 }, [4, 4], 5]);
 	});
 	test("warning", () => {
 		expect(shuffle()).toBeShuffleArray([]);
+		// 因为字符串也有length属性，而且也有迭代器，所以同样也会打乱哦
+		expect(shuffle("abcde")).toBeShuffleArray(["a", "b", "c", "d", "e"]);
+		expect(shuffle(12345)).toBeShuffleArray([]);
+
+		const obj = { 0: "a", 1: "b", 2: "c", length: 3 };
+		// 虽然有 length 属性，但是没有迭代器，所以会报错
+		expect(() => {
+			return shuffle(obj);
+		}).toThrow(TypeError);
+
+		// 为对象添加迭代器，使其可以被打乱, 但是这样做是不合理的，虽然可以通过测试
+		obj[Symbol.iterator] = function* () {
+			let i = 0;
+			while (i < this.length) {
+				yield this[i++];
+			}
+		};
+		expect(shuffle(obj)).toBeShuffleArray(["a", "b", "c"]);
+
+		expect(shuffle({ a: 1 })).toBeShuffleArray([]);
 	});
 });
