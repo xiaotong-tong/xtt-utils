@@ -72,7 +72,7 @@ expect.extend({
 describe("randomList module", () => {
 	test("success", () => {
 		expect(randomList(1, 10, 5)).toBeRandomListWithinRange(1, 10, 5);
-		expect(randomList()).toBeRandomListWithinRange(1, 100, 1);
+		expect(randomList()).toBeRandomListWithinRange(1, 10, 10);
 
 		expect(
 			randomList(1, 10, {

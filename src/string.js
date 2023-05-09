@@ -7,7 +7,7 @@ import { getTermLeft } from "./string/gettermleft.js";
 import { getTermRight } from "./string/gettermright.js";
 import { getRangeByTerm } from "./string/getrangebyterm.js";
 
-const string = {
+export {
 	reverse,
 	strToNum,
 	charToCodePoint,
@@ -17,5 +17,3 @@ const string = {
 	getTermRight,
 	getRangeByTerm
 };
-
-export default string;

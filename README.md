@@ -27,6 +27,8 @@ import xttUtils from "xtt-utils";
 xttUtils.random.random();
 
 // 按需引入
+import { random } from "xtt-utils";
+// 或者
 import { random } from "xtt-utils/random/random";
 random();
 ```
@@ -39,6 +41,8 @@ const xttUtils = require("xtt-utils");
 xttUtils.random.random();
 
 // 按需引入
+const { random } = require("xtt-utils");
+// 或者
 const { random } = require("xtt-utils/random/random");
 random();
 ```
