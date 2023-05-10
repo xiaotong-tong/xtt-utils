@@ -8,6 +8,7 @@ const utilsFilesNames = [
 	"random/random",
 	"random/randomlist",
 	"random/weightedrandom",
+	"random/randomHexColor",
 	"string",
 	"string/reverse",
 	"string/strtonum",
