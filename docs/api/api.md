@@ -4,6 +4,7 @@
     -   [random](./random/random.md) 获取随机数
     -   [randomList](./random/randomList.md) 获取随机数列表
     -   [weightedRandom](./random/weightedRandom.md) 获取带权重的随机数
+    -   [randomHexColor](./random/randomHexColor.md) 获取随机十六进制颜色
 -   string
     -   [reverse](./string/reverse.md) 字符串反转
     -   [strToNum](./string/strToNum.md) 字符串转数字

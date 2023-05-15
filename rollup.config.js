@@ -63,15 +63,18 @@ const indexFile = {
 		{
 			file: "dist/index.js",
 			format: "umd",
-			name: "xttUtils"
+			name: "xttUtils",
+			banner: `/**\n * xttUtils v0.1.1\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
 		},
 		{
 			file: "dist/index.cjs",
-			format: "cjs"
+			format: "cjs",
+			banner: `/**\n * xttUtils v0.1.1\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
 		},
 		{
 			file: "dist/index.esm.js",
-			format: "esm"
+			format: "esm",
+			banner: `/**\n * xttUtils v0.1.1\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
 		}
 	]
 };
