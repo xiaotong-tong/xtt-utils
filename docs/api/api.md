@@ -14,6 +14,7 @@
     -   [getTermLeft](./string/getTermLeft.md) 获取字符串中匹配项左侧的字符串
     -   [getTermRight](./string/getTermRight.md) 获取字符串中匹配项右侧的字符串
     -   [getRangeByTerm](./string/getRangeByTerm.md) 获取字符串中某个范围内的字符串
+    -   [trimLineStart](./string/trimLineStart.md) 删除行前的空格，保留缩进层级
 -   array
     -   [shuffle](./array/shuffle.md) 乱序数组
 -   number

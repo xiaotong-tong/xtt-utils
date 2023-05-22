@@ -17,6 +17,7 @@ const utilsFilesNames = [
 	"string/endswith",
 	"string/gettermleft",
 	"string/gettermright",
+	"string/trimLineStart",
 	"array",
 	"array/shuffle",
 	{ value: "function", alias: "fn" },
