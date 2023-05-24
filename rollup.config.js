@@ -25,9 +25,10 @@ const utilsFilesNames = [
 	{ value: "function/chain", alias: "fn/chain" },
 	{ value: "function/curry", alias: "fn/curry" },
 	{ value: "function/compose", alias: "fn/compose" },
+	{ value: "function/fori", alias: "fn/fori" },
 	"file",
 	"file/b64toblob",
-	"file/filetob64"
+	"file/filetob64",
 ];
 
 let utilsFilesInput = {};
@@ -47,15 +48,15 @@ const utilsFiles = {
 			dir: "dist",
 			format: "cjs",
 			preserveModules: true,
-			entryFileNames: "cjs/[name].cjs"
+			entryFileNames: "cjs/[name].cjs",
 		},
 		{
 			dir: "dist",
 			format: "esm",
 			preserveModules: true,
-			entryFileNames: "esm/[name].js"
-		}
-	]
+			entryFileNames: "esm/[name].js",
+		},
+	],
 };
 
 const indexFile = {
@@ -65,19 +66,19 @@ const indexFile = {
 			file: "dist/index.js",
 			format: "umd",
 			name: "xttUtils",
-			banner: `/**\n * xttUtils v0.1.1\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
+			banner: `/**\n * xttUtils v0.1.1\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`,
 		},
 		{
 			file: "dist/index.cjs",
 			format: "cjs",
-			banner: `/**\n * xttUtils v0.1.1\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
+			banner: `/**\n * xttUtils v0.1.1\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`,
 		},
 		{
 			file: "dist/index.esm.js",
 			format: "esm",
-			banner: `/**\n * xttUtils v0.1.1\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
-		}
-	]
+			banner: `/**\n * xttUtils v0.1.1\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`,
+		},
+	],
 };
 
 const indexMinFile = {
@@ -86,10 +87,10 @@ const indexMinFile = {
 		{
 			file: "dist/index.min.js",
 			format: "umd",
-			name: "xttUtils"
-		}
+			name: "xttUtils",
+		},
 	],
-	plugins: [terser()]
+	plugins: [terser()],
 };
 
 export default [indexFile, utilsFiles, indexMinFile];

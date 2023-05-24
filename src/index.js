@@ -7,6 +7,7 @@ import { throttle } from "./function/throttle.js";
 import { chain } from "./function/chain.js";
 import { curry } from "./function/curry.js";
 import { compose } from "./function/compose.js";
+import { fori } from "./function/fori.js";
 
 import { conversionBase } from "./number/conversionbase.js";
 import { thousandth } from "./number/thousandth.js";
@@ -34,6 +35,7 @@ export {
 	chain,
 	curry,
 	compose,
+	fori,
 	conversionBase,
 	thousandth,
 	random,
@@ -48,5 +50,5 @@ export {
 	getTermLeft,
 	getTermRight,
 	getRangeByTerm,
-	trimLineStart
+	trimLineStart,
 };
