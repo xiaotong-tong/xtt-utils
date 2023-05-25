@@ -1,7 +1,7 @@
 const { fori } = require("xtt-utils/fn/fori");
 
 describe("fori module", () => {
-	test("success", () => {
+	test("success", async () => {
 		let count = 0;
 		fori([1, 2, 3, 4], (item) => {
 			count += item;
@@ -31,5 +31,29 @@ describe("fori module", () => {
 		);
 
 		expect(count).toBe("a:7,b:8,");
+
+		count = fori([1, 2, 3], (v, i) => {
+			return v * i;
+		});
+		expect(count).toEqual([0, 2, 6]);
+
+		count = fori(
+			[
+				1,
+				Promise.resolve(2),
+				new Promise((res, rej) => {
+					setTimeout(() => {
+						res(3);
+					}, 1000);
+				}),
+			],
+			(v, i) => {
+				return v * i;
+			},
+			{
+				asyncIterator: true,
+			}
+		);
+		expect(await count).toEqual([0, 2, 6]);
 	});
 });
