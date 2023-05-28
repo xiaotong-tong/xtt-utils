@@ -1,12 +1,14 @@
 import { conversionBase } from "../number/conversionbase.js";
 
 /**
- * 返回一个字符串的 Unicode 编码点。
- * @param {string} str 需要转换的字符串
- * @param {Object} [options] 配置项
- * @param {string} [options.separator=""]  分隔符, 默认值为 ""
- * @param {2 | 8 | 10 | 16} [options.base=16] 转换的基数, 默认值为 16
- * @returns {string} Unicode 编码点
+ * @description Returns the Unicode code point of a string.
+ * @description-cn 返回一个字符串的 Unicode 编码点。
+ * @category String
+ * @param {string} str The string to convert
+ * @param {Object} [options] The options object
+ * @param {string} [options.separator=""] The separator of the converted result, default value is ""
+ * @param {2 | 8 | 10 | 16} [options.base=16] The base to which to convert the number. Must be one of 2, 8, 10, or 16. Defaults to 16.
+ * @returns {string} Returns the Unicode code point of a string
  * @example
  * charToCodePoint("Hello"); // "0x480x650x6c0x6c0x6f"
  * charToCodePoint("Hello World!", { separator: " "}) // "0x48 0x65 0x6c 0x6c 0x6f 0x20 0x57 0x6f 0x72 0x6c 0x64 0x21"

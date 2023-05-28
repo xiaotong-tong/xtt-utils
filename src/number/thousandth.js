@@ -1,8 +1,10 @@
 /**
- * 将数字转换为千分位
- * @param {number} num 需要转换的数字
- * @param {number} [maximumFractionDigits=20] 最大小数位数
- * @returns {string} 返回一个千分位的字符串
+ * @description Converts a number to a string with thousand separators
+ * @description-cn 将数字转换为带千分位分隔符的字符串
+ * @category Number
+ * @param {number} num The number to convert
+ * @param {number} [maximumFractionDigits=20] The maximum number of digits after the decimal point
+ * @returns {string} Returns a string with thousand separators
  * @example
  * thousandth(1000000) // "1,000,000"
  * thousandth(1000000.1234) // "1,000,000.1234"

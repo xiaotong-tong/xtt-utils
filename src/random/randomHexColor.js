@@ -1,6 +1,8 @@
 /**
- * 生成一个随机的十六进制颜色值
- * @returns {string} 返回一个随机的十六进制颜色值
+ * @description Generates a random hexadecimal color value
+ * @description-cn 生成一个随机的十六进制颜色值
+ * @category Random
+ * @returns {string} Returns the random hexadecimal color value
  * @example
  * randomHexColor() // #e672ac
  */

@@ -1,5 +1,7 @@
 /**
- * Converts a base64 string to a Blob object.
+ * @description Converts a base64 string to a Blob object.
+ * @description-cn 将base64字符串转换为Blob对象
+ * @category File
  * @param {string} b64Data base64 string
  * @returns {Promise<Blob>} promise of Blob object
  * @example

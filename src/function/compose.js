@@ -1,7 +1,9 @@
 /**
- * 组合函数 从右到左依次执行函数组合
- * @param  {...Function} fns 所有要组合的函数必须是单参数函数，最后一个函数可以是多参数函数
- * @returns 组合函数的执行结果
+ * @description Compose function from right to left
+ * @description-cn 组合函数 从右到左依次执行函数组合
+ * @category Function
+ * @param  {...Function} fns All functions to be combined must be single-parameter functions, and the last function can be a multi-parameter function
+ * @returns {Function} The function after composition
  * @example
  * const _ = xttUtils.curry.placeholder;
  * const isEndsWith = xttUtils.curry(xttUtils.endsWith, _, "World!", undefined);

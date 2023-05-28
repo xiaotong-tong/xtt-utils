@@ -1,54 +1,54 @@
-# 项目目录结构
+# Project Directory Structure
 
 -   .vscode
 
-    该目录存放 VS Code 的配置文件。
+    This directory contains the configuration files for VS Code.
 
 -   docs
 
-    该目录存放项目文档，包括说明文档、API 文档等。
+    This directory contains the project documentation, including the API documentation, and other documentation.
 
--   api
+    -   api
 
-    -   api.md
+        -   api.md
 
-        该文件是项目 API 文档的说明文档。
+            This file is the documentation for the project's API.
 
-    该目录存放 API 文档。内部的目录结构应与 src 目录结构保持一致。但是，不需要包含 index.ts 等汇总文件。
+        This directory contains the API documentation. The internal directory structure should be consistent with the src directory structure. However, it does not need to include summary files such as index.js.
 
--   directory.md
+    -   directory.md
 
-    该文件是项目目录结构的说明文档。
+        This file is the documentation for the project directory structure.
 
 -   src
 
     -   \_internal
 
-        该目录存放内部使用的工具函数。不对外暴露。
+        This directory contains utility functions for internal use only. It is not exposed externally.
 
     -   array
 
-        存放数组相关的工具函数。
+        This directory contains utility functions related to arrays.
 
     -   file
 
-        存放文件相关的工具函数。
+        This directory contains utility functions related to files.
 
     -   function
 
-        存放函数相关的工具函数。
+        This directory contains utility functions related to functions.
 
     -   number
 
-        存放数字相关的工具函数。
+        This directory contains utility functions related to numbers.
 
     -   random
 
-        存放随机数相关的工具函数。
+        This directory contains utility functions related to random numbers.
 
     -   string
 
-        存放字符串相关的工具函数。
+        This directory contains utility functions related to strings.
 
     -   index.js
     -   array.js
@@ -58,48 +58,48 @@
     -   random.js
     -   string.js
 
-        汇总文件，用于导出一个范围内的所有工具函数。
+        These are summary files used to export all utility functions within a given scope.
 
 -   test
 
-    该目录存放测试代码。内部的目录结构应与 src 目录结构保持一致。但是，不需要包含 index.test.ts 等汇总文件。
+    This directory contains test code. The internal directory structure should be consistent with the src directory structure. However, it does not need to include summary files such as index.js
 
 -   .eslintrc.json
 
-    该文件包含项目的 ESLint 配置。
+    This file contains the project's ESLint configuration.
 
 -   .gitignore
 
-    该文件包含项目的 Git 忽略规则。
+    This file contains the project's Git ignore rules.
 
 -   .npmignore
 
-    该文件包含项目的 NPM 忽略规则。
+    This file contains the project's NPM ignore rules.
 
 -   CHANGELOG.md
 
-    该文件包含项目的更新日志。
+    This file contains the project's update log.
 
 -   jest.config.mjs
 
-    该文件包含项目的 Jest 配置。
+    This file contains the project's Jest configuration.
 
 -   LICENSE
 
-    该文件包含项目的许可证信息。
+    This file contains the project's license information.
 
 -   package.json
 
-    该文件包含项目的 NPM 配置。
+    This file contains the project's NPM configuration.
 
 -   README.md
 
-    该文件是项目的主要说明文档，应包括项目的概述、用法示例、安装指南等。
+    This file is the main documentation for the project, including an overview, usage examples, installation guide, and more.
 
 -   rollup.config.js
 
-    该文件包含项目的 Rollup 配置。
+    This file contains the project's Rollup configuration.
 
 -   TODO.md
 
-    该文件包含项目的待办事项。
+    This file contains the project's to-do list.

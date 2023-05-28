@@ -1,11 +1,14 @@
 import { startsWith } from "./startswith.js";
 
 /**
- * 获取字符串中匹配项左侧的字符串
- * @param {string} str 要处理的字符串
- * @param {string | RegExp} searchTerm 要匹配的字符串或正则表达式
- * @param {number} [beforeWhichTimes=1] 匹配到几次后停止，默认为1, 如果数字大于匹配到的次数，则返回最后一个匹配项左侧的字符串
- * @returns {string} 返回匹配项左侧的字符串
+ * @description-en Get the string on the left of the matching item in the string
+ * @description-cn 获取字符串中匹配项左侧的字符串
+ * @category String
+ * @param {string} str the string to search
+ * @param {string | RegExp} searchTerm the string or regular expression to match the string
+ * @param {number} [beforeWhichTimes=1] the number of times to match before stopping, default is 1,
+ * if the number is greater than the number of matches, the string to the left of the last match item is returned
+ * @returns {string} Returns the string on the left of the matching item in the string
  * @example
  * getTermLeft("abcde", "c") // "ab"
  * getTermLeft("abcde", "c", 2) // "ab"

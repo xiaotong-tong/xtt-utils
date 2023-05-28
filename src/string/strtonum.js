@@ -1,7 +1,9 @@
 /**
- * @description 将字符串转换为数字
+ * @description string to number
+ * @description-cn 将字符串转换为数字
+ *  * @category String
  * @param {string} str
- * @returns {number} 返回一个数字
+ * @returns {number}
  * @example
  * strToNum("123") // 123
  * strToNum("123.456") // 123.456

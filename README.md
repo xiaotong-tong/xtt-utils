@@ -1,54 +1,60 @@
 # xtt-utils
 
-xtt-utils 是一个工具库，包含了一些常用的工具函数。
+A JavaScript utility library.
 
-## 安装
+## Internationalization
+
+[简体中文](./README_CN.md)
+[English](./README.md)
+
+## Installation
 
 ```bash
 npm i xtt-utils
 ```
 
-## 使用
+## Usage
 
-### browser
+### Browser
 
 ```html
 <script src=".../xtt-utils/dist/index.min.js"></script>
+<!-- After importing, the xttUtils global variable will be registered on the window -->
 <script>
-	console.log(xttUtils.random.random());
+	console.log(xttUtils.random());
 </script>
 ```
 
-### module
+### Module
 
 ```javascript
-// 整体引入
+// import the entire library
 import xttUtils from "xtt-utils";
-xttUtils.random.random();
+xttUtils.random();
 
-// 按需引入
-import { random } from "xtt-utils";
-// 或者
+// import specific functions
+import { random } from "xtt-utils"; // Recommended
+// or
 import { random } from "xtt-utils/random/random";
 random();
 ```
 
-### commonjs
+### CommonJS
 
 ```javascript
-// 整体引入
+// import the entire library
 const xttUtils = require("xtt-utils");
-xttUtils.random.random();
+xttUtils.random();
 
-// 按需引入
+// import specific functions
 const { random } = require("xtt-utils");
-// 或者
+// or
 const { random } = require("xtt-utils/random/random");
 random();
 ```
 
-## docs
+## Documentation
 
-可以查看 docs 文件夹内的 md 文档 [Docs](./docs/api/api.md)
+You can view the md documents in the docs folder [here](./docs/api/en/api.md)
 
-或者访问该 [网页](https://xiaotong-tong.github.io/xtt-utils-docs/index.html)
+Alternatively,you can visit the [xtt-utils documentation website](https://xiaotong-tong.github.io/xtt-utils-docs/index.html)

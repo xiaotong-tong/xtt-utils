@@ -1,19 +1,21 @@
 import { random } from "./random.js";
 import { shuffle } from "../array/shuffle.js";
-import { getMinAndMaxOfInt } from "../_internal/getminandmaxofint.js";
+import { _formatIntRange } from "../_internal/formatIntRange.js";
 
 /**
- * 生成一个随机数列表
- * @param {number} [min=1] 最小值
- * @param {number} [max=10] 最大值
- * @param {number | object} [option] 配置项, 如果是数字，则表示列表个数
- * @param {number} [option.count=max-min+1] 列表个数
- * @param {boolean} [option.unique=false] 列表中的数是否唯一
- * @returns {number[]} 每项均介于 min 和 max 之间的 length 为 count 的随机数列表(包含 min 和 max)
+ * @description Generate a list of random numbers
+ * @description-cn 生成一个随机数列表
+ * @category Random
+ * @param {number} [min=1] The minimum value of the range
+ * @param {number} [max=10] The maximum value of the range
+ * @param {number|object} [option] Options for generating the list. If it is a number, it represents the number of items in the list.
+ * @param {number} [option.count=max-min+1] The number of items in the list
+ * @param {boolean} [option.unique=false] Whether the items in the list are unique
+ * @returns {number[]} Returns a list of random numbers, each of which is between min and max (inclusive)
  * @see ./random.js
  * @example
- * random(1, 10) // [1 ~ 10]
- * random(1, 10, 5) // [1 ~ 10, ...*4]
+ * randomList(1, 10) // [1 ~ 10]
+ * randomList(1, 10, 5) // [1 ~ 10, ...*4]
  */
 
 export const randomList = (min, max, option) => {
@@ -23,7 +25,7 @@ export const randomList = (min, max, option) => {
 	if (max === undefined) {
 		max = 10;
 	}
-	[min, max] = getMinAndMaxOfInt(min, max);
+	[min, max] = _formatIntRange(min, max);
 
 	if (min === max) {
 		return [max];
@@ -57,8 +59,8 @@ export const randomList = (min, max, option) => {
 		}
 		return list;
 	} else {
-		// 如果 count 大于 (max - min) / 2，那么就直接生成一个随机数组，然后打乱顺序，再截取 count 个数
-		// 否则就生成一个集合，然后不断随机生成一个数，直到集合的长度达到 count
+		// If count is greater than (max - min) / 2, then generate a random array, shuffle it, and then take the first count numbers
+		// Otherwise, generate a set, and then randomly generate a number until the length of the set reaches count
 		if (count > (max - min) / 2) {
 			let randomArr = Array.from(
 				{ length: max - min + 1 },

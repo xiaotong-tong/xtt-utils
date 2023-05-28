@@ -1,14 +1,14 @@
 # b64ToBlob
 
-Converts a base64 string to a Blob object.
+将 base64 字符串转换为 Blob 对象。
 
 ## params
 
--   b64Data (string)：base64 string
+-   b64Data (string)：base64 字符串
 
 ## returns
 
--   (Promise<Blob>)：promise of Blob object
+-   (Promise<Blob>)：一个 Blob 对象的 promise
 
 ## notes
 

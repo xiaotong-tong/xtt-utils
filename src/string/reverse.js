@@ -1,5 +1,7 @@
 /**
- * @description 反转字符串
+ * @description Reverse a string.
+ * @description-cn 反转字符串
+ * @category String
  * @param {string} text
  * @returns {string} reverse text
  * @example

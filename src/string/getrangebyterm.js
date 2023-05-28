@@ -1,8 +1,10 @@
 /**
- * 获取字符串中某个范围内的字符串
- * @param {string} str 要处理的字符串
- * @param {[string | RegExp, string | RegExp]} term 要匹配的字符串或正则表达式范围
- * @returns {string} 返回匹配范围内的字符串
+ * @description Get the string in a range of strings.
+ * @description-cn 获取字符串中某个范围内的字符串。
+ * @category String
+ * @param {string} str the string to search.
+ * @param {[string | RegExp, string | RegExp]} term the string or regular expression to match the range of the string.
+ * @returns {string} Returns the string in a range of strings.
  * @example
  * getRangeByTerm("abcde", ["b", "d"]) // "c"
  * getRangeByTerm("abcde", ["d", "b"]) // "c"

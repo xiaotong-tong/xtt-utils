@@ -1,0 +1,31 @@
+# API
+
+-   random
+    -   [random](./random/random.md) Generate a random integer between min and max (inclusive of min and max).
+    -   [randomList](./random/randomList.md) Generate a random number list
+    -   [weightedRandom](./random/weightedRandom.md) Get a random item from a list of random numbers based on the weight list.
+    -   [randomHexColor](./random/randomHexColor.md) Generate a random hexadecimal color
+-   string
+    -   [reverse](./string/reverse.md) Returns the reverse of a string.
+    -   [strToNum](./string/strToNum.md) Convert a string to a number
+    -   [charToCodePoint](./string/charToCodePoint.md) Convert a character to a Unicode code point
+    -   [startsWith](./string/startsWith.md) Determine whether a string begins with a specified string or regular expression matching string
+    -   [endsWith](./string/endsWith.md) Determines whether a string ends with a specified string or a string matched by a regular expression
+    -   [getTermLeft](./string/getTermLeft.md) Get the string to the left of the matching item in the string
+    -   [getTermRight](./string/getTermRight.md) Get the string to the right of the matching item in the string
+    -   [getRangeByTerm](./string/getRangeByTerm.md) Get the string between the matching items in the string
+    -   [trimLineStart](./string/trimLineStart.md) Remove the line break at the beginning of the string
+-   array
+    -   [shuffle](./array/shuffle.md) Randomly shuffle the elements in the array
+-   number
+    -   [conversionBase](./number/conversionBase.md) Number conversion base
+    -   [thousandth](./number/thousandth.md) Thousands of numbers
+-   file
+    -   [b64ToBlob](./file/b64ToBlob.md) base64 to Blob
+    -   [fileToB64](./file/fileToB64.md) File to base64
+-   function
+    -   [chain](./function/chain.md) Function chaining
+    -   [throttle](./function/throttle.md) Throttle
+    -   [curry](./function/curry.md) Curry
+    -   [compose](./function/compose.md) Compose
+    -   [fori](./function/fori.md) Loop execution function.

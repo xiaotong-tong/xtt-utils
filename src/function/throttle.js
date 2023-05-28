@@ -1,8 +1,10 @@
 /**
- * 节流函数
- * @param { Function } func  要节流的函数
- * @param { number} delay 延迟时间
- * @return { Function } 节流后的函数
+ * @description throttle function
+ * @description-cn 节流函数
+ * @category Function
+ * @param { Function } func  The function to be throttled
+ * @param { number} delay The delay time
+ * @return { Function } Returns the throttled function
  */
 
 export const throttle = (func, delay) => {

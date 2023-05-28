@@ -1,9 +1,11 @@
 /**
- * 判断字符串是否以指定的字符串或正则表达式匹配的字符串开头
- * @param {string} str 要判断的字符串
- * @param {string | RegExp} prefix 指定的字符串或正则表达式
- * @param {number} [position] 开始判断的位置
- * @returns {boolean} 如果字符串以指定的字符串或正则表达式匹配的字符串开头则返回 true，否则返回 false
+ * @description Determines whether a string starts with the string or regular expression specified.
+ * @description-cn 判断字符串是否以指定的字符串或正则表达式匹配的字符串开头。
+ * @category String
+ * @param {string} str The string to search.
+ * @param {string | RegExp} prefix The string or regular expression to match the beginning of the string.
+ * @param {number} [startPosition] The index at which to begin search.
+ * @returns {boolean} Returns true if the string starts with the string or regular expression specified, otherwise false.
  * @example
  * startsWith("abc", "a"); // true
  * startsWith("abc", "b"); // false
@@ -13,17 +15,17 @@
  * startsWith("abc", /^b/, 1); // true
  */
 
-export const startsWith = (str, prefix, position) => {
+export const startsWith = (str, prefix, startPosition) => {
 	if (typeof str !== "string") {
 		return false;
 	}
 
 	if (typeof prefix === "string") {
-		return str.startsWith(prefix, position);
+		return str.startsWith(prefix, startPosition);
 	}
 
 	if (prefix instanceof RegExp) {
-		const newStr = str.slice(position);
+		const newStr = str.slice(startPosition);
 
 		if (prefix.source.startsWith("^")) {
 			return prefix.test(newStr);

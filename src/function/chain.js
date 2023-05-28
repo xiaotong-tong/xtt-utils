@@ -1,10 +1,14 @@
 /**
- * 开启链式调用，必须调用 value 方法获取最终的值
- * @param {object} [self=this] 调用链式调用的对象,默认为 this
- * @param {*} [initValue] 初始值, 在下一次调用链式调用的方法时会作为第一个参数传入
+ * @description Open chainable sequence, you must call the value method to get the final value
+ * @description-cn 开启链式调用，必须调用 value 方法获取最终的值
+ * @category Function
+ * @param {object} [self=this] The object of the chainable sequence, default is this
+ * @param {*} [initValue] The initial value of the chainable sequence, default is undefined
  *
- * 如果仅传入一个参数, 且该参数不是对象, 则该参数会作为 initValue 值，如果传入的是对象，则该对象会作为 self 值
- * @returns {Proxy} 代理对象
+ * If only one parameter is passed in and the parameter is not an object, the parameter will be used as the initValue value.
+ * If the passed-in is an object, the object will be used as the self value
+ *
+ * @returns {Proxy} Returns a proxy object
  * @example
  * chain(xttUtils, "Hello World!").reverse().reverse().getTermRight(" ").endsWith("World").value() // true
  */
@@ -31,8 +35,12 @@ export function chain(self, initValue) {
 					value = target[prop](value, ...args);
 					return proxyed;
 				};
+			} else {
+				console.error(
+					new Error(`The ${prop} method is not a function`)
+				);
+				return () => proxyed;
 			}
-			return proxyed;
 		}
 	});
 

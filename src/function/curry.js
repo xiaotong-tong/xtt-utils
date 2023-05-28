@@ -1,8 +1,13 @@
 /**
- * 函数柯里化
- * @param {Function} fn 要柯里化的函数
- * @param  {...any} [args] 初始化的参数
- * @returns {Function | any} 柯里化后的函数,如果参数已经足够,则返回函数执行结果
+ * @description Currying function
+ * @description-cn 函数柯里化
+ * @category Function
+ * @param {Function} fn The function to be curried
+ * @param  {...any} [args] The arguments of the function to be curried
+ * @returns {Function | any} Curried function, if the parameters are enough, return the result of the function execution
+ *
+ * @property {symbol} placeholder used to indicate that the parameter is not passed in
+ *
  * @example
  * const add = (a, b, c) => a + b + c;
  * const curriedAdd = curry(add);
@@ -34,6 +39,10 @@ const curry = (fn, ...args) => {
 	};
 };
 
+/**
+ * Placeholder for curry function
+ * @type {Symbol}
+ */
 curry.placeholder = Symbol("placeholder");
 
 export { curry };

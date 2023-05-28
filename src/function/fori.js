@@ -1,18 +1,22 @@
 /**
- * @callback Iteratee 循环体函数
- * @param {*} iterator 当前循环正在处理的元素
- * @param {number} i 当前循环正在处理的元素索引
- * @param {*} target 循环对象本身，如果循环的是 object 的话，这个值是 Object.entries(*) 后的值
+ * @callback Iteratee
+ * @description The function that will be executed on each iteration of the loop
+ * @description-cn 循环体函数
+ * @param {*} iterator The value of the current iteration
+ * @param {number} i The index of the current iteration
+ * @param {*} target The target of the current iteration. If the target is an object, this value is Object.entries(*)
  */
 
 /**
- * 循环
- * @param {*} collection 循环目标
- * @param {Iteratee} iteratee 循环体
- * @param {object} options 参数
- * @param {object} options.thisArg 循环体的 this 值
- * @param {boolean} options.asyncIterator 循环目标是否是异步
- * @returns {Array | Promise<Array>} 循环体的返回结果
+ * @description Loop through the target
+ * @description-cn 循环遍历目标
+ * @category Function
+ * @param {*} collection The target to be looped through
+ * @param {Iteratee} iteratee The function to be executed on each iteration of the loop
+ * @param {object} [options] The options for the loop
+ * @param {object} [options.thisArg] The value of `this` in the iteratee function
+ * @param {boolean} [options.asyncIterator] Whether the target is an async iterator
+ * @returns {Array | Promise<Array>} Returns the results of the loop. If the target is an async iterator, the return value is a Promise
  */
 export const fori = (collection, iteratee, options) => {
 	if (typeof iteratee !== "function") {
@@ -25,12 +29,12 @@ export const fori = (collection, iteratee, options) => {
 	let looped = false;
 
 	const loop = (target) => {
-		// 如果有迭代器或者异步迭代器代表可以循环
+		// If the target has an iterator or asyncIterator, it can be looped
 		if (target[Symbol.iterator] || target[Symbol.asyncIterator]) {
 			looped = true;
 
 			let i = 0;
-			// 如果 asyncIterator 参数为 true 或者 有 异步迭代器，执行 for await of 循环，否则执行 for of 循环
+			// If the asyncIterator parameter is true or there is an asynchronous iterator, execute the for await of loop, otherwise execute the for of loop
 			if (asyncIterator || target[Symbol.asyncIterator]) {
 				return new Promise((resolve, reject) => {
 					(async () => {
@@ -74,7 +78,7 @@ export const fori = (collection, iteratee, options) => {
 	let results = loop(collection);
 
 	if (!looped) {
-		// 因为普通对象中没有实现迭代器，这里判断是否为普通对象，如果是，就循环对象的 Object.entries 接口
+		// Because the iterator is not implemented in the ordinary object, judge whether it is an ordinary object here, if it is, loop the Object.entries interface of the object
 		if (collection instanceof Object) {
 			results = loop(Object.entries(collection));
 		}
