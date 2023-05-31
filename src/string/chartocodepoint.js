@@ -1,4 +1,5 @@
 import { conversionBase } from "../number/conversionbase.js";
+import { fori } from "../function/fori.js";
 
 /**
  * @description Returns the Unicode code point of a string.
@@ -20,17 +21,7 @@ export const charToCodePoint = (str, options) => {
 		return "";
 	}
 
-	if (!options) {
-		options = {};
-	}
-	if (!options.separator) {
-		options.separator = "";
-	}
-	if (!options.base) {
-		options.base = 16;
-	}
+	const { separator = "", base = 16 } = options || {};
 
-	return [...str]
-		.map((char) => conversionBase(char.codePointAt(0), options?.base))
-		.join(options.separator);
+	return fori(str, (char) => conversionBase(char.codePointAt(0), base)).join(separator);
 };
