@@ -1,4 +1,4 @@
-const { random } = require("xtt-utils/random/random");
+const { random } = require("xtt-utils");
 
 describe("random module", () => {
 	test("success", () => {
@@ -18,10 +18,7 @@ describe("random module", () => {
 		expect(value).toBeGreaterThanOrEqual(2);
 		expect(value).toBeLessThanOrEqual(10);
 
-		value = random(
-			1,
-			99999999999999999999999999999999999999999999999999999999999
-		);
+		value = random(1, 99999999999999999999999999999999999999999999999999999999999);
 		expect(value).toBeGreaterThanOrEqual(1);
 		expect(value).toBeLessThanOrEqual(Number.MAX_SAFE_INTEGER);
 
@@ -29,10 +26,7 @@ describe("random module", () => {
 		expect(value).toBeGreaterThanOrEqual(1);
 		expect(value).toBeLessThanOrEqual(Number.MAX_SAFE_INTEGER);
 
-		value = random(
-			-99999999999999999999999999999999999999999999999999999999999,
-			100
-		);
+		value = random(-99999999999999999999999999999999999999999999999999999999999, 100);
 		expect(value).toBeGreaterThanOrEqual(Number.MIN_SAFE_INTEGER);
 		expect(value).toBeLessThanOrEqual(100);
 

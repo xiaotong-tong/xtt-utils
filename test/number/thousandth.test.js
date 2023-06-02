@@ -1,4 +1,4 @@
-const { thousandth } = require("xtt-utils/number/thousandth");
+const { thousandth } = require("xtt-utils");
 
 describe("thousandth module", () => {
 	test("success", () => {

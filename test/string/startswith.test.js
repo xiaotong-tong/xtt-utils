@@ -1,4 +1,4 @@
-const { startsWith } = require("xtt-utils/string/startswith");
+const { startsWith } = require("xtt-utils");
 
 describe("startsWith module", () => {
 	test("success", () => {

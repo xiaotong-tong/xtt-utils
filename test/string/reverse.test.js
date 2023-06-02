@@ -1,4 +1,4 @@
-const { reverse } = require("xtt-utils/string/reverse");
+const { reverse } = require("xtt-utils");
 
 describe("revert module", () => {
 	test("success", () => {

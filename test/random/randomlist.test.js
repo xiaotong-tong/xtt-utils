@@ -1,12 +1,11 @@
-const { randomList } = require("xtt-utils/random/randomlist");
+const { randomList } = require("xtt-utils");
 
 expect.extend({
 	toBeRandomListWithinRange: (actual, min, max, count) => {
 		// 如果数组长度不等于 count，直接返回错误
 		if (actual.length !== count) {
 			return {
-				message: () =>
-					`array length is not equal!\n返回值: ${actual}\n预期结果: ${count}`,
+				message: () => `array length is not equal!\n返回值: ${actual}\n预期结果: ${count}`,
 				pass: false
 			};
 		} else {
@@ -34,8 +33,7 @@ expect.extend({
 		// 如果数组长度不等于 count，直接返回错误
 		if (actual.length !== count && count < max - min + 1) {
 			return {
-				message: () =>
-					`array length is not equal!\n返回值: ${actual}\n预期结果: ${count}`,
+				message: () => `array length is not equal!\n返回值: ${actual}\n预期结果: ${count}`,
 				pass: false
 			};
 		} else {

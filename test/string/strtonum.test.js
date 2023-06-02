@@ -1,4 +1,4 @@
-const { strToNum } = require("xtt-utils/string/strtonum");
+const { strToNum } = require("xtt-utils");
 
 describe("strToNum module", () => {
 	test("success", () => {

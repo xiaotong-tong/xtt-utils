@@ -1,12 +1,11 @@
-const { shuffle } = require("xtt-utils/array/shuffle");
+const { shuffle } = require("xtt-utils");
 
 expect.extend({
 	toBeShuffleArray: (actual, shuffledArray) => {
 		// 如果数组长度不一致，直接返回错误
 		if (actual.length !== shuffledArray.length) {
 			return {
-				message: () =>
-					`array length is not equal!\n返回值: ${actual}\n预期结果: ${shuffledArray}`,
+				message: () => `array length is not equal!\n返回值: ${actual}\n预期结果: ${shuffledArray}`,
 				pass: false
 			};
 		} else {
@@ -24,8 +23,7 @@ expect.extend({
 				};
 			} else {
 				return {
-					message: () =>
-						`array is not shuffled!\n返回值: ${actual}\n预期结果: ${shuffledArray}`,
+					message: () => `array is not shuffled!\n返回值: ${actual}\n预期结果: ${shuffledArray}`,
 					pass: false
 				};
 			}

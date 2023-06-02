@@ -1,4 +1,4 @@
-const { curry } = require("xtt-utils/fn/curry");
+const { curry } = require("xtt-utils");
 
 describe("curry module", () => {
 	test("success", () => {

@@ -1,4 +1,4 @@
-const { fori } = require("xtt-utils/fn/fori");
+const { fori } = require("xtt-utils");
 
 describe("fori module", () => {
 	test("success", async () => {
@@ -21,7 +21,7 @@ describe("fori module", () => {
 		fori(
 			{
 				a: 7,
-				b: 8,
+				b: 8
 			},
 			(item) => {
 				const [key, value] = item;
@@ -45,13 +45,13 @@ describe("fori module", () => {
 					setTimeout(() => {
 						res(3);
 					}, 1000);
-				}),
+				})
 			],
 			(v, i) => {
 				return v * i;
 			},
 			{
-				asyncIterator: true,
+				asyncIterator: true
 			}
 		);
 		expect(await count).toEqual([0, 2, 6]);

@@ -1,4 +1,4 @@
-const { fileToB64 } = require("xtt-utils/file/filetob64");
+const { fileToB64 } = require("xtt-utils");
 require("expect-puppeteer");
 const path = require("path");
 
@@ -18,9 +18,7 @@ describe("fileToB64 module", () => {
 
 		await input.uploadFile(path.resolve(__dirname, "nami.png"));
 
-		const file = await page.evaluateHandle(
-			() => document.getElementById("file").files[0]
-		);
+		const file = await page.evaluateHandle(() => document.getElementById("file").files[0]);
 
 		// 往浏览器中注入 fileToB64 方法
 		await page.addScriptTag({

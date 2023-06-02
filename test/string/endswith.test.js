@@ -1,4 +1,4 @@
-const { endsWith } = require("xtt-utils/string/endswith");
+const { endsWith } = require("xtt-utils");
 
 describe("endsWith module", () => {
 	test("success", () => {

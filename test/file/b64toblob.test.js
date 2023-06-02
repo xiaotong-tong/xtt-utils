@@ -1,4 +1,4 @@
-const { b64ToBlob } = require("xtt-utils/file/b64ToBlob");
+const { b64ToBlob } = require("xtt-utils");
 
 describe("b64ToBlob module", () => {
 	test("success", async () => {

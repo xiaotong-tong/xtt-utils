@@ -1,4 +1,4 @@
-const { trimLineStart } = require("xtt-utils/string/trimLineStart");
+const { trimLineStart } = require("xtt-utils");
 
 describe("trimLineStart module", () => {
 	test("success", () => {

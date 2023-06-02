@@ -1,4 +1,4 @@
-const { getTermLeft } = require("xtt-utils/string/getTermLeft");
+const { getTermLeft } = require("xtt-utils");
 
 describe("getTermLeft module", () => {
 	test("success", () => {

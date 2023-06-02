@@ -1,4 +1,4 @@
-const { conversionBase } = require("xtt-utils/number/conversionBase");
+const { conversionBase } = require("xtt-utils");
 
 describe("conversionBase module", () => {
 	test("success", () => {

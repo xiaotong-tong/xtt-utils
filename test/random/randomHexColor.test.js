@@ -1,4 +1,4 @@
-const { randomHexColor } = require("xtt-utils/random/randomHexColor");
+const { randomHexColor } = require("xtt-utils");
 
 expect.extend({
 	toBeHexColor: (actual) => {

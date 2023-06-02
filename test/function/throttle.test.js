@@ -1,4 +1,4 @@
-const { throttle } = require("xtt-utils/fn/throttle");
+const { throttle } = require("xtt-utils");
 
 describe("throttle module", () => {
 	test("success", () => {

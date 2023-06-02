@@ -1,4 +1,4 @@
-const { getTermRight } = require("xtt-utils/string/getTermRight");
+const { getTermRight } = require("xtt-utils");
 
 describe("getTermRight module", () => {
 	test("success", () => {
