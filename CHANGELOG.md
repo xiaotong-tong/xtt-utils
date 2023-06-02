@@ -1,5 +1,14 @@
 # 变更日志
 
+## 0.1.1 / 2023-06-02
+
+-   移除功能: 移除 nonDuplicateRandomList，合并到 randomList 中
+-   新增功能: 为 randomList 新增 unique 参数，取代原先 nonDuplicateRandomList 的功能，并更改一些参数的默认值
+-   新增功能: randomHexColor
+-   新增功能: trimLineStart
+-   新增功能: fori
+-   更新功能: 更新 index.js 内部方法的导入方式
+
 ## 0.1.0 / 2023-04-22
 
 -   移除 TypeScript，改用 JavaScript 编写
