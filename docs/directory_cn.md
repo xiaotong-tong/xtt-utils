@@ -1,5 +1,13 @@
 # 项目目录结构
 
+-   .github
+
+    该目录存放 GitHub 的配置文件。
+
+    -   workflows
+
+        该目录存放 GitHub 的工作流配置。
+
 -   .vscode
 
     该目录存放 VS Code 的配置文件。
@@ -10,13 +18,27 @@
 
     -   api
 
-        -   api.md
+        -   cn
 
-            该文件是项目 API 文档的说明文档。
+            -   api.md
 
-        该目录存放 API 文档。内部的目录结构应与 src 目录结构保持一致。但是，不需要包含 index.js 等汇总文件。
+            中文 API 文档的说明文档。
 
-    -   directory.md
+            -   \*.md
+
+            中文 API 文档的具体文档。内部的目录结构应与 src 目录结构保持一致。但是，不需要包含 index.js 等汇总文件。
+
+        -   en
+
+            -   api.md
+
+            英文 API 文档的说明文档。
+
+            -   \*.md
+
+            英文 API 文档的具体文档。内部的目录结构应与 src 目录结构保持一致。但是，不需要包含 index.js 等汇总文件。
+
+    -   directory.md && directory_cn.md
 
         该文件是项目目录结构的说明文档。
 
@@ -29,6 +51,10 @@
     -   array
 
         存放数组相关的工具函数。
+
+    -   date
+
+        存放日期相关的工具函数。
 
     -   file
 
@@ -84,6 +110,10 @@
 
     该文件包含项目的 Jest 配置。
 
+-   jest-puppeteer.config.cjs
+
+    该文件包含项目的 Jest Puppeteer 配置。
+
 -   LICENSE
 
     该文件包含项目的许可证信息。
@@ -92,7 +122,7 @@
 
     该文件包含项目的 NPM 配置。
 
--   README.md
+-   README.md && README_cn.md
 
     该文件是项目的主要说明文档，应包括项目的概述、用法示例、安装指南等。
 

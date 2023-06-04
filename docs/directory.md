@@ -1,5 +1,13 @@
 # Project Directory Structure
 
+-   .github
+
+    This directory contains the project's GitHub configuration.
+
+    -   workflows
+
+        This directory contains the project's GitHub Actions workflows.
+
 -   .vscode
 
     This directory contains the configuration files for VS Code.
@@ -10,13 +18,27 @@
 
     -   api
 
-        -   api.md
+        -   cn
 
-            This file is the documentation for the project's API.
+            -   api.md
 
-        This directory contains the API documentation. The internal directory structure should be consistent with the src directory structure. However, it does not need to include summary files such as index.js.
+                This file is the documentation for the project's API.
 
-    -   directory.md
+            -   \*.md
+
+                These files are the documentation for the project's API. The internal directory structure should be consistent with the src directory structure. However, it does not need to include summary files such as index.js.
+
+        -   en
+
+            -   api.md
+
+                This file is the documentation for the project's API.
+
+            -   \*.md
+
+                These files are the documentation for the project's API. The internal directory structure should be consistent with the src directory structure. However, it does not need to include summary files such as index.js.
+
+    -   directory.md && directory_cn.md
 
         This file is the documentation for the project directory structure.
 
@@ -29,6 +51,10 @@
     -   array
 
         This directory contains utility functions related to arrays.
+
+    -   date
+
+        This directory contains utility functions related to dates.
 
     -   file
 
@@ -84,6 +110,10 @@
 
     This file contains the project's Jest configuration.
 
+-   jest-puppeteer.config.mjs
+
+    This file contains the project's Jest Puppeteer configuration.
+
 -   LICENSE
 
     This file contains the project's license information.
@@ -92,7 +122,7 @@
 
     This file contains the project's NPM configuration.
 
--   README.md
+-   README.md && README_cn.md
 
     This file is the main documentation for the project, including an overview, usage examples, installation guide, and more.
 
