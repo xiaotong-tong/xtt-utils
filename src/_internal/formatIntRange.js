@@ -8,10 +8,10 @@ import { _toNumber } from "./toNumber.js";
  * @param {number} end
  * @returns {[number, number]} format result
  * @example
- * _formatIntRange(1, 10) // [1, 10]
- * _formatIntRange(10, 1) // [1, 10]
- * _formatIntRange(1.5, 10.9) // [2, 10]
- * _formatIntRange(-Infinity, Infinity) // [-2^53 + 1, 2^53 - 1]
+ * _formatIntRange(1, 10) // => [1, 10]
+ * _formatIntRange(10, 1) // => [1, 10]
+ * _formatIntRange(1.5, 10.9) // => [2, 10]
+ * _formatIntRange(-Infinity, Infinity) // => [-2^53 + 1, 2^53 - 1]
  */
 
 export const _formatIntRange = (start, end) => {

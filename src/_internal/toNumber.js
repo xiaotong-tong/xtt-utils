@@ -6,7 +6,7 @@
  * @param {object} [option] Options
  * @param {boolean} [option.NaNFormat=false] If true, the NaN value will be converted to 0.
  * @param {boolean} [option.int=false] If true, the value will be converted to an integer.
- * @param {"round"|"ceil"|"floor"} [option.intFormatType="round"] The type of integer conversion, the default is "round", you can choose "ceil" or "floor".
+ * @param {"round"|"ceil"|"floor"|"trunc"} [option.intFormatType="trunc"] The type of integer conversion, the default is "trunc", you can choose "round", "ceil", "floor" or "trunc
  * @returns {number}
  */
 
@@ -19,9 +19,9 @@ export const _toNumber = (value, option) => {
 
 	// Limit the value to the maximum and minimum safe integer range
 	if (value > Number.MAX_SAFE_INTEGER) {
-		value = Number.MAX_SAFE_INTEGER;
+		return Number.MAX_SAFE_INTEGER;
 	} else if (value < Number.MIN_SAFE_INTEGER) {
-		value = Number.MIN_SAFE_INTEGER;
+		return Number.MIN_SAFE_INTEGER;
 	}
 
 	if (option?.int) {
@@ -32,8 +32,11 @@ export const _toNumber = (value, option) => {
 			case "floor":
 				value = Math.floor(value);
 				break;
-			default:
+			case "round":
 				value = Math.round(value);
+				break;
+			default:
+				value = Math.trunc(value);
 				break;
 		}
 	}

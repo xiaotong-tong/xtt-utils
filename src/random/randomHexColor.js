@@ -1,3 +1,4 @@
+import { random } from "./random.js";
 /**
  * @description Generates a random hexadecimal color value
  * @description-cn 生成一个随机的十六进制颜色值
@@ -8,5 +9,5 @@
  */
 
 export const randomHexColor = () => {
-	return "#" + (~~(Math.random() * 0xffffff)).toString(16).padStart(6, "0");
+	return "#" + random(0, 0xffffff).toString(16).padStart(6, "0");
 };

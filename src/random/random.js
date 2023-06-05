@@ -8,11 +8,11 @@ import { _formatIntRange } from "../_internal/formatIntRange.js";
  * @param {number} [max = 100] maximum value
  * @returns {number} Returns the random integer
  * @example
- * random(1, 10) // 1 ~ 10
- * random(10) // 1 ~ 10
- * random() // 1 ~ 100
- * random(1, 10.5) // 1 ~ 10
- * random(1, Number.MAX_SAFE_INTEGER) // 1 ~ 2^53 - 1
+ * random(1, 10) // => 1 ~ 10
+ * random(10) // => 1 ~ 10
+ * random() // => 1 ~ 100
+ * random(1.5, 10.5) // => 2 ~ 10
+ * random(1, Infinity) // => 1 ~ 2^53 - 1
  */
 
 export const random = (min, max) => {

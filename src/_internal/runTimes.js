@@ -3,7 +3,7 @@
  * @param {Function} fn
  * @param {number} times
  */
-export const runTimes = (fn, times) => {
+export const _runTimes = (fn, times) => {
 	if (typeof fn !== "function") {
 		throw new TypeError("Expected a function");
 	}
