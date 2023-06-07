@@ -29,3 +29,5 @@
     -   [curry](./function/curry.md) 函数柯里化
     -   [compose](./function/compose.md) 函数组合
     -   [fori](./function/fori.md) 循环
+-   date
+    -   [formatDate](./date/formatDate.md) 格式化日期

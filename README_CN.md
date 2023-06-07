@@ -4,7 +4,7 @@ xtt-utils 是一个工具库，包含了一些常用的 js 工具函数。
 
 ## 国际化
 
-[简体中文](./README_CN.md)
+[简体中文](./README_CN.md) |
 [English](./README.md)
 
 ## 安装

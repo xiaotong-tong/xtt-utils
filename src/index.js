@@ -27,6 +27,8 @@ import { getTermRight } from "./string/gettermright.js";
 import { getRangeByTerm } from "./string/getrangebyterm.js";
 import { trimLineStart } from "./string/trimLineStart.js";
 
+import { formatDate } from "./date/formatDate.js";
+
 export {
 	shuffle,
 	b64ToBlob,
@@ -51,4 +53,5 @@ export {
 	getTermRight,
 	getRangeByTerm,
 	trimLineStart,
+	formatDate
 };

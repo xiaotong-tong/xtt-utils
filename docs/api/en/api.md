@@ -29,3 +29,5 @@
     -   [curry](./function/curry.md) Curry
     -   [compose](./function/compose.md) Compose
     -   [fori](./function/fori.md) Loop execution function.
+-   date
+    -   [formatDate](./date/formatDate.md) Format date

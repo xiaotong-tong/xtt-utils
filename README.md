@@ -4,7 +4,9 @@ A JavaScript utility library.
 
 ## Internationalization
 
-[简体中文](./README_CN.md)
+> This English document was translated with the help of GitHub Copilot.
+
+[简体中文](./README_CN.md) |
 [English](./README.md)
 
 ## Installation
