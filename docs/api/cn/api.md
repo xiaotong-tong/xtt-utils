@@ -17,6 +17,7 @@
     -   [trimLineStart](./string/trimLineStart.md) 删除行前的空格，保留缩进层级
 -   array
     -   [shuffle](./array/shuffle.md) 乱序数组
+    -   [sum](./array/sum.md) 求和
 -   number
     -   [conversionBase](./number/conversionBase.md) 进制转换
     -   [thousandth](./number/thousandth.md) 千分位

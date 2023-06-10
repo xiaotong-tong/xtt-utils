@@ -17,6 +17,7 @@
     -   [trimLineStart](./string/trimLineStart.md) Remove the line break at the beginning of the string
 -   array
     -   [shuffle](./array/shuffle.md) Randomly shuffle the elements in the array
+    -   [sum](./array/sum.md) Sum up
 -   number
     -   [conversionBase](./number/conversionBase.md) Number conversion base
     -   [thousandth](./number/thousandth.md) Thousands of numbers

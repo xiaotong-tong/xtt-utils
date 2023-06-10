@@ -1,13 +1,5 @@
 import { random } from "./random.js";
-
-/**
- * Get the sum of all the numbers in an array.
- * @param {number[]} list - The array of numbers to sum.
- * @returns {number} Returns the sum of all the numbers in the array.
- */
-const getListSum = (list) => {
-	return list.reduce((a, b) => a + b);
-};
+import { sum as getSumValue } from "../array/sum.js";
 
 /**
  * @description Get a random item from a list of random numbers based on the weight list.
@@ -39,7 +31,7 @@ export function weightedRandom(randomList, weightedList) {
 			randomList.length = weightedList.length;
 		}
 
-		const r = random(1, getListSum(weightedList));
+		const r = random(1, getSumValue(weightedList));
 
 		for (let i = 0; i < randomList.length; i++) {
 			sum += weightedList[i];
