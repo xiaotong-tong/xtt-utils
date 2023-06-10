@@ -2,6 +2,11 @@
 
 Generates a random hexadecimal color value
 
+## params
+
+-   [options] (object)：config options
+    -   [alpha=false] (boolean)：whether to include the alpha channel, default is false
+
 ## returns
 
 -   (string)：hexadecimal color value
@@ -10,4 +15,5 @@ Generates a random hexadecimal color value
 
 ```js
 randomHexColor(); // #e672ac
+randomHexColor({ alpha: true }); // #8b346ae5
 ```

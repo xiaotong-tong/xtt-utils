@@ -1,9 +1,9 @@
 const { randomHexColor } = require("xtt-utils");
 
 expect.extend({
-	toBeHexColor: (actual) => {
-		const pass = /^#[0-9a-fA-F]{6}$/.test(actual);
-		if (pass) {
+	toBeHexColor: (actual, alpha) => {
+		const grep = new RegExp(`^#[0-9a-fA-F]{${alpha ? 8 : 6}}$`);
+		if (grep.test(actual)) {
 			return {
 				message: () => `expected ${actual} not to be a hex color`,
 				pass: true
@@ -20,5 +20,7 @@ expect.extend({
 describe("randomHexColor module", () => {
 	test("success", () => {
 		expect(randomHexColor()).toBeHexColor();
+
+		expect(randomHexColor({ alpha: true })).toBeHexColor(true);
 	});
 });
