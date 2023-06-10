@@ -1,5 +1,6 @@
 import { shuffle } from "./array/shuffle.js";
 import { sum } from "./array/sum.js";
+import { range } from "./array/range.js";
 
 import { b64ToBlob } from "./file/b64toblob.js";
 import { fileToB64 } from "./file/filetob64.js";
@@ -33,6 +34,7 @@ import { formatDate } from "./date/formatDate.js";
 export {
 	shuffle,
 	sum,
+	range,
 	b64ToBlob,
 	fileToB64,
 	throttle,

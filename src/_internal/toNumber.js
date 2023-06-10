@@ -6,7 +6,7 @@
  * @param {object} [option] Options
  * @param {boolean} [option.NaNFormat=false] If true, the NaN value will be converted to 0.
  * @param {boolean} [option.int=false] If true, the value will be converted to an integer.
- * @param {"round"|"ceil"|"floor"|"trunc"} [option.intFormatType="trunc"] The type of integer conversion, the default is "trunc", you can choose "round", "ceil", "floor" or "trunc
+ * @param {"round"|"ceil"|"floor"|"trunc"} [option.intFormatType="trunc"] The type of integer conversion, the default is "trunc", you can choose "round", "ceil", "floor" or "trunc".
  * @returns {number}
  */
 

@@ -18,6 +18,7 @@
 -   array
     -   [shuffle](./array/shuffle.md) Randomly shuffle the elements in the array
     -   [sum](./array/sum.md) Sum up
+    -   [range](./array/range.md) Create an array of numbers in a range
 -   number
     -   [conversionBase](./number/conversionBase.md) Number conversion base
     -   [thousandth](./number/thousandth.md) Thousands of numbers

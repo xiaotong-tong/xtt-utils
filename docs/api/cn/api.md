@@ -18,6 +18,7 @@
 -   array
     -   [shuffle](./array/shuffle.md) 乱序数组
     -   [sum](./array/sum.md) 求和
+    -   [range](./array/range.md) 创建一个数字范围数组
 -   number
     -   [conversionBase](./number/conversionBase.md) 进制转换
     -   [thousandth](./number/thousandth.md) 千分位

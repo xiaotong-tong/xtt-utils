@@ -15,10 +15,11 @@ const methods = {
 		"trimLineStart",
 		"strToNum"
 	],
-	array: ["shuffle"],
+	array: ["shuffle", "range", "sum"],
 	number: ["conversionBase", "thousandth"],
 	file: ["b64ToBlob", "fileToB64"],
-	function: ["fori", "throttle", "chain", "compose", "curry"]
+	function: ["fori", "throttle", "chain", "compose", "curry"],
+	date: ["formatDate"]
 };
 
 const title = `# xttUtils

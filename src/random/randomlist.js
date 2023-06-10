@@ -1,5 +1,6 @@
 import { random } from "./random.js";
 import { shuffle } from "../array/shuffle.js";
+import { range } from "../array/range.js";
 import { _formatIntRange } from "../_internal/formatIntRange.js";
 
 /**
@@ -31,9 +32,7 @@ export const randomList = (min, max, option) => {
 		return [max];
 	}
 
-	/**
-	 * @type {number}
-	 */
+	/** @type {number} */
 	let count;
 	if (typeof option === "number") {
 		count = option;
@@ -47,9 +46,7 @@ export const randomList = (min, max, option) => {
 		return [];
 	}
 
-	/**
-	 * @type {boolean}
-	 */
+	/** @type {boolean} */
 	let unique = option?.unique ?? false;
 
 	if (!unique) {
@@ -62,10 +59,7 @@ export const randomList = (min, max, option) => {
 		// If count is greater than (max - min) / 2, then generate a random array, shuffle it, and then take the first count numbers
 		// Otherwise, generate a set, and then randomly generate a number until the length of the set reaches count
 		if (count > (max - min) / 2) {
-			let randomArr = Array.from(
-				{ length: max - min + 1 },
-				(_, i) => i + min
-			);
+			let randomArr = range(min, max);
 
 			randomArr = shuffle(randomArr);
 			if (count === undefined) {
