@@ -1,0 +1,33 @@
+name: deploy
+
+on:
+    push:
+        branches:
+            - main
+        paths:
+            - "docs/api/**" # 在 docs/api 目录下的文件发生变化时触发
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        permissions:
+            pages: write
+            id-token: write
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Use Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: "16.x"
+
+            - name: Generate md
+              run: npm run docs:generate
+
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.DEPLOY_SECRET }}
+                  publish_dir: ./docs/pages
+                  publish_branch: gh-pages

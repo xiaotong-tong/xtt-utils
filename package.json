@@ -14,7 +14,8 @@
 		"test": "jest",
 		"prebuild": "rimraf dist",
 		"build": "rollup -c rollup.config.js",
-		"eslint": "npx eslint src/**/*.js"
+		"eslint": "npx eslint src/**/*.js",
+		"docs:generate": "node ./docs/api/allToOne.cjs"
 	},
 	"exports": {
 		".": {

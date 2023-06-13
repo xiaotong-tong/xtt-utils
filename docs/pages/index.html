@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>xtt-utils</title>
+		<script src="./xtt-ui.min.js"></script>
+
+		<style>
+			body {
+				display: grid;
+				column-gap: 8px;
+				grid-template-columns: 200px 1fr;
+			}
+			#nav {
+				overflow-x: auto;
+				height: fit-content;
+				position: sticky;
+				top: 0;
+			}
+			#nav ul {
+				list-style-type: none;
+				padding-inline-start: 0;
+				margin-block: 0;
+			}
+
+			#nav p {
+				margin-block-end: 8px;
+			}
+
+			#nav a {
+				padding-inline-start: 1em;
+			}
+		</style>
+	</head>
+	<body>
+		<nav id="nav"></nav>
+		<xtt-markdown id="markdown"></xtt-markdown>
+
+		<script>
+			const nav = document.querySelector("#nav");
+			const content = document.querySelector("#markdown");
+
+			fetch("./xttUtils-cn.md")
+				.then((res) => {
+					return res.text();
+				})
+				.then((text) => {
+					content.textContent = text;
+
+					setTimeout(() => {
+						const headers = Array.from(content.headers).filter(
+							(h) => h.tagName === "H2" || h.tagName === "H3"
+						);
+
+						const ul = document.createElement("ul");
+
+						headers.forEach((h) => {
+							const li = document.createElement("li");
+							let c;
+
+							if (h.tagName === "H2") {
+								c = document.createElement("p");
+							} else {
+								c = document.createElement("a");
+								c.href = "#" + h.id;
+							}
+
+							c.textContent = h.textContent;
+							li.append(c);
+							ul.append(li);
+						});
+						nav.append(ul);
+					}, 0);
+				});
+		</script>
+	</body>
+</html>

@@ -41,5 +41,5 @@ function getContent(lang) {
 	return content;
 }
 
-fs.writeFileSync(path.join(__dirname, "./generated/xttUtils-en.md"), getContent("en"));
-fs.writeFileSync(path.join(__dirname, "./generated/xttUtils-cn.md"), getContent("cn"));
+fs.writeFileSync(path.join(__dirname, "../pages/xttUtils-en.md"), getContent("en"));
+fs.writeFileSync(path.join(__dirname, "../pages/xttUtils-cn.md"), getContent("cn"));
