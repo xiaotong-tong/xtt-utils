@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const { fori } = require("../../dist/index.cjs");
 
 const methods = {
 	random: ["random", "randomList", "weightedRandom", "randomHexColor"],
@@ -28,16 +27,17 @@ const title = `# xttUtils
 
 function getContent(lang) {
 	let content = title;
-	fori(methods, ([method, list]) => {
+	for (const [method, list] of Object.entries(methods)) {
 		content += `## ${method} Methods\n\n`;
-		fori(list, (name) => {
+		list.forEach((name) => {
 			const data = fs
 				.readFileSync(path.join(__dirname, lang ?? "en", method, name + ".md"))
 				.toString()
 				.replace(/^#/gm, "###");
 			content += data + "\n";
 		});
-	});
+	}
+
 	return content;
 }
 
