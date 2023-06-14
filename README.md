@@ -59,4 +59,4 @@ random();
 
 You can view the md documents in the docs folder [here](./docs/api/en/api.md)
 
-Alternatively,you can visit the [xtt-utils documentation website](https://xiaotong-tong.github.io/xtt-utils-docs/index.html)
+Alternatively,you can visit the [xtt-utils documentation website](https://xiaotong-tong.github.io/xtt-utils/)

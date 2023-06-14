@@ -57,4 +57,4 @@ random();
 
 可以查看 docs 文件夹内的 md 文档 [Docs](./docs/api/cn/api.md)
 
-或者访问该 [xtt-utils 文档网页](https://xiaotong-tong.github.io/xtt-utils-docs/index.html)
+或者访问该 [xtt-utils 文档网页](https://xiaotong-tong.github.io/xtt-utils/)
