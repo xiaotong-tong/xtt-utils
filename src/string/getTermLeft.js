@@ -1,4 +1,4 @@
-import { startsWith } from "./startswith.js";
+import { startsWith } from "./startsWith.js";
 
 /**
  * @description-en Get the string on the left of the matching item in the string
@@ -39,12 +39,7 @@ export const getTermLeft = (str, searchTerm, beforeWhichTimes) => {
 		}
 	}
 
-	const grep = new RegExp(
-		`.+?(?=${
-			typeof searchTerm === "string" ? searchTerm : searchTerm.source
-		})`,
-		"g"
-	);
+	const grep = new RegExp(`.+?(?=${typeof searchTerm === "string" ? searchTerm : searchTerm.source})`, "g");
 	const result = str.match(grep);
 
 	if (result === null) {

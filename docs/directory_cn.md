@@ -38,6 +38,14 @@
 
             英文 API 文档的具体文档。内部的目录结构应与 src 目录结构保持一致。但是，不需要包含 index.js 等汇总文件。
 
+        -   allToOne.cjs
+
+            该文件用于将所有 API 文档合并为一个文件。合并的文件会保存到 pages 目录下，以便 GitHub Pages 展示。
+
+    -   pages
+
+        该目录存放 GitHub Pages 的文件。该目录下的文件会在 push 到 main 分支时自动打包到 gh-pages 分支, 然后通过 GitHub Pages 展示。
+
     -   directory.md && directory_cn.md
 
         该文件是项目目录结构的说明文档。
@@ -105,6 +113,10 @@
 -   CHANGELOG.md
 
     该文件包含项目的更新日志。
+
+-   compose-dev.yaml
+
+    该文件包含项目的 Docker Compose 配置。
 
 -   jest.config.mjs
 

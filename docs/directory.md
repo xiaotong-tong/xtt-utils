@@ -38,6 +38,14 @@
 
                 These files are the documentation for the project's API. The internal directory structure should be consistent with the src directory structure. However, it does not need to include summary files such as index.js.
 
+        -   allToOne.cjs
+
+            This file is used to merge all API documentation into one file. The merged file will be saved to the pages directory for GitHub Pages to display.
+
+    -   pages
+
+        This directory contains the files for GitHub Pages. The files in this directory will be automatically packaged into the gh-pages branch when pushed to the main branch, and then displayed through GitHub Pages.
+
     -   directory.md && directory_cn.md
 
         This file is the documentation for the project directory structure.
@@ -105,6 +113,10 @@
 -   CHANGELOG.md
 
     This file contains the project's update log.
+
+-   compose-dev.yaml
+
+    This file contains the project's Docker Compose configuration for development.
 
 -   jest.config.mjs
 

@@ -54,5 +54,12 @@ export const range = (start, end, step) => {
 		intFormatType: "trunc"
 	});
 
-	return Array.from({ length: ~~((end - start) / step) + 1 }, (_, i) => i * step + start);
+	const length = ~~((end - start) / step) + 1;
+	const res = new Array(length);
+
+	for (let i = 0; i < length; i++) {
+		res[i] = i * step + start;
+	}
+
+	return res;
 };

@@ -17,11 +17,11 @@
     -   [trimLineStart](./string/trimLineStart.md) Remove the line break at the beginning of the string
 -   array
     -   [shuffle](./array/shuffle.md) Randomly shuffle the elements in the array
-    -   [sum](./array/sum.md) Sum up
     -   [range](./array/range.md) Create an array of numbers in a range
 -   number
     -   [conversionBase](./number/conversionBase.md) Number conversion base
     -   [thousandth](./number/thousandth.md) Thousands of numbers
+    -   [sum](./number/sum.md) Sum up
 -   file
     -   [b64ToBlob](./file/b64ToBlob.md) base64 to Blob
     -   [fileToB64](./file/fileToB64.md) File to base64

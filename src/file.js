@@ -1,4 +1,4 @@
-import { b64ToBlob } from "./file/b64toblob.js";
-import { fileToB64 } from "./file/filetob64.js";
+import { b64ToBlob } from "./file/b64ToBlob.js";
+import { fileToB64 } from "./file/fileToB64.js";
 
 export { b64ToBlob, fileToB64 };

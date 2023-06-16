@@ -1,4 +1,4 @@
-import { conversionBase } from "../number/conversionbase.js";
+import { conversionBase } from "../number/conversionBase.js";
 import { fori } from "../function/fori.js";
 
 /**

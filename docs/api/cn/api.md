@@ -17,11 +17,11 @@
     -   [trimLineStart](./string/trimLineStart.md) 删除行前的空格，保留缩进层级
 -   array
     -   [shuffle](./array/shuffle.md) 乱序数组
-    -   [sum](./array/sum.md) 求和
     -   [range](./array/range.md) 创建一个数字范围数组
 -   number
     -   [conversionBase](./number/conversionBase.md) 进制转换
     -   [thousandth](./number/thousandth.md) 千分位
+    -   [sum](./number/sum.md) 求和
 -   file
     -   [b64ToBlob](./file/b64ToBlob.md) base64 转 blob
     -   [fileToB64](./file/fileToB64.md) File 转 base64

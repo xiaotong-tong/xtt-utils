@@ -1,6 +1,8 @@
 /**
- * Sums up.
- * @param {...Array} values  The array or parameter list to sum up.
+ * @description Sums up
+ * @description-cn 求和
+ * @category Number
+ * @param {...number} values  The array or parameter list to sum up.
  * @returns {number} Returns the sum
  * @example
  * sum([1, 2, 3]) // 6

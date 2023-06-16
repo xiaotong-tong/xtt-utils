@@ -14,8 +14,8 @@ const methods = {
 		"trimLineStart",
 		"strToNum"
 	],
-	array: ["shuffle", "range", "sum"],
-	number: ["conversionBase", "thousandth"],
+	array: ["shuffle", "range"],
+	number: ["conversionBase", "thousandth", "sum"],
 	file: ["b64ToBlob", "fileToB64"],
 	function: ["fori", "throttle", "chain", "compose", "curry"],
 	date: ["formatDate"]

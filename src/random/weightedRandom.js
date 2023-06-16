@@ -1,5 +1,5 @@
 import { random } from "./random.js";
-import { sum as getSumValue } from "../array/sum.js";
+import { sum as getSumValue } from "../number/sum.js";
 
 /**
  * @description Get a random item from a list of random numbers based on the weight list.
