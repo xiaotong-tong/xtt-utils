@@ -390,25 +390,6 @@ range(1, 10, 7); // => [1, 8]
 range(1, -10, -3); // => [1, -2, -5, -8]
 ```
 
-### sum
-
-求和
-
-#### params
-
--   values (...Array): 需要求和的数组或参数列表
-
-#### returns
-
--   (number): 求和结果
-
-#### example
-
-```js
-sum([1, 2, 3, 4, 5]); // 15
-sum(1, 2, 3, 4, 5); // 15
-```
-
 ## number Methods
 
 ### conversionBase
@@ -458,6 +439,25 @@ thousandth(1000000.1234, 2); // "1,000,000.12"
 #### references
 
 -   MDN [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
+
+### sum
+
+求和
+
+#### params
+
+-   values (...Array): 需要求和的数组或参数列表
+
+#### returns
+
+-   (number): 求和结果
+
+#### example
+
+```js
+sum([1, 2, 3, 4, 5]); // 15
+sum(1, 2, 3, 4, 5); // 15
+```
 
 ## file Methods
 
