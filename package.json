@@ -10,8 +10,9 @@
 		"dist"
 	],
 	"scripts": {
-		"pretest": "rollup -c rollup.config.js",
+		"pretest": "npm run build",
 		"test": "jest",
+		"test:wsl": "npm run build && WSLENV=true jest",
 		"prebuild": "rimraf dist",
 		"build": "rollup -c rollup.config.js",
 		"eslint": "npx eslint src/**/*.js",

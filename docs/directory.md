@@ -114,10 +114,6 @@
 
     This file contains the project's update log.
 
--   compose-dev.yaml
-
-    This file contains the project's Docker Compose configuration for development.
-
 -   jest.config.mjs
 
     This file contains the project's Jest configuration.

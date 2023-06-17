@@ -114,10 +114,6 @@
 
     该文件包含项目的更新日志。
 
--   compose-dev.yaml
-
-    该文件包含项目的 Docker Compose 配置。
-
 -   jest.config.mjs
 
     该文件包含项目的 Jest 配置。
