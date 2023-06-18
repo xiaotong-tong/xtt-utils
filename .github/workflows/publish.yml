@@ -30,7 +30,12 @@ jobs:
               run: npm run build
 
             - name: Publish to npm
-              run: npm publish
+              run: |
+                  if [[ ${{ github.ref }} == *"alpha"* ]]; then
+                    npm publish --tag alpha
+                  else
+                    npm publish
+                  fi
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
               # run: |
