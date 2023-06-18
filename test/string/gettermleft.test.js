@@ -4,6 +4,7 @@ describe("getTermLeft module", () => {
 	test("success", () => {
 		expect(getTermLeft("abcde", "c")).toBe("ab");
 		expect(getTermLeft("abcde", "c", 2)).toBe("ab");
+		expect(getTermLeft("abcdec", "c")).toBe("ab");
 		expect(getTermLeft("abcdec", "c", 2)).toBe("abcde");
 		expect(getTermLeft("abcde", "a")).toBe("");
 		expect(getTermLeft("abcde", "a", 2)).toBe("");

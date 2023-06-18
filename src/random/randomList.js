@@ -15,8 +15,9 @@ import { _formatIntRange } from "../_internal/formatIntRange.js";
  * @returns {number[]} Returns a list of random numbers, each of which is between min and max (inclusive)
  * @see ./random.js
  * @example
- * randomList(1, 10) // [1 ~ 10]
- * randomList(1, 10, 5) // [1 ~ 10, ...*4]
+ * randomList(1, 10) // -> [1 ~ 10, ...*9]
+ * randomList(1, 10, 5) // -> [1 ~ 10, ...*4]
+ * randomList(1, 10, { count: 5, unique: true }) // -> [1 ~ 10, ...*4] (unique)
  */
 
 export const randomList = (min, max, option) => {
