@@ -1,7 +1,0 @@
-doc/
-src/
-test/
-CHANGELOG.md
-jest.config.mjs
-rollup.config.js
-TODO.md

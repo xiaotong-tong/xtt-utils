@@ -9,14 +9,19 @@ jobs:
     publish:
         runs-on: ubuntu-latest
 
+        permissions:
+            contents: read
+            packages: write
+
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
 
             - name: Setup Node.js
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v3
               with:
                   node-version: "16.x"
+                  registry-url: "https://registry.npmjs.org"
 
             - name: Install dependencies
               run: npm install
@@ -25,11 +30,12 @@ jobs:
               run: npm run build
 
             - name: Publish to npm
-              run: |
-                  if [[ ${{ github.ref }} == *"alpha"* ]]; then
-                    npm publish --tag alpha
-                  else
-                    npm publish
-                  fi
+              run: npm publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+              # run: |
+              #     if [[ ${{ github.ref }} == *"alpha"* ]]; then
+              #       npm publish --tag alpha
+              #     else
+              #       npm publish
+              #     fi
