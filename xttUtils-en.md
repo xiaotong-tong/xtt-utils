@@ -61,6 +61,7 @@ min and max parameters are consistent with the [random](./random.md) method. (ex
 #### example
 
 ```js
+randomList(1, 10); // [4, 2, 3, 7, 4, 2, 8, 9, 4, 1]
 randomList(1, 10, 5); // [8, 9, 10, 8, 10]
 randomList(1, 10, 10); // [3, 5, 4, 1, 10, 7, 6, 9, 4, 10]
 randomList(1, 10, {
