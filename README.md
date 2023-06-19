@@ -20,7 +20,7 @@ npm i xtt-utils
 ### Browser
 
 ```html
-<script src=".../xtt-utils/dist/index.min.js"></script>
+<script src="../xtt-utils/dist/index.min.js"></script>
 <!-- After importing, the xttUtils global variable will be registered on the window -->
 <script>
 	console.log(xttUtils.random());

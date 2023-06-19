@@ -18,7 +18,7 @@ npm i xtt-utils
 ### browser
 
 ```html
-<script src=".../xtt-utils/dist/index.min.js"></script>
+<script src="../xtt-utils/dist/index.min.js"></script>
 <!-- 导入后会在 window 上注册 xttUtils 全局变量 -->
 <script>
 	console.log(xttUtils.random());
