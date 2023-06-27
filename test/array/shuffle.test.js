@@ -10,7 +10,7 @@ expect.extend({
 			};
 		} else {
 			let flag = true;
-			// 遍历数组，如果有一个元素不在打乱后的数组中，则代表出bug了
+			// 遍历数组，如果有任意一个元素不在打乱后的数组中，则代表出bug了
 			for (let i = 0; i < actual.length; i++) {
 				if (!shuffledArray.includes(actual[i])) {
 					flag = false;
@@ -34,16 +34,18 @@ expect.extend({
 describe("shuffle module", () => {
 	test("success", () => {
 		expect(shuffle([1, 2, 3, 4, 5])).toBeShuffleArray([1, 2, 3, 4, 5]);
+
 		expect(shuffle([])).toBeShuffleArray([]);
+		expect(shuffle()).toBeShuffleArray([]);
 
 		const value = [1, "2", { 3: 3 }, [4, 4], 5];
 		expect(shuffle(value)).toBeShuffleArray(value);
 		// 测试是否会修改原数组
 		expect(value).toEqual([1, "2", { 3: 3 }, [4, 4], 5]);
 	});
+
 	test("warning", () => {
-		expect(shuffle()).toBeShuffleArray([]);
-		// 因为字符串也有length属性，而且也有迭代器，所以同样也会打乱哦
+		// 因为字符串也有length属性，而且也有迭代器，所以同样也会打乱
 		expect(shuffle("abcde")).toBeShuffleArray(["a", "b", "c", "d", "e"]);
 		expect(shuffle(12345)).toBeShuffleArray([]);
 

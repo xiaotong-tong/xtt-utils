@@ -29,6 +29,7 @@ jobs:
             - name: Build package
               run: npm run build
 
+              # tag 中如果包含 alpha，则发布到 alpha tag
             - name: Publish to npm
               run: |
                   if [[ ${{ github.ref }} == *"alpha"* ]]; then
@@ -38,9 +39,3 @@ jobs:
                   fi
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-              # run: |
-              #     if [[ ${{ github.ref }} == *"alpha"* ]]; then
-              #       npm publish --tag alpha
-              #     else
-              #       npm publish
-              #     fi

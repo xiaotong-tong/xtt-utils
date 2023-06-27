@@ -2,12 +2,16 @@
 
 格式化日期
 
+> 该函数仅为简单处理，如果需要更复杂的格式化，建议使用 [day.js](https://day.js.org/zh-CN/)
+
 ## params
 
--   date (Date|string|number): 日期
--   format (string|object): 格式化字符串或者格式化选项
-    -   format (string): 格式化字符串, 默认为 'YYYY-MM-DD hh:mm:ss'，可选值参考下方 format 列表
-    -   lang (string): 语言，默认为 'en'
+| 参数          | 类型                     | 默认值              | 描述                                           |
+| ------------- | ------------------------ | ------------------- | ---------------------------------------------- |
+| date          | Date \| string \| number | -                   | 日期                                           |
+| format        | string \| object         | -                   | 格式化选项， 为 string 时相当于 format.format  |
+| format.format | string                   | YYYY-MM-DD hh:mm:ss | 格式化字符串, 格式化标识符参考下方 format 区域 |
+| format.lang   | string                   | en                  | 语言                                           |
 
 ## returns
 
@@ -52,6 +56,19 @@ formatDate("2023-01-01", { format: "dddd", lang: "zh-CN" }); // => '星期日'
 > dd, ddd, dddd 选项需要传入 lang 参数才能生效, 默认为 'en'
 > 取值为 Intl.DateTimeFormat 中的 [weekday](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters) 选项
 > dd -> narrow, ddd -> short, dddd -> long
+
+**星期取值列表**
+
+| lang | format | 星期一 | 星期二  | 星期三    | 星期四   | 星期五 | 星期六   | 星期日 |
+| ---- | ------ | ------ | ------- | --------- | -------- | ------ | -------- | ------ |
+| en   | d      | 1      | 2       | 3         | 4        | 5      | 6        | 0      |
+| en   | dd     | M      | T       | W         | T        | F      | S        | S      |
+| en   | ddd    | Mon    | Tue     | Wed       | Thu      | Fri    | Sat      | Sun    |
+| en   | dddd   | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| zh   | d      | 1      | 2       | 3         | 4        | 5      | 6        | 0      |
+| zh   | dd     | 一     | 二      | 三        | 四       | 五     | 六       | 日     |
+| zh   | ddd    | 周一   | 周二    | 周三      | 周四     | 周五   | 周六     | 周日   |
+| zh   | dddd   | 星期一 | 星期二  | 星期三    | 星期四   | 星期五 | 星期六   | 星期日 |
 
 ## references
 
