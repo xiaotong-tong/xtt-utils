@@ -651,6 +651,8 @@ curry(add, 10, 20, 30, 4); // 60
 
 Format date
 
+> This function is only for simple processing. If you need more complex formatting, it is recommended to use [day.js](https://day.js.org/en/)
+
 #### params
 
 -   date (Date|string|number): Date
@@ -700,6 +702,19 @@ Supported format placeholders:
 > The dd, ddd, and dddd options require the lang parameter to be passed in to take effect. The default is 'en'.
 > The value is the weekday option in Intl.DateTimeFormat.
 > dd -> narrow, ddd -> >short, dddd -> long
+
+**weekday values**
+
+| lang | format | Mon    | Tue     | Wed       | Thu      | Fri    | Sat      | Sun    |
+| ---- | ------ | ------ | ------- | --------- | -------- | ------ | -------- | ------ |
+| en   | d      | 1      | 2       | 3         | 4        | 5      | 6        | 0      |
+| en   | dd     | M      | T       | W         | T        | F      | S        | S      |
+| en   | ddd    | Mon    | Tue     | Wed       | Thu      | Fri    | Sat      | Sun    |
+| en   | dddd   | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| zh   | d      | 1      | 2       | 3         | 4        | 5      | 6        | 0      |
+| zh   | dd     | 一     | 二      | 三        | 四       | 五     | 六       | 日     |
+| zh   | ddd    | 周一   | 周二    | 周三      | 周四     | 周五   | 周六     | 周日   |
+| zh   | dddd   | 星期一 | 星期二  | 星期三    | 星期四   | 星期五 | 星期六   | 星期日 |
 
 #### references
 
