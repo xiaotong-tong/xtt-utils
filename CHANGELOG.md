@@ -1,5 +1,13 @@
 # 变更日志
 
+## 0.1.2 / 2023-06-28
+
+-   新增功能: formatDate 格式化日期
+-   新增功能: randomHexColor 新增 alpha 参数
+-   新增功能: sum
+-   新增功能: range
+-   新增功能: conversionBase 新增参数 hasPrefix
+
 ## 0.1.1 / 2023-06-02
 
 -   移除功能: 移除 nonDuplicateRandomList，合并到 randomList 中
