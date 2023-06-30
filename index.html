@@ -35,45 +35,70 @@
 		</style>
 	</head>
 	<body>
-		<nav id="nav"></nav>
+		<nav id="nav">
+			<xtt-select id="selectedLang">
+				<option selected value="en">English</option>
+				<option value="cn">中国语</option>
+			</xtt-select>
+		</nav>
 		<xtt-markdown id="markdown"></xtt-markdown>
 
 		<script>
 			const nav = document.querySelector("#nav");
+			const selectedLang = document.querySelector("#selectedLang");
 			const content = document.querySelector("#markdown");
+			const mdCache = {
+				en: null,
+				cn: null
+			};
 
-			fetch("./xttUtils-cn.md")
-				.then((res) => {
-					return res.text();
-				})
-				.then((text) => {
-					content.textContent = text;
+			const createNav = () => {
+				nav.querySelector("ul")?.remove();
+				const headers = Array.from(content.headers).filter((h) => h.tagName === "H2" || h.tagName === "H3");
 
-					setTimeout(() => {
-						const headers = Array.from(content.headers).filter(
-							(h) => h.tagName === "H2" || h.tagName === "H3"
-						);
+				const ul = document.createElement("ul");
 
-						const ul = document.createElement("ul");
+				headers.forEach((h) => {
+					const li = document.createElement("li");
+					let c;
 
-						headers.forEach((h) => {
-							const li = document.createElement("li");
-							let c;
+					if (h.tagName === "H2") {
+						c = document.createElement("p");
+					} else {
+						c = document.createElement("a");
+						c.href = "#" + h.id;
+					}
 
-							if (h.tagName === "H2") {
-								c = document.createElement("p");
-							} else {
-								c = document.createElement("a");
-								c.href = "#" + h.id;
-							}
-
-							c.textContent = h.textContent;
-							li.append(c);
-							ul.append(li);
-						});
-						nav.append(ul);
-					}, 0);
+					c.textContent = h.textContent;
+					li.append(c);
+					ul.append(li);
 				});
+				nav.append(ul);
+			};
+
+			const getContent = (lang = "en") => {
+				if (mdCache[lang]) {
+					content.textContent = mdCache[lang];
+					setTimeout(createNav, 0);
+					return;
+				}
+				fetch(`./xttUtils-${lang}.md`)
+					.then((res) => {
+						return res.text();
+					})
+					.then((text) => {
+						mdCache[lang] = text;
+						content.textContent = text;
+
+						setTimeout(createNav, 0);
+					});
+			};
+
+			getContent("en");
+
+			selectedLang.addEventListener("change", (e) => {
+				getContent(selectedLang.value);
+			});
 		</script>
 	</body>
 </html>

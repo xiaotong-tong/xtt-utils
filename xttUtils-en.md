@@ -447,7 +447,7 @@ thousandth(1000000.1234, 2); // "1,000,000.12"
 
 -   MDN [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
 
-### # sum
+### sum
 
 Sum up.
 
