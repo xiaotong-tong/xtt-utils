@@ -31,6 +31,8 @@ import { trimLineStart } from "./string/trimLineStart.js";
 
 import { formatDate } from "./date/formatDate.js";
 
+import { css } from "./html/css.js";
+
 export {
 	shuffle,
 	range,
@@ -57,5 +59,6 @@ export {
 	getTermRight,
 	getRangeByTerm,
 	trimLineStart,
-	formatDate
+	formatDate,
+	css
 };

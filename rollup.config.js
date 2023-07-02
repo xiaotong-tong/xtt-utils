@@ -33,7 +33,9 @@ const utilsFilesNames = [
 	"file/b64ToBlob",
 	"file/fileToB64",
 	"date",
-	"date/formatDate"
+	"date/formatDate",
+	"html",
+	"html/css"
 ];
 
 let utilsFilesInput = {};
