@@ -72,6 +72,10 @@
 
         存放函数相关的工具函数。
 
+    -   html
+
+        存放 HTML 相关的工具函数。
+
     -   number
 
         存放数字相关的工具函数。
@@ -86,8 +90,10 @@
 
     -   index.js
     -   array.js
+    -   date.js
     -   file.js
     -   function.js
+    -   html.js
     -   number.js
     -   random.js
     -   string.js

@@ -5,19 +5,32 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>xtt-utils</title>
-		<script src="./xtt-ui.min.js"></script>
+		<script src="./xtt-utils-page.min.js"></script>
 
 		<style>
+			::-webkit-scrollbar {
+				width: 5px;
+				height: 5px;
+				margin: 5px 0;
+			}
+			::-webkit-scrollbar-thumb {
+				margin: 5px 0;
+				border-radius: 15px;
+				background-image: linear-gradient(#c9d1d9, #c9d1d9);
+			}
+			::-webkit-scrollbar-track {
+				margin: 5px 0;
+				border-radius: 15px;
+			}
+
 			body {
-				display: grid;
+				display: flex;
+				height: calc(100vh - 16px);
 				column-gap: 8px;
-				grid-template-columns: 200px 1fr;
 			}
 			#nav {
-				overflow-x: auto;
-				height: fit-content;
-				position: sticky;
-				top: 0;
+				overflow: auto;
+				width: 200px;
 			}
 			#nav ul {
 				list-style-type: none;
@@ -31,6 +44,12 @@
 
 			#nav a {
 				padding-inline-start: 1em;
+			}
+
+			#markdown {
+				flex: 1;
+				overflow-x: hidden;
+				overflow-y: auto;
 			}
 		</style>
 	</head>

@@ -1,4 +1,5 @@
 /**
+ * @support browser
  * @description Set or get the style of an element
  * @description-cn 设置或获取元素的样式
  * @category HTML
@@ -15,6 +16,10 @@
  * }); // -> document.body
  */
 export const css = (element, styles, value) => {
+	if (element?.nodeType !== Node.ELEMENT_NODE) {
+		throw new TypeError("element is not a ELEMENT_NODE");
+	}
+
 	if (typeof styles === "object") {
 		Object.assign(element.style, styles);
 	} else if (typeof styles === "string") {

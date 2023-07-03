@@ -18,7 +18,8 @@ const methods = {
 	number: ["conversionBase", "thousandth", "sum"],
 	file: ["b64ToBlob", "fileToB64"],
 	function: ["fori", "throttle", "chain", "compose", "curry"],
-	date: ["formatDate"]
+	date: ["formatDate"],
+	html: ["css"]
 };
 
 const title = `# xttUtils

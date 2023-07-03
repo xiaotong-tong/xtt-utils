@@ -72,6 +72,10 @@
 
         This directory contains utility functions related to functions.
 
+    -   html
+
+        This directory contains utility functions related to HTML.
+
     -   number
 
         This directory contains utility functions related to numbers.
@@ -86,8 +90,10 @@
 
     -   index.js
     -   array.js
+    -   date.js
     -   file.js
     -   function.js
+    -   html.js
     -   number.js
     -   random.js
     -   string.js
