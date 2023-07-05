@@ -28,38 +28,28 @@
 				height: calc(100vh - 16px);
 				column-gap: 8px;
 			}
-			#nav {
+			#left {
 				overflow: auto;
 				width: 200px;
 			}
-			#nav ul {
-				list-style-type: none;
-				padding-inline-start: 0;
-				margin-block: 0;
-			}
-
-			#nav p {
-				margin-block-end: 8px;
-			}
-
-			#nav a {
-				padding-inline-start: 1em;
+			#nav {
+				margin-block-start: 8px;
 			}
 
 			#markdown {
 				flex: 1;
-				overflow-x: hidden;
-				overflow-y: auto;
 			}
 		</style>
 	</head>
 	<body>
-		<nav id="nav">
+		<aside id="left">
 			<xtt-select id="selectedLang">
 				<option selected value="en">English</option>
 				<option value="cn">中国语</option>
 			</xtt-select>
-		</nav>
+			<xtt-page-nav id="nav"></xtt-page-nav>
+		</aside>
+
 		<xtt-markdown id="markdown"></xtt-markdown>
 
 		<script>
@@ -72,27 +62,40 @@
 			};
 
 			const createNav = () => {
-				nav.querySelector("ul")?.remove();
+				nav.replaceChildren();
 				const headers = Array.from(content.headers).filter((h) => h.tagName === "H2" || h.tagName === "H3");
 
-				const ul = document.createElement("ul");
+				let lastList;
 
 				headers.forEach((h) => {
-					const li = document.createElement("li");
-					let c;
-
 					if (h.tagName === "H2") {
-						c = document.createElement("p");
+						const c = document.createElement("h2");
+						c.textContent = h.textContent;
+						nav.append(c);
+						lastList = null;
 					} else {
-						c = document.createElement("a");
-						c.href = "#" + h.id;
-					}
+						if (lastList) {
+							const c = document.createElement("xtt-list-item");
+							const a = document.createElement("xtt-link");
+							a.textContent = h.textContent;
+							a.href = "#" + h.id;
+							a.setAttribute("block", "");
+							c.append(a);
+							lastList.append(c);
+						} else {
+							lastList = document.createElement("xtt-list");
 
-					c.textContent = h.textContent;
-					li.append(c);
-					ul.append(li);
+							const c = document.createElement("xtt-list-item");
+							const a = document.createElement("xtt-link");
+							a.textContent = h.textContent;
+							a.href = "#" + h.id;
+							a.setAttribute("block", "");
+							c.append(a);
+							lastList.append(c);
+							nav.append(lastList);
+						}
+					}
 				});
-				nav.append(ul);
 			};
 
 			const getContent = (lang = "en") => {

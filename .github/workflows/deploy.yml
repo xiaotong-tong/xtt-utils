@@ -6,6 +6,7 @@ on:
             - main
         paths:
             - "docs/api/**" # 在 docs/api 目录下的文件发生变化时触发
+            - "docs/pages/**" # 在 docs/pages 目录下的文件发生变化时触发
 
 jobs:
     build:
