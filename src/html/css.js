@@ -21,10 +21,17 @@ export const css = (element, styles, value) => {
 	}
 
 	if (typeof styles === "object") {
-		Object.assign(element.style, styles);
+		for (const key in styles) {
+			if (Object.hasOwnProperty.call(styles, key)) {
+				element.style.setProperty(key, styles[key]);
+			}
+		}
 	} else if (typeof styles === "string") {
 		if (value === undefined) {
-			return element.style.getPropertyValue(styles) || getComputedStyle(element).getPropertyValue(styles);
+			return (
+				element.style.getPropertyValue(styles) ||
+				getComputedStyle(element).getPropertyValue(styles)
+			);
 		} else {
 			element.style.setProperty(styles, value);
 		}
