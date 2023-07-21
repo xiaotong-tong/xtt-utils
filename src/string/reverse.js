@@ -15,8 +15,8 @@ export const reverse = (text) => {
 	}
 	let resText = "";
 
-	for (let i = text.length - 1; i >= 0; i--) {
-		resText += text[i];
+	for (const i of text) {
+		resText = i + resText;
 	}
 	return resText;
 };

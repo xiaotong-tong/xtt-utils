@@ -28,10 +28,7 @@ export const css = (element, styles, value) => {
 		}
 	} else if (typeof styles === "string") {
 		if (value === undefined) {
-			return (
-				element.style.getPropertyValue(styles) ||
-				getComputedStyle(element).getPropertyValue(styles)
-			);
+			return element.style.getPropertyValue(styles) || getComputedStyle(element).getPropertyValue(styles);
 		} else {
 			element.style.setProperty(styles, value);
 		}
