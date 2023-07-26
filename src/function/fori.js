@@ -36,32 +36,23 @@ export const fori = (collection, iteratee, options) => {
 			let i = 0;
 			// If the asyncIterator parameter is true or there is an asynchronous iterator, execute the for await of loop, otherwise execute the for of loop
 			if (asyncIterator || target[Symbol.asyncIterator]) {
-				return new Promise((resolve, reject) => {
-					(async () => {
-						const resPromiseList = [];
-						for await (const iterator of target) {
-							resPromiseList.push(
-								new Promise((res) => {
-									res(
-										iteratee.call(
-											thisArg,
-											iterator,
-											i,
-											target
-										)
-									);
-								})
-							);
-							i++;
-						}
-						Promise.all(resPromiseList)
-							.then((v) => {
-								resolve(v);
+				return new Promise(async (resolve, reject) => {
+					const resPromiseList = [];
+					for await (const iterator of target) {
+						resPromiseList.push(
+							new Promise((res) => {
+								res(iteratee.call(thisArg, iterator, i, target));
 							})
-							.catch((e) => {
-								reject(e);
-							});
-					})();
+						);
+						i++;
+					}
+					Promise.all(resPromiseList)
+						.then((v) => {
+							resolve(v);
+						})
+						.catch((e) => {
+							reject(e);
+						});
 				});
 			} else {
 				const resList = [];
