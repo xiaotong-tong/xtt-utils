@@ -6,6 +6,7 @@
 	"main": "dist/index.cjs",
 	"module": "dist/index.esm.js",
 	"browser": "dist/index.min.js",
+	"types": "dist/index.d.ts",
 	"files": [
 		"dist"
 	],
@@ -22,7 +23,8 @@
 		".": {
 			"import": "./dist/index.esm.js",
 			"require": "./dist/index.cjs",
-			"default": "./dist/index.min.js"
+			"default": "./dist/index.min.js",
+			"types": "./dist/index.d.ts"
 		},
 		"./*": {
 			"import": "./dist/esm/*.js",
@@ -51,6 +53,7 @@
 		"jest-puppeteer": "^9.0.0",
 		"prettier": "^2.8.8",
 		"rimraf": "^5.0.1",
-		"rollup": "^3.19.1"
+		"rollup": "^3.19.1",
+		"rollup-plugin-copy": "^3.4.0"
 	}
 }

@@ -1,4 +1,5 @@
 import terser from "@rollup/plugin-terser";
+import copy from "rollup-plugin-copy";
 
 const utilsFilesNames = [
 	"number",
@@ -97,7 +98,13 @@ const indexMinFile = {
 			name: "xttUtils"
 		}
 	],
-	plugins: [terser()]
+	plugins: [
+		terser(),
+		// 顺带复制一份声明文件
+		copy({
+			targets: [{ src: "src/index.d.ts", dest: "dist" }]
+		})
+	]
 };
 
 export default [indexFile, utilsFiles, indexMinFile];
