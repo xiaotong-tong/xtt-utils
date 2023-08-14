@@ -3,7 +3,7 @@
  * @description-cn 开启链式调用，必须调用 value 方法获取最终的值
  * @category Function
  * @param {object} [self=this] The object of the chainable sequence, default is this
- * @param {*} [initValue] The initial value of the chainable sequence, default is undefined
+ * @param {*} [initValue] The initial value of the chainable sequence
  *
  * If only one parameter is passed in and the parameter is not an object, the parameter will be used as the initValue value.
  * If the passed-in is an object, the object will be used as the self value
@@ -36,9 +36,7 @@ export function chain(self, initValue) {
 					return proxyed;
 				};
 			} else {
-				console.error(
-					new Error(`The ${prop} method is not a function`)
-				);
+				console.error(new Error(`The ${prop} method is not a function`));
 				return () => proxyed;
 			}
 		}

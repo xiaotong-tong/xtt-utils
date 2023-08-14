@@ -4,8 +4,9 @@ import { random } from "../random/random.js";
  * @description Shuffle an array
  * @description-cn 乱序数组
  * @category Array
- * @param {any[]} list The array to shuffle
- * @returns {any[]} Returns the new shuffled array
+ * @template T
+ * @param {T[]} list The array to shuffle
+ * @returns {T[]} Returns the new shuffled array
  * @example
  * shuffle([1, 2, 3, 4, 5]) // [2, 4, 1, 5, 3]
  */

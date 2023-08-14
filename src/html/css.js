@@ -4,7 +4,7 @@
  * @description-cn 设置或获取元素的样式
  * @category HTML
  * @param {HTMLElement} element
- * @param {object | string} styles - If it is an object, it will be set as the style of the element. If it is a string, it will be used as the style name to get or set the style value.
+ * @param {object | string} styles - If it is an object, the key is the style name, and the value is the style value. If it is a string, it will be used as the style name to get or set the style value.
  * @param {string} value - If styles is a string, value will be used as the style value to set.
  * @returns {HTMLElement | string} - If get, return the style value, otherwise return the element itself.
  * @example

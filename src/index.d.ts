@@ -2,39 +2,36 @@ declare module "xtt-utils" {
 	/**
 	 * @description Create an array of numbers in the range [start, end] with step.
 	 * @description-cn 创建一个在 [start, end] 范围内的数字数组，步长为 step
-	 * @category Array
 	 * @param {number} [start=0] The start of the range.
-	 * @param {number} end The end of the range.
+	 * @param {number} [end] The end of the range.
 	 * @param {number} [step=1] The value to increment or decrement by.
 	 * @returns {Array} Returns the range of numbers.
+	 *
+	 * If end is not specified, it's set to start with start then set to 0.
+	 * If step is not specified, it's set to 1 when start is less than end, otherwise it's set to -1.
+	 *
 	 * @example
 	 * range(1, 10, 7) // => [1, 8]
 	 * range(10) // => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 	 * range(-10) // => [0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10]
 	 * range(1, -10, -3) // => [1, -2, -5, -8]
 	 */
-	export function range(start: number, end: number): number[];
+	export function range(start?: number, end?: number, step?: number): number[];
 
 	/**
 	 * @description Shuffle an array
 	 * @description-cn 乱序数组
-	 * @category Array
-	 * @param {any[]} list The array to shuffle
-	 * @returns {any[]} Returns the new shuffled array
+	 * @template T
+	 * @param {T[]} list The array to shuffle
+	 * @returns {T[]} Returns the new shuffled array
 	 * @example
 	 * shuffle([1, 2, 3, 4, 5]) // [2, 4, 1, 5, 3]
 	 */
-	export function shuffle(arr: any[]): any[];
-
-	interface FormatOptions {
-		format: string;
-		lang: string;
-	}
+	export function shuffle<T>(list: T[]): T[];
 
 	/**
 	 * @description Format a date
 	 * @description-cn 格式化日期
-	 * @category Date
 	 * @param {Date | string | number} date The date to format.
 	 * @param {string | object} format If format is a string, it will be automatically changed to { format: input }
 	 * @param {string} [format.format="YYYY-MM-DD hh:mm:ss"] format string like 'YYYY-MM-DD hh:mm:ss'
@@ -45,7 +42,15 @@ declare module "xtt-utils" {
 	 * formatDate("2023-01-01", "dddd") // => 'Sunday'
 	 * formatDate("2023-01-01", { format: "dddd", lang: "zh-CN" }) // => '星期日'
 	 */
-	export function formatDate(date: Date | string | number, format: string | FormatOptions): string;
+	export function formatDate(
+		date: Date | string | number,
+		format:
+			| string
+			| {
+					format: string;
+					lang?: string;
+			  }
+	): string;
 
 	/**
 	 * @callback FormatFn
@@ -57,12 +62,18 @@ declare module "xtt-utils" {
 	 * @returns {string} formatted date string
 	 */
 
-	type FormatFn = (format: string | FormatOptions) => string;
+	type FormatFn = (
+		format:
+			| string
+			| {
+					format: string;
+					lang?: string;
+			  }
+	) => string;
 
 	/**
 	 * @description Format a date
 	 * @description-cn 格式化日期
-	 * @category Date
 	 * @param {Date | string | number} date The date to format.
 	 * @returns {FormatFn} return a partial function with the date fixed.
 	 * @example
@@ -75,7 +86,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Converts a base64 string to a Blob object.
 	 * @description-cn 将base64字符串转换为Blob对象
-	 * @category File
 	 * @param {string} b64Data base64 string
 	 * @returns {Promise<Blob>} promise of Blob object
 	 * @example
@@ -88,7 +98,6 @@ declare module "xtt-utils" {
 	 * @support only support browser, because FileReader is not supported in nodejs
 	 * @description Converts File object to base64 string.
 	 * @description-cn 将 File 对象转换为 base64
-	 * @category File
 	 * @param {File} file File Object
 	 * @returns {Promise<string>} promise of base64 string
 	 */
@@ -97,9 +106,8 @@ declare module "xtt-utils" {
 	/**
 	 * @description Open chainable sequence, you must call the value method to get the final value
 	 * @description-cn 开启链式调用，必须调用 value 方法获取最终的值
-	 * @category Function
 	 * @param {object} [self=this] The object of the chainable sequence, default is this
-	 * @param {*} [initValue] The initial value of the chainable sequence, default is undefined
+	 * @param {*} [initValue] The initial value of the chainable sequence
 	 *
 	 * If only one parameter is passed in and the parameter is not an object, the parameter will be used as the initValue value.
 	 * If the passed-in is an object, the object will be used as the self value
@@ -108,12 +116,11 @@ declare module "xtt-utils" {
 	 * @example
 	 * chain(xttUtils, "Hello World!").reverse().reverse().getTermRight(" ").endsWith("World").value() // true
 	 */
-	export function chain(self?: object, initValue?: any): any;
+	export function chain<T = this>(self?: T, initValue?: any): Proxy<T>;
 
 	/**
 	 * @description Compose function from right to left
 	 * @description-cn 组合函数 从右到左依次执行函数组合
-	 * @category Function
 	 * @param  {...Function} fns All functions to be combined must be single-parameter functions, and the last function can be a multi-parameter function
 	 * @returns {Function} The function after composition
 	 * @example
@@ -127,7 +134,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Currying function
 	 * @description-cn 函数柯里化
-	 * @category Function
 	 * @param {Function} fn The function to be curried
 	 * @param  {...any} [args] The arguments of the function to be curried
 	 * @returns {Function | any} Curried function, if the parameters are enough, return the result of the function execution
@@ -147,7 +153,10 @@ declare module "xtt-utils" {
 	 * curriedAdd(_, _, 3)(_, 2)(1); // 6
 	 * curry(add, 10, 20, 30, 4); // 60
 	 */
-	export function curry(fn: Function, ...args: any[]): Function | any;
+	export const curry: {
+		(fn: Function, ...args: any[]): Function | any;
+		placeholder: symbol;
+	};
 
 	/**
 	 * @callback Iteratee
@@ -163,7 +172,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Loop through the target
 	 * @description-cn 循环遍历目标
-	 * @category Function
 	 * @param {*} collection The target to be looped through
 	 * @param {Iteratee} iteratee The function to be executed on each iteration of the loop
 	 * @param {object} [options] The options for the loop
@@ -180,36 +188,44 @@ declare module "xtt-utils" {
 	/**
 	 * @description throttle function
 	 * @description-cn 节流函数
-	 * @category Function
 	 * @param { Function } func  The function to be throttled
 	 * @param { number} delay The delay time
 	 * @return { Function } Returns the throttled function
 	 */
-	export function throttle(fn: Function, delay: number): Function;
+	export function throttle(func: Function, delay: number): Function;
 
 	/**
 	 * @support browser
-	 * @description Set or get the style of an element
-	 * @description-cn 设置或获取元素的样式
-	 * @category HTML
+	 * @description get the style of an element
+	 * @description-cn 获取元素的样式
 	 * @param {HTMLElement} element
-	 * @param {object | string} styles - If it is an object, it will be set as the style of the element. If it is a string, it will be used as the style name to get or set the style value.
-	 * @param {string} value - If styles is a string, value will be used as the style value to set.
-	 * @returns {HTMLElement | string} - If get, return the style value, otherwise return the element itself.
+	 * @param {string} styles - the style name to get  the style value.
+	 * @returns {string} - return the style value
+	 * @example
+	 * css(document.body, "font-size"); // -> 16px
+	 */
+	export function css(element: HTMLElement, styles: string): string;
+
+	/**
+	 * @support browser
+	 * @description Set the style of an element
+	 * @description-cn 设置元素的样式
+	 * @param {HTMLElement} element
+	 * @param {object | string} styles - If it is an object, the key is the style name, and the value is the style value. If it is a string, it is the style name.
+	 * @param {string} value - the style value to set.
+	 * @returns {HTMLElement} - return the element itself.
 	 * @example
 	 * css(document.body, "font-size", "16px"); // -> document.body
-	 * css(document.body, "font-size"); // -> 16px
 	 * css(document.body, {
 	 *     fontSize: "16px",
 	 *     color: "red"
 	 * }); // -> document.body
 	 */
-	export function css(element: HTMLElement, styles: object | string, value?: string): HTMLElement | string;
+	export function css(element: HTMLElement, styles: { [Prop: string]: string } | string, value?: string): HTMLElement;
 
 	/**
 	 * @description Converts a number to a string of the specified base
 	 * @description-cn 将数字转换为指定进制的字符串
-	 * @category Number
 	 * @param {number} num The number to convert
 	 * @param {2 | 8 | 10 | 16} [base=10] The base to which to convert the number. Must be one of 2, 8, 10, or 16. Defaults to 10.
 	 * @param {boolean} [hasPrefix=true] Whether to add the base identifier to the string. Defaults to true.
@@ -225,7 +241,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Sums up
 	 * @description-cn 求和
-	 * @category Number
 	 * @param {...number} values  The array or parameter list to sum up.
 	 * @returns {number} Returns the sum
 	 * @example
@@ -238,7 +253,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Converts a number to a string with thousand separators
 	 * @description-cn 将数字转换为带千分位分隔符的字符串
-	 * @category Number
 	 * @param {number} num The number to convert
 	 * @param {number} [maximumFractionDigits=20] The maximum number of digits after the decimal point
 	 * @returns {string} Returns a string with thousand separators
@@ -251,7 +265,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Generate a random integer between min and max (inclusive)
 	 * @description-cn 生成一个介于 min 和 max 之间的随机整数
-	 * @category Random
 	 * @param {number} [min = 1] minimum value
 	 * @param {number} [max = 100] maximum value
 	 * @returns {number} Returns the random integer
@@ -267,7 +280,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Generates a random hexadecimal color value
 	 * @description-cn 生成一个随机的十六进制颜色值
-	 * @category Random
 	 * @param {object} [options] The options object
 	 * @param {boolean} [options.alpha=false] Whether to include alpha channel
 	 * @returns {string} Returns the random hexadecimal color value
@@ -280,7 +292,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Generate a list of random numbers
 	 * @description-cn 生成一个随机数列表
-	 * @category Random
 	 * @param {number} [min=1] The minimum value of the range
 	 * @param {number} [max=10] The maximum value of the range
 	 * @param {number|object} [option] Options for generating the list. If it is a number, it represents the number of items in the list.
@@ -302,7 +313,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Get a random item from a list of random numbers based on the weight list.
 	 * @description-cn 获取权重随机数
-	 * @category Random
 	 * @param {any[] | Object<string,number>} randomList The list of items to choose from.
 	 * @param {number[]} [weightedList] The list of weights to apply to each item.
 	 * When randomList is an object, the weightedList will be ignored. The keys of the object are the items to choose from, and the values are the weights to apply to each item.
@@ -316,7 +326,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Returns the Unicode code point of a string.
 	 * @description-cn 返回一个字符串的 Unicode 编码点。
-	 * @category String
 	 * @param {string} str The string to convert
 	 * @param {Object} [options] The options object
 	 * @param {string} [options.separator=""] The separator of the converted result, default value is ""
@@ -332,7 +341,6 @@ declare module "xtt-utils" {
 	/**
 	 * Determines whether a string ends with the string or regular expression specified.
 	 * @description-cn 判断字符串是否以指定的字符串或正则表达式匹配的字符串结尾。
-	 * @category String
 	 * @param {string} str - The string to search.
 	 * @param {string | RegExp} suffix - The string or regular expression to match the end of the string.
 	 * @param {number} [endPosition] - The index at which to end the search.
@@ -350,7 +358,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Get the string in a range of strings.
 	 * @description-cn 获取字符串中某个范围内的字符串。
-	 * @category String
 	 * @param {string} str the string to search.
 	 * @param {[string | RegExp, string | RegExp]} term the string or regular expression to match the range of the string.
 	 * @returns {string} Returns the string in a range of strings.
@@ -364,7 +371,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description-en Get the string on the left of the matching item in the string
 	 * @description-cn 获取字符串中匹配项左侧的字符串
-	 * @category String
 	 * @param {string} str the string to search
 	 * @param {string | RegExp} searchTerm the string or regular expression to match the string
 	 * @param {number} [beforeWhichTimes=1] the number of times to match before stopping, default is 1,
@@ -383,7 +389,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Get the string right of the matching item in the string.
 	 * @description-cn 获取字符串中匹配项右侧的字符串
-	 * @category String
 	 * @param {string} str The string to search
 	 * @param {string | RegExp} searchTerm The string or regular expression to match the right of the string.
 	 * @param {number} [afterWhichTimes] The number of times to match after stopping, default is 1,
@@ -402,7 +407,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Reverse a string.
 	 * @description-cn 反转字符串
-	 * @category String
 	 * @param {string} text
 	 * @returns {string} reverse text
 	 * @example
@@ -414,7 +418,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description Determines whether a string starts with the string or regular expression specified.
 	 * @description-cn 判断字符串是否以指定的字符串或正则表达式匹配的字符串开头。
-	 * @category String
 	 * @param {string} str The string to search.
 	 * @param {string | RegExp} prefix The string or regular expression to match the beginning of the string.
 	 * @param {number} [startPosition] The index at which to begin search.
@@ -432,7 +435,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description string to number
 	 * @description-cn 将字符串转换为数字
-	 * @category String
 	 * @param {string} str
 	 * @returns {number}
 	 * @example
@@ -445,7 +447,6 @@ declare module "xtt-utils" {
 	/**
 	 * @description-en Delete the leading spaces of the line, keep the indent level, if it is multiple lines, then delete the minimum common space number of all lines
 	 * @description-cn 删除行前的空格，保留缩进层级，如果是多行，那么会删除所有行的最小共有空格数
-	 * @category String
 	 * @param {string} str
 	 * @param {object} options
 	 * @param {boolean} [options.removeFirstEmptyLine=false] Whether to delete the empty line of the first line. The default value is false
