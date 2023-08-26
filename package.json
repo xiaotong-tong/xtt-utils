@@ -54,6 +54,6 @@
 		"prettier": "^2.8.8",
 		"rimraf": "^5.0.1",
 		"rollup": "^3.19.1",
-		"rollup-plugin-copy": "^3.4.0"
+		"rollup-plugin-dts": "^6.0.0"
 	}
 }

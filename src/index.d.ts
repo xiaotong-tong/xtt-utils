@@ -116,7 +116,7 @@ declare module "xtt-utils" {
 	 * @example
 	 * chain(xttUtils, "Hello World!").reverse().reverse().getTermRight(" ").endsWith("World").value() // true
 	 */
-	export function chain<T = this>(self?: T, initValue?: any): Proxy<T>;
+	export function chain<T>(self?: T, initValue?: any): T;
 
 	/**
 	 * @description Compose function from right to left

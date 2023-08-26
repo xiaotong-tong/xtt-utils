@@ -1,5 +1,5 @@
 import terser from "@rollup/plugin-terser";
-import copy from "rollup-plugin-copy";
+import { dts } from "rollup-plugin-dts";
 
 const utilsFilesNames = [
 	"number",
@@ -98,13 +98,14 @@ const indexMinFile = {
 			name: "xttUtils"
 		}
 	],
-	plugins: [
-		terser(),
-		// 顺带复制一份声明文件
-		copy({
-			targets: [{ src: "src/index.d.ts", dest: "dist" }]
-		})
-	]
+	plugins: [terser()]
 };
 
-export default [indexFile, utilsFiles, indexMinFile];
+// 打包 typescript 声明文件
+const dtsFile = {
+	input: "src/index.d.ts",
+	output: [{ file: "dist/index.d.ts", format: "es" }],
+	plugins: [dts()]
+};
+
+export default [indexFile, utilsFiles, indexMinFile, dtsFile];
