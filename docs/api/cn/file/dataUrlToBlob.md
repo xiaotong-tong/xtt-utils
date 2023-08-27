@@ -1,10 +1,10 @@
-# b64ToBlob
+# dataUrlToBlob
 
-将 base64 字符串转换为 Blob 对象。
+将 data url 字符串转换为 Blob 对象
 
 ## params
 
--   b64Data (string)：base64 字符串
+-   data (string)：data url 字符串
 
 ## returns
 

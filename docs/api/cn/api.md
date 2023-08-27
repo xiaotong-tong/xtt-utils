@@ -23,8 +23,9 @@
     -   [thousandth](./number/thousandth.md) 千分位
     -   [sum](./number/sum.md) 求和
 -   file
-    -   [b64ToBlob](./file/b64ToBlob.md) base64 转 blob
-    -   [fileToB64](./file/fileToB64.md) File 转 base64
+    -   [dataUrlToBlob](./file/dataUrlToBlob.md) 将 data url 字符串转换为 Blob 对象
+    -   [toB64](./file/toB64.md) 将输入转换为 base64 字符串
+    -   [toDataUrl](./file/toDataUrl.md) 将输入转换为 data url 字符串
 -   function
     -   [chain](./function/chain.md) 函数链式调用
     -   [throttle](./function/throttle.md) 函数节流

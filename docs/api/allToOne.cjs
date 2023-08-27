@@ -16,7 +16,7 @@ const methods = {
 	],
 	array: ["shuffle", "range"],
 	number: ["conversionBase", "thousandth", "sum"],
-	file: ["b64ToBlob", "fileToB64"],
+	file: ["toB64", "dataUrlToBlob", "toDataUrl"],
 	function: ["fori", "throttle", "chain", "compose", "curry"],
 	date: ["formatDate"],
 	html: ["css"]

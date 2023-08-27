@@ -1,4 +1,5 @@
-import { b64ToBlob } from "./file/b64ToBlob.js";
-import { fileToB64 } from "./file/fileToB64.js";
+import { dataUrlToBlob } from "./file/dataUrlToBlob.js";
+import { toDataUrl } from "./file/toDataUrl.js";
+import { toB64 } from "./file/toB64.js";
 
-export { b64ToBlob, fileToB64 };
+export { dataUrlToBlob, toDataUrl, toB64 };

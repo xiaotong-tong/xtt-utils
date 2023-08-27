@@ -84,24 +84,42 @@ declare module "xtt-utils" {
 	export function formatDate(date: Date): FormatFn;
 
 	/**
-	 * @description Converts a base64 string to a Blob object.
-	 * @description-cn 将base64字符串转换为Blob对象
-	 * @param {string} b64Data base64 string
+	 * @description Converts a data url string to a Blob object.
+	 * @description-cn 将 data url 字符串转换为 Blob 对象
+	 * @param {string} data data url string
 	 * @returns {Promise<Blob>} promise of Blob object
 	 * @example
 	 * b64ToBlob("data:image/png;base64,...")
 	 */
 
-	export function b64ToBlob(b64Data: string): Promise<Blob>;
+	export function dataUrlToBlob(data: string): Promise<Blob>;
 
 	/**
 	 * @support only support browser, because FileReader is not supported in nodejs
-	 * @description Converts File object to base64 string.
-	 * @description-cn 将 File 对象转换为 base64
-	 * @param {File} file File Object
+	 * @description Converts something to a base64 string.
+	 * @description-cn 将输入转换为 base64
+	 * @param {input} input The input to convert
 	 * @returns {Promise<string>} promise of base64 string
 	 */
-	export function fileToB64(file: File): Promise<string>;
+	export function toB64(input: File | Blob | string | number): Promise<string>;
+
+	/**
+	 * @description Converts something to a data url string.
+	 * @description-cn 将输入转换为 data url 字符串
+	 * @param {string | number | File | Blob} input The input to convert
+	 * @param {boolean} options.base64 output value is base64 encoded or not, default is true. but only works when input is string or number
+	 * @param {string} options.mime mime type of output data url, default is "text/plain". but only works when input is string or number
+	 * @returns {Promise<string>} promise of data url string
+	 * @example
+	 * toDataUrl("hello world") // "data:text/plain;base64,aGVsbG8gd29ybGQ="
+	 * toDataUrl("hello world", { base64: false }) // "data:text/plain,hello world"
+	 * toDataUrl("hello world", { mime: "text/html" }) // "data:text/html;base64,aGVsbG8gd29ybGQ="
+	 */
+
+	export function toDataUrl(
+		input: string | number | File | Blob,
+		options?: { base64?: boolean = true; mime?: string = "text/plain" }
+	): Promise<string>;
 
 	/**
 	 * @description Open chainable sequence, you must call the value method to get the final value

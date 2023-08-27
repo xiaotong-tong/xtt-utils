@@ -1,10 +1,10 @@
-# b64ToBlob
+# dataUrlToBlob
 
-Converts a base64 string to a Blob object.
+Convert data url string to Blob object
 
 ## params
 
--   b64Data (string)：base64 string
+-   data (string)：data url string
 
 ## returns
 

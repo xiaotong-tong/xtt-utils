@@ -31,8 +31,9 @@ const utilsFilesNames = [
 	{ value: "function/compose", alias: "fn/compose" },
 	{ value: "function/fori", alias: "fn/fori" },
 	"file",
-	"file/b64ToBlob",
-	"file/fileToB64",
+	"file/dataUrlToBlob",
+	"file/toDataUrl",
+	"file/toB64",
 	"date",
 	"date/formatDate",
 	"html",
@@ -74,17 +75,17 @@ const indexFile = {
 			file: "dist/index.js",
 			format: "umd",
 			name: "xttUtils",
-			banner: `/**\n * xttUtils v0.1.1\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
+			banner: `/**\n * xttUtils v0.1.3\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
 		},
 		{
 			file: "dist/index.cjs",
 			format: "cjs",
-			banner: `/**\n * xttUtils v0.1.1\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
+			banner: `/**\n * xttUtils v0.1.3\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
 		},
 		{
 			file: "dist/index.esm.js",
 			format: "esm",
-			banner: `/**\n * xttUtils v0.1.1\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
+			banner: `/**\n * xttUtils v0.1.3\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
 		}
 	]
 };

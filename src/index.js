@@ -1,8 +1,9 @@
 import { shuffle } from "./array/shuffle.js";
 import { range } from "./array/range.js";
 
-import { b64ToBlob } from "./file/b64ToBlob.js";
-import { fileToB64 } from "./file/fileToB64.js";
+import { dataUrlToBlob } from "./file/dataUrlToBlob.js";
+import { toDataUrl } from "./file/toDataUrl.js";
+import { toB64 } from "./file/toB64.js";
 
 import { throttle } from "./function/throttle.js";
 import { chain } from "./function/chain.js";
@@ -36,8 +37,9 @@ import { css } from "./html/css.js";
 export {
 	shuffle,
 	range,
-	b64ToBlob,
-	fileToB64,
+	dataUrlToBlob,
+	toDataUrl,
+	toB64,
 	throttle,
 	chain,
 	curry,

@@ -23,8 +23,9 @@
     -   [thousandth](./number/thousandth.md) Thousands of numbers
     -   [sum](./number/sum.md) Sum up
 -   file
-    -   [b64ToBlob](./file/b64ToBlob.md) base64 to Blob
-    -   [fileToB64](./file/fileToB64.md) File to base64
+    -   [dataUrlToBlob](./file/dataUrlToBlob.md) Convert data url string to Blob object
+    -   [toB64](./file/toB64.md) Convert input to base64 string.
+    -   [toDataUrl](./file/toDataUrl.md) Convert input to data url string
 -   function
     -   [chain](./function/chain.md) Function chaining
     -   [throttle](./function/throttle.md) Throttle
