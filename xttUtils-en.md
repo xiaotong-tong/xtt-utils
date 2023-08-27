@@ -468,13 +468,36 @@ sum(1, 2, 3, 4, 5); // 15
 
 ## file Methods
 
-### b64ToBlob
+### toB64
 
-Converts a base64 string to a Blob object.
+Convert input to base64 string.
+
+> warning
+>
+> This functino is supported in browser environment only when input is `File` or `Blob`.
+> Not supported in node.js environment. Because `FileReader` is not a global object in node.js.
 
 #### params
 
--   b64Data (string)：base64 string
+-   input (File | Blob | string | number): input
+
+#### returns
+
+-   (Promise<string>): promise of the base64 string
+
+#### examples
+
+```javascript
+toB64("hello world"); // "aGVsbG8gd29ybGQ="
+```
+
+### dataUrlToBlob
+
+Convert data url string to Blob object
+
+#### params
+
+-   data (string)：data url string
 
 #### returns
 
@@ -486,22 +509,33 @@ Usesd `fetch` API, so compatibility should be considered when using in node.js e
 
 See: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 
-### fileToB64
+### toDataUrl
 
-Converts a file Object to a base64 string.
+Convert input to data url string
 
 > warning
 >
-> This functino is supported in browser environment only.
-> Not supported in node.js environment. Because `File` and `FileReader` is not a global object in node.js.
+> This functino is supported in browser environment only when input is `File` or `Blob`.
+> Not supported in node.js environment. Because `FileReader` is not a global object in node.js.
 
 #### params
 
--   file (File): File object
+-   input (File | Blob | string | number): input
+-   [options] (object): optional
+    -   [options.mimeType="text/plain"] (string): specify the mime type of data url
+    -   [options.base64=true] (boolean): whether to return base64 string
 
 #### returns
 
--   (Promise<string>): promise of the base64 string
+-   (Promise<string>): promise of the data url string
+
+#### examples
+
+```javascript
+toDataUrl("hello world"); // "data:text/plain;base64,aGVsbG8gd29ybGQ="
+toDataUrl("hello world", { base64: false }); // "data:text/plain,hello world"
+toDataUrl("hello world", { mime: "text/html" }); // "data:text/html;base64,aGVsbG8gd29ybGQ="
+```
 
 ## function Methods
 
