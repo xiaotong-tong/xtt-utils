@@ -1,5 +1,18 @@
 # 变更日志
 
+## feature
+
+-   新增功能：toB64
+-   新增功能：toDataUrl
+-   新增功能：dataUrlToBlob
+-   删除功能：fileToB64，功能合并到 toB64 中
+-   删除功能：b64ToBlob，功能修改为 dataUrlToBlob
+
+## 0.1.3 / 2023-08-26
+
+-   新增功能: css
+-   添加 index.d.ts 文件，用于 TypeScript 项目的类型支持
+
 ## 0.1.2 / 2023-06-28
 
 -   新增功能: formatDate 格式化日期

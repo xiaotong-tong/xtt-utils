@@ -19,12 +19,12 @@ describe("toB64 module", () => {
 		await input.uploadFile(path.resolve(__dirname, "nami.png"));
 
 		// 往浏览器中注入 toB64 方法
+		// 因为 toB64 方法依赖于 toDataUrl 方法, 所以也要注入
 		await page.addScriptTag({
 			content: `var toDataUrl = ${toDataUrl.toString()};
 					var toB64 = ${toB64.toString()};`
 		});
 
-		console.log(input);
 		const b64 = await page.evaluate(() => {
 			const file = document.querySelector("#file").files[0];
 			return toB64(file);

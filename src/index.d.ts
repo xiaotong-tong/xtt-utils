@@ -118,7 +118,7 @@ declare module "xtt-utils" {
 
 	export function toDataUrl(
 		input: string | number | File | Blob,
-		options?: { base64?: boolean = true; mime?: string = "text/plain" }
+		options?: { base64?: boolean; mime?: string }
 	): Promise<string>;
 
 	/**

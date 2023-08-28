@@ -100,6 +100,10 @@
 
         These are summary files used to export all utility functions within a given scope.
 
+    -   index.d.ts
+
+        This file is used to provide type support for TypeScript projects.
+
 -   test
 
     This directory contains test code. The internal directory structure should be consistent with the src directory structure. However, it does not need to include summary files such as index.js
