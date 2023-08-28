@@ -3,3 +3,5 @@ dist/
 package-lock.json
 docs/pages/xttUtils-*.md
 .vscode/
+xtt-utils-*.tar.gz
+xtt-utils-*.zip
