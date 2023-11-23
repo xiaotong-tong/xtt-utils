@@ -1,5 +1,8 @@
 import terser from "@rollup/plugin-terser";
 import { dts } from "rollup-plugin-dts";
+import packageJson from "./package.json" assert { type: "json" };
+
+const version = packageJson.version;
 
 const utilsFilesNames = [
 	"number",
@@ -75,17 +78,17 @@ const indexFile = {
 			file: "dist/index.js",
 			format: "umd",
 			name: "xttUtils",
-			banner: `/**\n * xttUtils v0.2.0\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
+			banner: `/**\n * xttUtils v${version}\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
 		},
 		{
 			file: "dist/index.cjs",
 			format: "cjs",
-			banner: `/**\n * xttUtils v0.2.0\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
+			banner: `/**\n * xttUtils v${version}\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
 		},
 		{
 			file: "dist/index.esm.js",
 			format: "esm",
-			banner: `/**\n * xttUtils v0.2.0\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
+			banner: `/**\n * xttUtils v${version}\n * (c) 2023, xtt. (MIT License)\n * https://github.com/xiaotong-tong/xtt-utils\n */\n`
 		}
 	]
 };

@@ -64,3 +64,34 @@ export {
 	formatDate,
 	css
 };
+
+export default {
+	shuffle,
+	range,
+	dataUrlToBlob,
+	toDataUrl,
+	toB64,
+	throttle,
+	chain,
+	curry,
+	compose,
+	fori,
+	conversionBase,
+	thousandth,
+	sum,
+	random,
+	randomList,
+	weightedRandom,
+	randomHexColor,
+	reverse,
+	strToNum,
+	charToCodePoint,
+	startsWith,
+	endsWith,
+	getTermLeft,
+	getTermRight,
+	getRangeByTerm,
+	trimLineStart,
+	formatDate,
+	css
+};
