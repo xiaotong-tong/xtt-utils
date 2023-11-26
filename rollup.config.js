@@ -14,7 +14,7 @@ const utilsFilesNames = [
 	"random/randomList",
 	"random/weightedRandom",
 	"random/randomHexColor",
-	"random/soduku",
+	"random/sudoku",
 	"string",
 	"string/reverse",
 	"string/strToNum",

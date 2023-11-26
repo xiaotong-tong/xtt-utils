@@ -529,10 +529,10 @@ declare module "xtt-utils" {
 	 * @category Random
 	 * @returns {number[][]} Returns a sudoku board
 	 * @example
-	 * generateSodukuBoard() // -> [[...], ...] // 9 * 9
+	 * generateSudokuBoard() // -> [[...], ...] // 9 * 9
 	 */
 
-	export function generateSodukuBoard(): number[][];
+	export function generateSudokuBoard(): number[][];
 
 	/**
 	 * @description generate a sudoku board with spaces
@@ -541,10 +541,10 @@ declare module "xtt-utils" {
 	 * @param {number} [square=44] The number of given squares in the board
 	 * @returns {number[][]} Returns a sudoku board with spaces, the spaces value is 0
 	 * @example
-	 * generateSoduku() // -> [[...], ...] // 9 * 9
+	 * generateSudoku() // -> [[...], ...] // 9 * 9
 	 */
 
-	export function generateSoduku(square?: number): number[][];
+	export function generateSudoku(square?: number): number[][];
 
 	/**
 	 * @description validate a sudoku board
@@ -553,10 +553,10 @@ declare module "xtt-utils" {
 	 * @param {number[][]} [board] The sudoku board
 	 * @returns {boolean} Returns true if the board is valid, else false
 	 * @example
-	 * isValidSodukuBoard([[...], ...]) // -> true
+	 * isValidSudokuBoard([[...], ...]) // -> true
 	 */
 
-	export function isValidSodukuBoard(board: number[][]): boolean;
+	export function isValidSudokuBoard(board: number[][]): boolean;
 }
 
 declare module "xtt-utils/array/range" {
@@ -1137,4 +1137,41 @@ declare module "xtt-utils/string/trimLineStart" {
 			removeLastEmptyLine?: boolean;
 		}
 	): string;
+}
+
+declare module "xtt-utils/random/sudoku" {
+	/**
+	 * @description generate a sudoku board
+	 * @description-cn 随机生成一个数独终盘
+	 * @category Random
+	 * @returns {number[][]} Returns a sudoku board
+	 * @example
+	 * generateSudokuBoard() // -> [[...], ...] // 9 * 9
+	 */
+
+	export function generateSudokuBoard(): number[][];
+
+	/**
+	 * @description generate a sudoku board with spaces
+	 * @description-cn 随机生成一个数独游戏初始化盘面
+	 * @category Random
+	 * @param {number} [square=44] The number of given squares in the board
+	 * @returns {number[][]} Returns a sudoku board with spaces, the spaces value is 0
+	 * @example
+	 * generateSudoku() // -> [[...], ...] // 9 * 9
+	 */
+
+	export function generateSudoku(square?: number): number[][];
+
+	/**
+	 * @description validate a sudoku board
+	 * @description-cn 验证一个数独终盘是否合法
+	 * @category Random
+	 * @param {number[][]} [board] The sudoku board
+	 * @returns {boolean} Returns true if the board is valid, else false
+	 * @example
+	 * isValidSudokuBoard([[...], ...]) // -> true
+	 */
+
+	export function isValidSudokuBoard(board: number[][]): boolean;
 }

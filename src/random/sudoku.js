@@ -116,7 +116,9 @@ class sudoku {
 		return this.#board;
 	}
 
-	generate(square = 44) {
+	generate(square) {
+		square = parseInt(square) || 44;
+
 		let board = this.generateBoard();
 		const spaces = 81 - square;
 
@@ -141,6 +143,14 @@ class sudoku {
 	}
 
 	isValidBoard(board) {
+		if (
+			!Array.isArray(board) ||
+			board.length !== 9 ||
+			!board.every((row) => Array.isArray(row) && row.length === 9)
+		) {
+			return false;
+		}
+
 		for (let row = 0; row < 9; row++) {
 			let rows = this.#getRows(row, board);
 			let cols = this.#getCols(row, board);
@@ -178,12 +188,11 @@ class sudoku {
  * @category Random
  * @returns {number[][]} Returns a sudoku board
  * @example
- * generateSodukuBoard() // -> [[...], ...] // 9 * 9
+ * generateSudokuBoard() // -> [[...], ...] // 9 * 9
  */
 
-export const generateSodukuBoard = () => {
-	const board = new sudoku();
-	return board.generateBoard();
+export const generateSudokuBoard = () => {
+	return new sudoku().generateBoard();
 };
 
 /**
@@ -193,12 +202,11 @@ export const generateSodukuBoard = () => {
  * @param {number} [square=44] The number of given squares in the board
  * @returns {number[][]} Returns a sudoku board with spaces, the spaces value is 0
  * @example
- * generateSoduku() // -> [[...], ...] // 9 * 9
+ * generateSudoku() // -> [[...], ...] // 9 * 9
  */
 
-export const generateSoduku = (square) => {
-	const board = new sudoku();
-	return board.generate(square);
+export const generateSudoku = (square) => {
+	return new sudoku().generate(square);
 };
 
 /**
@@ -208,10 +216,9 @@ export const generateSoduku = (square) => {
  * @param {number[][]} [board] The sudoku board
  * @returns {boolean} Returns true if the board is valid, else false
  * @example
- * isValidSodukuBoard([[...], ...]) // -> true
+ * isValidSudokuBoard([[...], ...]) // -> true
  */
 
-export const isValidSodukuBoard = (board) => {
-	const soduku = new sudoku();
-	return soduku.isValidBoard(board);
+export const isValidSudokuBoard = (board) => {
+	return new sudoku().isValidBoard(board);
 };

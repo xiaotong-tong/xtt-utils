@@ -3,17 +3,17 @@ import { randomList } from "./random/randomList.js";
 import { weightedRandom } from "./random/weightedRandom.js";
 import { randomHexColor } from "./random/randomHexColor.js";
 import {
-	generateSoduku,
-	generateSodukuBoard,
-	isValidSodukuBoard
-} from "./random/soduku.js";
+	generateSudokuBoard,
+	generateSudoku,
+	isValidSudokuBoard
+} from "./random/sudoku.js";
 
 export {
 	random,
 	randomList,
 	weightedRandom,
 	randomHexColor,
-	generateSoduku,
-	generateSodukuBoard,
-	isValidSodukuBoard
+	generateSudokuBoard,
+	generateSudoku,
+	isValidSudokuBoard
 };

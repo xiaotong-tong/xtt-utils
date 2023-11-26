@@ -5,6 +5,7 @@
     -   [randomList](./random/randomList.md) Generate a random number list
     -   [weightedRandom](./random/weightedRandom.md) Get a random item from a list of random numbers based on the weight list.
     -   [randomHexColor](./random/randomHexColor.md) Generate a random hexadecimal color
+    -   [sudoku](./random/sudoku.md) Generate a sudoku board
 -   string
     -   [reverse](./string/reverse.md) Returns the reverse of a string.
     -   [strToNum](./string/strToNum.md) Convert a string to a number

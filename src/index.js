@@ -20,10 +20,10 @@ import { randomList } from "./random/randomList.js";
 import { weightedRandom } from "./random/weightedRandom.js";
 import { randomHexColor } from "./random/randomHexColor.js";
 import {
-	generateSoduku,
-	generateSodukuBoard,
-	isValidSodukuBoard
-} from "./random/soduku.js";
+	generateSudokuBoard,
+	generateSudoku,
+	isValidSudokuBoard
+} from "./random/sudoku.js";
 
 import { reverse } from "./string/reverse.js";
 import { strToNum } from "./string/strToNum.js";
@@ -57,9 +57,9 @@ export {
 	randomList,
 	weightedRandom,
 	randomHexColor,
-	generateSoduku,
-	generateSodukuBoard,
-	isValidSodukuBoard,
+	generateSudokuBoard,
+	generateSudoku,
+	isValidSudokuBoard,
 	reverse,
 	strToNum,
 	charToCodePoint,
@@ -91,9 +91,9 @@ export default {
 	randomList,
 	weightedRandom,
 	randomHexColor,
-	generateSoduku,
-	generateSodukuBoard,
-	isValidSodukuBoard,
+	generateSudokuBoard,
+	generateSudoku,
+	isValidSudokuBoard,
 	reverse,
 	strToNum,
 	charToCodePoint,
