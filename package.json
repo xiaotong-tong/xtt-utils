@@ -1,6 +1,6 @@
 {
 	"name": "xtt-utils",
-	"version": "0.2.1-alpha.0",
+	"version": "0.2.1-alpha.1",
 	"description": "javascript utils",
 	"type": "module",
 	"main": "dist/index.cjs",
@@ -30,6 +30,9 @@
 			"import": "./dist/esm/*.js",
 			"require": "./dist/cjs/*.cjs"
 		}
+	},
+	"gitHooks": {
+		"pre-commit": "npm run eslint"
 	},
 	"repository": {
 		"type": "git",
