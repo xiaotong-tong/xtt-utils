@@ -1,5 +1,11 @@
 # 变更日志
 
+## 0.2.1 / 2023-11-26
+
+-   新增功能: generateSudoku, generateSudokuBoard, isValidSudokuBoard
+-   优化对 typescript 的支持
+-   优化对默认导入的支持
+
 ## 0.2.0 / 2023-08-28
 
 -   新增功能：toB64
