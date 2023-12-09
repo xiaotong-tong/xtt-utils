@@ -22,7 +22,7 @@ export const throttle = (func, delay) => {
 					lastArgs = null;
 					res(...lastArgsCopy);
 				}
-			}, delay);
+			}, delay ?? 0);
 		} else {
 			lastArgs = args;
 		}

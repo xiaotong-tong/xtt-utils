@@ -16,11 +16,7 @@ declare module "xtt-utils" {
 	 * range(-10) // => [0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10]
 	 * range(1, -10, -3) // => [1, -2, -5, -8]
 	 */
-	export function range(
-		start?: number,
-		end?: number,
-		step?: number
-	): number[];
+	export function range(start?: number, end?: number, step?: number): number[];
 
 	/**
 	 * @description Shuffle an array
@@ -105,9 +101,7 @@ declare module "xtt-utils" {
 	 * @param {input} input The input to convert
 	 * @returns {Promise<string>} promise of base64 string
 	 */
-	export function toB64(
-		input: File | Blob | string | number
-	): Promise<string>;
+	export function toB64(input: File | Blob | string | number): Promise<string>;
 
 	/**
 	 * @description Converts something to a data url string.
@@ -214,7 +208,7 @@ declare module "xtt-utils" {
 	 * @param { number} delay The delay time
 	 * @return { Function } Returns the throttled function
 	 */
-	export function throttle(func: Function, delay: number): Function;
+	export function throttle<A extends any[], R>(func: (...args: A) => R, delay: number): (...args: A) => void;
 
 	/**
 	 * @support browser
@@ -243,11 +237,7 @@ declare module "xtt-utils" {
 	 *     color: "red"
 	 * }); // -> document.body
 	 */
-	export function css(
-		element: HTMLElement,
-		styles: { [Prop: string]: string } | string,
-		value?: string
-	): HTMLElement;
+	export function css(element: HTMLElement, styles: { [Prop: string]: string } | string, value?: string): HTMLElement;
 
 	/**
 	 * @description Converts a number to a string of the specified base
@@ -262,11 +252,7 @@ declare module "xtt-utils" {
 	 * conversionBase(10, 2, false) // -> "1010"
 	 * conversionBase(-10, 2) // -> "-0b1010"
 	 */
-	export function conversionBase(
-		num: number,
-		base?: 2 | 8 | 10 | 16,
-		hasPrefix?: boolean
-	): string;
+	export function conversionBase(num: number, base?: 2 | 8 | 10 | 16, hasPrefix?: boolean): string;
 
 	/**
 	 * @description Sums up
@@ -290,10 +276,7 @@ declare module "xtt-utils" {
 	 * thousandth(1000000) // "1,000,000"
 	 * thousandth(1000000.1234) // "1,000,000.1234"
 	 */
-	export function thousandth(
-		num: number,
-		maximumFractionDigits?: number
-	): string;
+	export function thousandth(num: number, maximumFractionDigits?: number): string;
 
 	/**
 	 * @description Generate a random integer between min and max (inclusive)
@@ -354,10 +337,7 @@ declare module "xtt-utils" {
 	 * weightedRandom([1, 2, 3], [4, 5, 6]) // 4/15 probability returns 1, 5/15 probability returns 2, 6/15 probability returns 3
 	 * weightedRandom({ 1: 4, 2: 5, 3: 6 }) // ditto
 	 */
-	export function weightedRandom(
-		randomList: any[] | { [key: string]: number },
-		weightedList?: number[]
-	): any;
+	export function weightedRandom(randomList: any[] | { [key: string]: number }, weightedList?: number[]): any;
 
 	/**
 	 * @description Returns the Unicode code point of a string.
@@ -372,10 +352,7 @@ declare module "xtt-utils" {
 	 * charToCodePoint("Hello World!", { separator: " "}) // "0x48 0x65 0x6c 0x6c 0x6f 0x20 0x57 0x6f 0x72 0x6c 0x64 0x21"
 	 * charToCodePoint("Hello World!", { base: 2, separator: " " }) // "0b1001000 0b1100101 0b1101100 0b1101100 0b1101111 0b100000 0b1010111 0b1101111 0b1110010 0b1101100 0b1100100 0b100001"
 	 */
-	export function charToCodePoint(
-		str: string,
-		options?: { separator?: string; base?: 2 | 8 | 10 | 16 }
-	): string;
+	export function charToCodePoint(str: string, options?: { separator?: string; base?: 2 | 8 | 10 | 16 }): string;
 
 	/**
 	 * Determines whether a string ends with the string or regular expression specified.
@@ -392,11 +369,7 @@ declare module "xtt-utils" {
 	 * endsWith("abc", /b$/); // false
 	 * endsWith("abc", /b$/, 2); // true
 	 */
-	export function endsWith(
-		str: string,
-		suffix: string | RegExp,
-		endPosition?: number
-	): boolean;
+	export function endsWith(str: string, suffix: string | RegExp, endPosition?: number): boolean;
 
 	/**
 	 * @description Get the string in a range of strings.
@@ -409,10 +382,7 @@ declare module "xtt-utils" {
 	 * getRangeByTerm("abcde", ["d", "b"]) // "c"
 	 * getRangeByTerm("a1bcd2e", [/\d/, /\d/]) // "bcd"
 	 */
-	export function getRangeByTerm(
-		str: string,
-		term: [string | RegExp, string | RegExp]
-	): string;
+	export function getRangeByTerm(str: string, term: [string | RegExp, string | RegExp]): string;
 
 	/**
 	 * @description-en Get the string on the left of the matching item in the string
@@ -430,11 +400,7 @@ declare module "xtt-utils" {
 	 * getTermLeft("abc1de2", /\d/, 2) // "abc1de"
 	 * getTermLeft("abc1de2", /\d/, 3) // "abc1de"
 	 */
-	export function getTermLeft(
-		str: string,
-		searchTerm: string | RegExp,
-		beforeWhichTimes?: number
-	): string;
+	export function getTermLeft(str: string, searchTerm: string | RegExp, beforeWhichTimes?: number): string;
 
 	/**
 	 * @description Get the string right of the matching item in the string.
@@ -452,11 +418,7 @@ declare module "xtt-utils" {
 	 * getTermRight("abc1de2", /\d/, 2) // ""
 	 * getTermRight("abc1de2", /\d/, 3) // ""
 	 */
-	export function getTermRight(
-		str: string,
-		searchTerm: string | RegExp,
-		afterWhichTimes?: number
-	): string;
+	export function getTermRight(str: string, searchTerm: string | RegExp, afterWhichTimes?: number): string;
 
 	/**
 	 * @description Reverse a string.
@@ -484,11 +446,7 @@ declare module "xtt-utils" {
 	 * startsWith("abc", /^b/); // false
 	 * startsWith("abc", /^b/, 1); // true
 	 */
-	export function startsWith(
-		str: string,
-		prefix: string | RegExp,
-		startPosition?: number
-	): boolean;
+	export function startsWith(str: string, prefix: string | RegExp, startPosition?: number): boolean;
 
 	/**
 	 * @description string to number
@@ -557,6 +515,21 @@ declare module "xtt-utils" {
 	 */
 
 	export function isValidSudokuBoard(board: number[][]): boolean;
+
+	/**
+	 * validate email format
+	 * @description-cn 判断字符串是否是邮箱格式
+	 * @category Boolean
+	 * @param {string} email - The string to search within.
+	 * @returns {boolean} Returns true if value is an email, else false.
+	 * @example
+	 * isEmail("example@abc.com") => true
+	 * isEmail("abc.com") => false
+	 * isEmail("a.b.example@abc.com") => true
+	 * isEmail("a..example@abc.com") => false
+	 */
+
+	export function isEmail(email: string): boolean;
 }
 
 declare module "xtt-utils/array/range" {
@@ -577,11 +550,7 @@ declare module "xtt-utils/array/range" {
 	 * range(-10) // => [0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10]
 	 * range(1, -10, -3) // => [1, -2, -5, -8]
 	 */
-	export function range(
-		start?: number,
-		end?: number,
-		step?: number
-	): number[];
+	export function range(start?: number, end?: number, step?: number): number[];
 }
 
 declare module "xtt-utils/array/suffle" {
@@ -674,9 +643,7 @@ declare module "xtt-utils/file/toB64" {
 	 * @param {input} input The input to convert
 	 * @returns {Promise<string>} promise of base64 string
 	 */
-	export function toB64(
-		input: File | Blob | string | number
-	): Promise<string>;
+	export function toB64(input: File | Blob | string | number): Promise<string>;
 }
 
 declare module "xtt-utils/file/toDataUrl" {
@@ -826,11 +793,7 @@ declare module "xtt-utils/html/css" {
 	 *     color: "red"
 	 * }); // -> document.body
 	 */
-	export function css(
-		element: HTMLElement,
-		styles: { [Prop: string]: string } | string,
-		value?: string
-	): HTMLElement;
+	export function css(element: HTMLElement, styles: { [Prop: string]: string } | string, value?: string): HTMLElement;
 }
 
 declare module "xtt-utils/number/conversionBase" {
@@ -847,11 +810,7 @@ declare module "xtt-utils/number/conversionBase" {
 	 * conversionBase(10, 2, false) // -> "1010"
 	 * conversionBase(-10, 2) // -> "-0b1010"
 	 */
-	export function conversionBase(
-		num: number,
-		base?: 2 | 8 | 10 | 16,
-		hasPrefix?: boolean
-	): string;
+	export function conversionBase(num: number, base?: 2 | 8 | 10 | 16, hasPrefix?: boolean): string;
 }
 
 declare module "xtt-utils/number/sum" {
@@ -879,10 +838,7 @@ declare module "xtt-utils/number/thousandth" {
 	 * thousandth(1000000) // "1,000,000"
 	 * thousandth(1000000.1234) // "1,000,000.1234"
 	 */
-	export function thousandth(
-		num: number,
-		maximumFractionDigits?: number
-	): string;
+	export function thousandth(num: number, maximumFractionDigits?: number): string;
 }
 
 declare module "xtt-utils/random/random" {
@@ -951,10 +907,7 @@ declare module "xtt-utils/random/weightedRandom" {
 	 * weightedRandom([1, 2, 3], [4, 5, 6]) // 4/15 probability returns 1, 5/15 probability returns 2, 6/15 probability returns 3
 	 * weightedRandom({ 1: 4, 2: 5, 3: 6 }) // ditto
 	 */
-	export function weightedRandom(
-		randomList: any[] | { [key: string]: number },
-		weightedList?: number[]
-	): any;
+	export function weightedRandom(randomList: any[] | { [key: string]: number }, weightedList?: number[]): any;
 }
 
 declare module "xtt-utils/string/charToCodePoint" {
@@ -971,10 +924,7 @@ declare module "xtt-utils/string/charToCodePoint" {
 	 * charToCodePoint("Hello World!", { separator: " "}) // "0x48 0x65 0x6c 0x6c 0x6f 0x20 0x57 0x6f 0x72 0x6c 0x64 0x21"
 	 * charToCodePoint("Hello World!", { base: 2, separator: " " }) // "0b1001000 0b1100101 0b1101100 0b1101100 0b1101111 0b100000 0b1010111 0b1101111 0b1110010 0b1101100 0b1100100 0b100001"
 	 */
-	export function charToCodePoint(
-		str: string,
-		options?: { separator?: string; base?: 2 | 8 | 10 | 16 }
-	): string;
+	export function charToCodePoint(str: string, options?: { separator?: string; base?: 2 | 8 | 10 | 16 }): string;
 }
 
 declare module "xtt-utils/string/endsWith" {
@@ -993,11 +943,7 @@ declare module "xtt-utils/string/endsWith" {
 	 * endsWith("abc", /b$/); // false
 	 * endsWith("abc", /b$/, 2); // true
 	 */
-	export function endsWith(
-		str: string,
-		suffix: string | RegExp,
-		endPosition?: number
-	): boolean;
+	export function endsWith(str: string, suffix: string | RegExp, endPosition?: number): boolean;
 }
 
 declare module "xtt-utils/string/getRangeByTerm" {
@@ -1012,10 +958,7 @@ declare module "xtt-utils/string/getRangeByTerm" {
 	 * getRangeByTerm("abcde", ["d", "b"]) // "c"
 	 * getRangeByTerm("a1bcd2e", [/\d/, /\d/]) // "bcd"
 	 */
-	export function getRangeByTerm(
-		str: string,
-		term: [string | RegExp, string | RegExp]
-	): string;
+	export function getRangeByTerm(str: string, term: [string | RegExp, string | RegExp]): string;
 }
 
 declare module "xtt-utils/string/getTermLeft" {
@@ -1035,11 +978,7 @@ declare module "xtt-utils/string/getTermLeft" {
 	 * getTermLeft("abc1de2", /\d/, 2) // "abc1de"
 	 * getTermLeft("abc1de2", /\d/, 3) // "abc1de"
 	 */
-	export function getTermLeft(
-		str: string,
-		searchTerm: string | RegExp,
-		beforeWhichTimes?: number
-	): string;
+	export function getTermLeft(str: string, searchTerm: string | RegExp, beforeWhichTimes?: number): string;
 }
 
 declare module "xtt-utils/string/getTermRight" {
@@ -1059,11 +998,7 @@ declare module "xtt-utils/string/getTermRight" {
 	 * getTermRight("abc1de2", /\d/, 2) // ""
 	 * getTermRight("abc1de2", /\d/, 3) // ""
 	 */
-	export function getTermRight(
-		str: string,
-		searchTerm: string | RegExp,
-		afterWhichTimes?: number
-	): string;
+	export function getTermRight(str: string, searchTerm: string | RegExp, afterWhichTimes?: number): string;
 }
 
 declare module "xtt-utils/string/reverse" {
@@ -1095,11 +1030,7 @@ declare module "xtt-utils/string/startsWith" {
 	 * startsWith("abc", /^b/); // false
 	 * startsWith("abc", /^b/, 1); // true
 	 */
-	export function startsWith(
-		str: string,
-		prefix: string | RegExp,
-		startPosition?: number
-	): boolean;
+	export function startsWith(str: string, prefix: string | RegExp, startPosition?: number): boolean;
 }
 
 declare module "xtt-utils/string/strToNum" {
@@ -1174,4 +1105,21 @@ declare module "xtt-utils/random/sudoku" {
 	 */
 
 	export function isValidSudokuBoard(board: number[][]): boolean;
+}
+
+declare module "xtt-utils/boolean/isEmail" {
+	/**
+	 * validate email format
+	 * @description-cn 判断字符串是否是邮箱格式
+	 * @category Boolean
+	 * @param {string} email - The string to search within.
+	 * @returns {boolean} Returns true if value is an email, else false.
+	 * @example
+	 * isEmail("example@abc.com") => true
+	 * isEmail("abc.com") => false
+	 * isEmail("a.b.example@abc.com") => true
+	 * isEmail("a..example@abc.com") => false
+	 */
+
+	export function isEmail(email: string): boolean;
 }

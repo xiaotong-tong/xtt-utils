@@ -19,11 +19,7 @@ import { random } from "./random/random.js";
 import { randomList } from "./random/randomList.js";
 import { weightedRandom } from "./random/weightedRandom.js";
 import { randomHexColor } from "./random/randomHexColor.js";
-import {
-	generateSudokuBoard,
-	generateSudoku,
-	isValidSudokuBoard
-} from "./random/sudoku.js";
+import { generateSudokuBoard, generateSudoku, isValidSudokuBoard } from "./random/sudoku.js";
 
 import { reverse } from "./string/reverse.js";
 import { strToNum } from "./string/strToNum.js";
@@ -38,6 +34,8 @@ import { trimLineStart } from "./string/trimLineStart.js";
 import { formatDate } from "./date/formatDate.js";
 
 import { css } from "./html/css.js";
+
+import { isEmail } from "./boolean/isEmail.js";
 
 export {
 	shuffle,
@@ -70,7 +68,8 @@ export {
 	getRangeByTerm,
 	trimLineStart,
 	formatDate,
-	css
+	css,
+	isEmail
 };
 
 export default {
@@ -104,5 +103,6 @@ export default {
 	getRangeByTerm,
 	trimLineStart,
 	formatDate,
-	css
+	css,
+	isEmail
 };

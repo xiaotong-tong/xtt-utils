@@ -41,7 +41,9 @@ const utilsFilesNames = [
 	"date",
 	"date/formatDate",
 	"html",
-	"html/css"
+	"html/css",
+	"boolean",
+	"boolean/isEmail"
 ];
 
 let utilsFilesInput = {};
