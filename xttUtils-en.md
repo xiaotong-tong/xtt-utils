@@ -424,6 +424,27 @@ strToNum("fdsf12fd3.4fsdf56.7fds89"); // 123.456789
 strToNum("-fdsf12fd3.4fsdf56.7fds89"); // -123.456789
 ```
 
+### isEmail
+
+Determine whether a string is an email address
+
+#### params
+
+-   email (string): email address
+
+#### returns
+
+-   (boolean): is email address
+
+#### example
+
+```js
+isEmail("example@abc.com") => true
+isEmail("abc.com") => false
+isEmail("a.b.example@abc.com") => true
+isEmail("a..example@abc.com") => false
+```
+
 ## array Methods
 
 ### shuffle
@@ -888,28 +909,5 @@ css(document.body, {
 	fontSize: "16px",
 	color: "red"
 }); // -> document.body
-```
-
-## boolean Methods
-
-### isEmail
-
-Determine whether a string is an email address
-
-#### params
-
--   email (string): email address
-
-#### returns
-
--   (boolean): is email address
-
-#### example
-
-```js
-isEmail("example@abc.com") => true
-isEmail("abc.com") => false
-isEmail("a.b.example@abc.com") => true
-isEmail("a..example@abc.com") => false
 ```
 

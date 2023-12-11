@@ -424,6 +424,27 @@ strToNum("fdsf12fd3.4fsdf56.7fds89"); // 123.456789
 strToNum("-fdsf12fd3.4fsdf56.7fds89"); // -123.456789
 ```
 
+### isEmail
+
+判断字符串是否是邮箱
+
+#### params
+
+-   email (string): 需要判断的字符串
+
+#### returns
+
+-   (boolean): 是否是邮箱
+
+#### example
+
+```js
+isEmail("example@abc.com") => true
+isEmail("abc.com") => false
+isEmail("a.b.example@abc.com") => true
+isEmail("a..example@abc.com") => false
+```
+
 ## array Methods
 
 ### shuffle
@@ -891,28 +912,5 @@ css(document.body, {
 	fontSize: "16px",
 	color: "red"
 }); // -> document.body
-```
-
-## boolean Methods
-
-### isEmail
-
-判断字符串是否是邮箱
-
-#### params
-
--   email (string): 需要判断的字符串
-
-#### returns
-
--   (boolean): 是否是邮箱
-
-#### example
-
-```js
-isEmail("example@abc.com") => true
-isEmail("abc.com") => false
-isEmail("a.b.example@abc.com") => true
-isEmail("a..example@abc.com") => false
 ```
 
