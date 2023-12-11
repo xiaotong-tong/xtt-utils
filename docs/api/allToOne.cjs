@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const methods = {
-	random: ["random", "randomList", "weightedRandom", "randomHexColor", "sudoku"],
+	random: ["random", "randomList", "weightedRandom", "randomHexColor", "sudoku", "isEmail"],
 	string: [
 		"reverse",
 		"startsWith",
@@ -19,8 +19,7 @@ const methods = {
 	file: ["toB64", "dataUrlToBlob", "toDataUrl"],
 	function: ["fori", "throttle", "chain", "compose", "curry"],
 	date: ["formatDate"],
-	html: ["css"],
-	boolean: ["isEmail"]
+	html: ["css"]
 };
 
 const title = `# xttUtils

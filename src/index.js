@@ -30,12 +30,11 @@ import { getTermLeft } from "./string/getTermLeft.js";
 import { getTermRight } from "./string/getTermRight.js";
 import { getRangeByTerm } from "./string/getRangeByTerm.js";
 import { trimLineStart } from "./string/trimLineStart.js";
+import { isEmail } from "./string/isEmail.js";
 
 import { formatDate } from "./date/formatDate.js";
 
 import { css } from "./html/css.js";
-
-import { isEmail } from "./boolean/isEmail.js";
 
 export {
 	shuffle,

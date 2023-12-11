@@ -25,6 +25,7 @@ const utilsFilesNames = [
 	"string/getTermRight",
 	"string/getRangeByTerm",
 	"string/trimLineStart",
+	"string/isEmail",
 	"array",
 	"array/shuffle",
 	"array/range",
@@ -41,9 +42,7 @@ const utilsFilesNames = [
 	"date",
 	"date/formatDate",
 	"html",
-	"html/css",
-	"boolean",
-	"boolean/isEmail"
+	"html/css"
 ];
 
 let utilsFilesInput = {};

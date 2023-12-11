@@ -7,6 +7,7 @@ import { getTermLeft } from "./string/getTermLeft.js";
 import { getTermRight } from "./string/getTermRight.js";
 import { getRangeByTerm } from "./string/getRangeByTerm.js";
 import { trimLineStart } from "./string/trimLineStart.js";
+import { isEmail } from "./string/isEmail.js";
 
 export {
 	reverse,
@@ -17,5 +18,6 @@ export {
 	getTermLeft,
 	getTermRight,
 	getRangeByTerm,
-	trimLineStart
+	trimLineStart,
+	isEmail
 };

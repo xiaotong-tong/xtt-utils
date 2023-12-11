@@ -16,6 +16,7 @@
     -   [getTermRight](./string/getTermRight.md) Get the string to the right of the matching item in the string
     -   [getRangeByTerm](./string/getRangeByTerm.md) Get the string between the matching items in the string
     -   [trimLineStart](./string/trimLineStart.md) Remove the line break at the beginning of the string
+    -   [isEmail](./boolean/isEmail.md) Determine whether a string is an email address
 -   array
     -   [shuffle](./array/shuffle.md) Randomly shuffle the elements in the array
     -   [range](./array/range.md) Create an array of numbers in a range
@@ -37,5 +38,3 @@
     -   [formatDate](./date/formatDate.md) Format date
 -   html
     -   [css](./html/css.md) Get or set the style of an element
--   boolean
-    -   [isEmail](./boolean/isEmail.md) Determine whether a string is an email address

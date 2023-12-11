@@ -16,6 +16,7 @@
     -   [getTermRight](./string/getTermRight.md) 获取字符串中匹配项右侧的字符串
     -   [getRangeByTerm](./string/getRangeByTerm.md) 获取字符串中某个范围内的字符串
     -   [trimLineStart](./string/trimLineStart.md) 删除行前的空格，保留缩进层级
+    -   [isEmail](./boolean/isEmail.md) 判断字符串是否是邮箱
 -   array
     -   [shuffle](./array/shuffle.md) 乱序数组
     -   [range](./array/range.md) 创建一个数字范围数组
@@ -37,5 +38,3 @@
     -   [formatDate](./date/formatDate.md) 格式化日期
 -   html
     -   [css](./html/css.md) 获取或设置元素的样式
--   boolean
-    -   [isEmail](./boolean/isEmail.md) 判断字符串是否是邮箱

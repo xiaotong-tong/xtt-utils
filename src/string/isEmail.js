@@ -3,7 +3,7 @@ import { emailGrep } from "../_internal/grep.js";
 /**
  * Determine whether a string is an email address
  * @description-cn 判断字符串是否是邮箱
- * @category Boolean
+ * @category String
  * @param {string} email - The string to search within.
  * @returns {boolean} Returns true if value is an email, else false.
  * @example
@@ -14,7 +14,7 @@ import { emailGrep } from "../_internal/grep.js";
  */
 
 export const isEmail = (email) => {
-	if (typeof email !== "string" || email.length < 5) {
+	if (typeof email !== "string" || email.length < 6) {
 		return false;
 	}
 

@@ -519,7 +519,7 @@ declare module "xtt-utils" {
 	/**
 	 * Determine whether a string is an email address
 	 * @description-cn 判断字符串是否是邮箱格式
-	 * @category Boolean
+	 * @category String
 	 * @param {string} email - The string to search within.
 	 * @returns {boolean} Returns true if value is an email, else false.
 	 * @example
@@ -910,6 +910,43 @@ declare module "xtt-utils/random/weightedRandom" {
 	export function weightedRandom(randomList: any[] | { [key: string]: number }, weightedList?: number[]): any;
 }
 
+declare module "xtt-utils/random/sudoku" {
+	/**
+	 * @description generate a sudoku board
+	 * @description-cn 随机生成一个数独终盘
+	 * @category Random
+	 * @returns {number[][]} Returns a sudoku board
+	 * @example
+	 * generateSudokuBoard() // -> [[...], ...] // 9 * 9
+	 */
+
+	export function generateSudokuBoard(): number[][];
+
+	/**
+	 * @description generate a sudoku board with spaces
+	 * @description-cn 随机生成一个数独游戏初始化盘面
+	 * @category Random
+	 * @param {number} [square=44] The number of given squares in the board
+	 * @returns {number[][]} Returns a sudoku board with spaces, the spaces value is 0
+	 * @example
+	 * generateSudoku() // -> [[...], ...] // 9 * 9
+	 */
+
+	export function generateSudoku(square?: number): number[][];
+
+	/**
+	 * @description validate a sudoku board
+	 * @description-cn 验证一个数独终盘是否合法
+	 * @category Random
+	 * @param {number[][]} [board] The sudoku board
+	 * @returns {boolean} Returns true if the board is valid, else false
+	 * @example
+	 * isValidSudokuBoard([[...], ...]) // -> true
+	 */
+
+	export function isValidSudokuBoard(board: number[][]): boolean;
+}
+
 declare module "xtt-utils/string/charToCodePoint" {
 	/**
 	 * @description Returns the Unicode code point of a string.
@@ -1070,48 +1107,11 @@ declare module "xtt-utils/string/trimLineStart" {
 	): string;
 }
 
-declare module "xtt-utils/random/sudoku" {
-	/**
-	 * @description generate a sudoku board
-	 * @description-cn 随机生成一个数独终盘
-	 * @category Random
-	 * @returns {number[][]} Returns a sudoku board
-	 * @example
-	 * generateSudokuBoard() // -> [[...], ...] // 9 * 9
-	 */
-
-	export function generateSudokuBoard(): number[][];
-
-	/**
-	 * @description generate a sudoku board with spaces
-	 * @description-cn 随机生成一个数独游戏初始化盘面
-	 * @category Random
-	 * @param {number} [square=44] The number of given squares in the board
-	 * @returns {number[][]} Returns a sudoku board with spaces, the spaces value is 0
-	 * @example
-	 * generateSudoku() // -> [[...], ...] // 9 * 9
-	 */
-
-	export function generateSudoku(square?: number): number[][];
-
-	/**
-	 * @description validate a sudoku board
-	 * @description-cn 验证一个数独终盘是否合法
-	 * @category Random
-	 * @param {number[][]} [board] The sudoku board
-	 * @returns {boolean} Returns true if the board is valid, else false
-	 * @example
-	 * isValidSudokuBoard([[...], ...]) // -> true
-	 */
-
-	export function isValidSudokuBoard(board: number[][]): boolean;
-}
-
-declare module "xtt-utils/boolean/isEmail" {
+declare module "xtt-utils/string/isEmail" {
 	/**
 	 * Determine whether a string is an email address
 	 * @description-cn 判断字符串是否是邮箱格式
-	 * @category Boolean
+	 * @category String
 	 * @param {string} email - The string to search within.
 	 * @returns {boolean} Returns true if value is an email, else false.
 	 * @example
