@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const methods = {
-	random: ["random", "randomList", "weightedRandom", "randomHexColor", "sudoku", "isEmail"],
+	random: ["random", "randomList", "weightedRandom", "randomHexColor", "sudoku"],
 	string: [
 		"reverse",
 		"startsWith",
@@ -12,7 +12,8 @@ const methods = {
 		"getRangeByTerm",
 		"charToCodePoint",
 		"trimLineStart",
-		"strToNum"
+		"strToNum",
+		"isEmail"
 	],
 	array: ["shuffle", "range"],
 	number: ["conversionBase", "thousandth", "sum"],
