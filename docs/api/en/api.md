@@ -37,3 +37,5 @@
     -   [formatDate](./date/formatDate.md) Format date
 -   html
     -   [css](./html/css.md) Get or set the style of an element
+-   boolean
+    -   [isEmail](./boolean/isEmail.md) Determine whether a string is an email address

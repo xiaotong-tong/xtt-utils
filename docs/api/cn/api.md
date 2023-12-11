@@ -37,3 +37,5 @@
     -   [formatDate](./date/formatDate.md) 格式化日期
 -   html
     -   [css](./html/css.md) 获取或设置元素的样式
+-   boolean
+    -   [isEmail](./boolean/isEmail.md) 判断字符串是否是邮箱

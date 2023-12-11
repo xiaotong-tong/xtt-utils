@@ -517,7 +517,7 @@ declare module "xtt-utils" {
 	export function isValidSudokuBoard(board: number[][]): boolean;
 
 	/**
-	 * validate email format
+	 * Determine whether a string is an email address
 	 * @description-cn 判断字符串是否是邮箱格式
 	 * @category Boolean
 	 * @param {string} email - The string to search within.
@@ -1109,7 +1109,7 @@ declare module "xtt-utils/random/sudoku" {
 
 declare module "xtt-utils/boolean/isEmail" {
 	/**
-	 * validate email format
+	 * Determine whether a string is an email address
 	 * @description-cn 判断字符串是否是邮箱格式
 	 * @category Boolean
 	 * @param {string} email - The string to search within.

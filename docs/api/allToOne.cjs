@@ -2,13 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const methods = {
-	random: [
-		"random",
-		"randomList",
-		"weightedRandom",
-		"randomHexColor",
-		"sudoku"
-	],
+	random: ["random", "randomList", "weightedRandom", "randomHexColor", "sudoku"],
 	string: [
 		"reverse",
 		"startsWith",
@@ -25,7 +19,8 @@ const methods = {
 	file: ["toB64", "dataUrlToBlob", "toDataUrl"],
 	function: ["fori", "throttle", "chain", "compose", "curry"],
 	date: ["formatDate"],
-	html: ["css"]
+	html: ["css"],
+	boolean: ["isEmail"]
 };
 
 const title = `# xttUtils
@@ -38,9 +33,7 @@ function getContent(lang) {
 		content += `## ${method} Methods\n\n`;
 		list.forEach((name) => {
 			const data = fs
-				.readFileSync(
-					path.join(__dirname, lang ?? "en", method, name + ".md")
-				)
+				.readFileSync(path.join(__dirname, lang ?? "en", method, name + ".md"))
 				.toString()
 				.replace(/^#/gm, "###");
 			content += data + "\n";
@@ -50,11 +43,5 @@ function getContent(lang) {
 	return content;
 }
 
-fs.writeFileSync(
-	path.join(__dirname, "../pages/xttUtils-en.md"),
-	getContent("en")
-);
-fs.writeFileSync(
-	path.join(__dirname, "../pages/xttUtils-cn.md"),
-	getContent("cn")
-);
+fs.writeFileSync(path.join(__dirname, "../pages/xttUtils-en.md"), getContent("en"));
+fs.writeFileSync(path.join(__dirname, "../pages/xttUtils-cn.md"), getContent("cn"));
