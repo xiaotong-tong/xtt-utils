@@ -1,27 +1,38 @@
 const fs = require("fs");
 const path = require("path");
 
-const methods = {
-	random: ["random", "randomList", "weightedRandom", "randomHexColor", "sudoku"],
-	string: [
-		"reverse",
-		"startsWith",
-		"endsWith",
-		"getTermLeft",
-		"getTermRight",
-		"getRangeByTerm",
-		"charToCodePoint",
-		"trimLineStart",
-		"strToNum",
-		"isEmail"
-	],
-	array: ["shuffle", "range"],
-	number: ["conversionBase", "thousandth", "sum"],
-	file: ["toB64", "dataUrlToBlob", "toDataUrl"],
-	function: ["fori", "throttle", "chain", "compose", "curry"],
-	date: ["formatDate"],
-	html: ["css"]
-};
+const methods = [
+	"random",
+	"randomList",
+	"weightedRandom",
+	"randomHexColor",
+	"sudoku",
+	"reverse",
+	"startsWith",
+	"endsWith",
+	"getTermLeft",
+	"getTermRight",
+	"getRangeByTerm",
+	"charToCodePoint",
+	"trimLineStart",
+	"strToNum",
+	"isEmail",
+	"shuffle",
+	"range",
+	"conversionBase",
+	"thousandth",
+	"sum",
+	"toB64",
+	"dataUrlToBlob",
+	"toDataUrl",
+	"fori",
+	"throttle",
+	"chain",
+	"compose",
+	"curry",
+	"formatDate",
+	"css"
+];
 
 const title = `# xttUtils
 
@@ -29,16 +40,13 @@ const title = `# xttUtils
 
 function getContent(lang) {
 	let content = title;
-	for (const [method, list] of Object.entries(methods)) {
-		content += `## ${method} Methods\n\n`;
-		list.forEach((name) => {
-			const data = fs
-				.readFileSync(path.join(__dirname, lang ?? "en", method, name + ".md"))
-				.toString()
-				.replace(/^#/gm, "###");
-			content += data + "\n";
-		});
-	}
+	methods.forEach((name) => {
+		const data = fs
+			.readFileSync(path.join(__dirname, lang ?? "en", name + ".md"))
+			.toString()
+			.replace(/^#/gm, "##");
+		content += data + "\n";
+	});
 
 	return content;
 }

@@ -37,7 +37,7 @@ xttUtils.random();
 // import specific functions
 import { random } from "xtt-utils"; // Recommended
 // or
-import { random } from "xtt-utils/random/random";
+import random from "xtt-utils/random";
 random();
 ```
 
@@ -51,7 +51,7 @@ xttUtils.random();
 // import specific functions
 const { random } = require("xtt-utils");
 // or
-const { random } = require("xtt-utils/random/random");
+const random = require("xtt-utils/random");
 random();
 ```
 

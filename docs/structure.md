@@ -56,49 +56,17 @@
 
         This directory contains utility functions for internal use only. It is not exposed externally.
 
-    -   array
+    -   \*.js
 
-        This directory contains utility functions related to arrays.
+        These files are the project's source code.
 
-    -   date
+    -   \*.d.ts
 
-        This directory contains utility functions related to dates.
-
-    -   file
-
-        This directory contains utility functions related to files.
-
-    -   function
-
-        This directory contains utility functions related to functions.
-
-    -   html
-
-        This directory contains utility functions related to HTML.
-
-    -   number
-
-        This directory contains utility functions related to numbers.
-
-    -   random
-
-        This directory contains utility functions related to random numbers.
-
-    -   string
-
-        This directory contains utility functions related to strings.
+        These files are used to provide type support for TypeScript projects.
 
     -   index.js
-    -   array.js
-    -   date.js
-    -   file.js
-    -   function.js
-    -   html.js
-    -   number.js
-    -   random.js
-    -   string.js
 
-        These are summary files used to export all utility functions within a given scope.
+        This file is used to summarize the project's source code.
 
     -   index.d.ts
 

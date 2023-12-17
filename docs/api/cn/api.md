@@ -1,40 +1,32 @@
 # API
 
--   random
-    -   [random](./random/random.md) 获取随机数
-    -   [randomList](./random/randomList.md) 获取随机数列表
-    -   [weightedRandom](./random/weightedRandom.md) 获取带权重的随机数
-    -   [randomHexColor](./random/randomHexColor.md) 获取随机十六进制颜色
-    -   [sudoku](./random/sudoku.md) 数独相关
--   string
-    -   [reverse](./string/reverse.md) 字符串反转
-    -   [strToNum](./string/strToNum.md) 字符串转数字
-    -   [charToCodePoint](./string/charToCodePoint.md) 返回一个字符串的 Unicode 编码点。
-    -   [startsWith](./string/startsWith.md) 判断字符串是否以指定的字符串或正则表达式匹配的字符串开头
-    -   [endsWith](./string/endsWith.md) 判断字符串是否以指定的字符串或正则表达式匹配的字符串结尾
-    -   [getTermLeft](./string/getTermLeft.md) 获取字符串中匹配项左侧的字符串
-    -   [getTermRight](./string/getTermRight.md) 获取字符串中匹配项右侧的字符串
-    -   [getRangeByTerm](./string/getRangeByTerm.md) 获取字符串中某个范围内的字符串
-    -   [trimLineStart](./string/trimLineStart.md) 删除行前的空格，保留缩进层级
-    -   [isEmail](./boolean/isEmail.md) 判断字符串是否是邮箱
--   array
-    -   [shuffle](./array/shuffle.md) 乱序数组
-    -   [range](./array/range.md) 创建一个数字范围数组
--   number
-    -   [conversionBase](./number/conversionBase.md) 进制转换
-    -   [thousandth](./number/thousandth.md) 千分位
-    -   [sum](./number/sum.md) 求和
--   file
-    -   [dataUrlToBlob](./file/dataUrlToBlob.md) 将 data url 字符串转换为 Blob 对象
-    -   [toB64](./file/toB64.md) 将输入转换为 base64 字符串
-    -   [toDataUrl](./file/toDataUrl.md) 将输入转换为 data url 字符串
--   function
-    -   [chain](./function/chain.md) 函数链式调用
-    -   [throttle](./function/throttle.md) 函数节流
-    -   [curry](./function/curry.md) 函数柯里化
-    -   [compose](./function/compose.md) 函数组合
-    -   [fori](./function/fori.md) 循环
--   date
-    -   [formatDate](./date/formatDate.md) 格式化日期
--   html
-    -   [css](./html/css.md) 获取或设置元素的样式
+-   [random](./random.md) 获取随机数
+-   [randomList](./randomList.md) 获取随机数列表
+-   [weightedRandom](./weightedRandom.md) 获取带权重的随机数
+-   [randomHexColor](./randomHexColor.md) 获取随机十六进制颜色
+-   [sudoku](./sudoku.md) 数独相关
+-   [reverse](./reverse.md) 字符串反转
+-   [strToNum](./strToNum.md) 字符串转数字
+-   [charToCodePoint](./charToCodePoint.md) 返回一个字符串的 Unicode 编码点。
+-   [startsWith](./startsWith.md) 判断字符串是否以指定的字符串或正则表达式匹配的字符串开头
+-   [endsWith](./endsWith.md) 判断字符串是否以指定的字符串或正则表达式匹配的字符串结尾
+-   [getTermLeft](./getTermLeft.md) 获取字符串中匹配项左侧的字符串
+-   [getTermRight](./getTermRight.md) 获取字符串中匹配项右侧的字符串
+-   [getRangeByTerm](./getRangeByTerm.md) 获取字符串中某个范围内的字符串
+-   [trimLineStart](./trimLineStart.md) 删除行前的空格，保留缩进层级
+-   [isEmail](./isEmail.md) 判断字符串是否是邮箱
+-   [shuffle](./shuffle.md) 乱序数组
+-   [range](./range.md) 创建一个数字范围数组
+-   [conversionBase](./conversionBase.md) 进制转换
+-   [thousandth](./thousandth.md) 千分位
+-   [sum](./sum.md) 求和
+-   [dataUrlToBlob](./dataUrlToBlob.md) 将 data url 字符串转换为 Blob 对象
+-   [toB64](./toB64.md) 将输入转换为 base64 字符串
+-   [toDataUrl](./toDataUrl.md) 将输入转换为 data url 字符串
+-   [chain](./chain.md) 函数链式调用
+-   [throttle](./throttle.md) 函数节流
+-   [curry](./curry.md) 函数柯里化
+-   [compose](./compose.md) 函数组合
+-   [fori](./fori.md) 循环
+-   [formatDate](./formatDate.md) 格式化日期
+-   [css](./css.md) 获取或设置元素的样式
