@@ -1,12 +1,10 @@
 # xttUtils
 
-## random Methods
-
-### random
+## random
 
 Generate a random integer between min and max (inclusive of min and max).
 
-#### note
+### note
 
 If max is greater than Number.MAX_SAFE_INTEGER, it will return an integer between min and Number.MAX_SAFE_INTEGER
 
@@ -16,7 +14,7 @@ If min is less than Number.MIN_SAFE_INTEGER, it will return an integer between N
 >
 > Number.MIN_SAFE_INTEGER = -9007199254740991 = -(2^53 - 1)
 
-#### params
+### params
 
 -   [min=1] (number)：minimum value
 -   [max=100] (number)：maximum value
@@ -27,11 +25,11 @@ If one parameter is included, an integer between 1 and the parameter (inclusive 
 
 If two parameters are included, an integer between min and max (inclusive of min and max) is returned.
 
-#### returns
+### returns
 
 -   (number)：random integer between min and max (inclusive of min and max).
 
-#### example
+### example
 
 ```js
 random(1, 10); // 1 - 10
@@ -40,11 +38,11 @@ random(); // 1 - 100
 random(-Infinity, Infinity); // -9007199254740991 - 9007199254740991
 ```
 
-### randomList
+## randomList
 
 Generate a random number list
 
-#### params
+### params
 
 -   [min=1] (number)：minimum value
 -   [max=10] (number)：maximum value
@@ -54,11 +52,11 @@ Generate a random number list
 
 min and max parameters are consistent with the [random](./random.md) method. (except for the default value)
 
-#### returns
+### returns
 
 -   (number[])：A random number list of length count, each of which is between min and max
 
-#### example
+### example
 
 ```js
 randomList(1, 10); // [4, 2, 3, 7, 4, 2, 8, 9, 4, 1]
@@ -81,60 +79,60 @@ randomList(1, 10, {
 }); // [4, 8, 10, 6, 1,5, 2,  7, 9, 3]
 ```
 
-### weightedRandom
+## weightedRandom
 
 Get a random item from a list of random numbers based on the weight list.
 
-#### params
+### params
 
 -   randomList (any[] | Object<string,number>)：The list of random numbers, when randomList is Object, the weight list will be ignored, the key of Object is the list of random numbers, and the value is the weight list
 
 -   [weightList] (number[]): The weight list, the length of the weight list must be the same as the length of the random number list, and the sum of the weight list must be greater than 1
 
-#### returns
+### returns
 
 -   (any)：A random item from the random number list
 
-#### example
+### example
 
 ```js
 weightedRandom([1, 2, 3], [4, 5, 6]); // 4/15 probability to get 1, 5/15 probability to get 2, 6/15 probability to get 3
 weightedRandom({ 1: 4, 2: 5, 3: 6 }); // ditto
 ```
 
-### randomHexColor
+## randomHexColor
 
 Generates a random hexadecimal color value
 
-#### params
+### params
 
 -   [options] (object)：config options
     -   [alpha=false] (boolean)：whether to include the alpha channel, default is false
 
-#### returns
+### returns
 
 -   (string)：hexadecimal color value
 
-#### example
+### example
 
 ```js
 randomHexColor(); // #e672ac
 randomHexColor({ alpha: true }); // #8b346ae5
 ```
 
-### generateSudoku
+## generateSudoku
 
 Generate a sudoku game initial data.
 
-#### params
+### params
 
 -   [square=44] (number): The number of given squares in the board
 
-#### returns
+### returns
 
 -   (number[][])：The initial data of the sudoku game
 
-#### example
+### example
 
 ```js
 generateSudoku();
@@ -152,15 +150,15 @@ generateSudoku();
 // ];
 ```
 
-### generateSudokuBoard
+## generateSudokuBoard
 
 Generate a sudoku board.
 
-#### returns
+### returns
 
 -   (number[][])：The sudoku board
 
-#### example
+### example
 
 ```js
 generateSudokuBoard();
@@ -178,19 +176,19 @@ generateSudokuBoard();
 // ];
 ```
 
-### isValidSudokuBoard
+## isValidSudokuBoard
 
 Validate a sudoku board.
 
-#### params
+### params
 
 -   board (number[][]): The sudoku board
 
-#### returns
+### returns
 
 -   (boolean)：Whether the board is valid
 
-#### example
+### example
 
 ```js
 isValidSudokuBoard([
@@ -206,32 +204,30 @@ isValidSudokuBoard([
 ]); // -> true
 ```
 
-## string Methods
-
-### reverse
+## reverse
 
 Returns the reverse of a string.
 
-#### params
+### params
 
 -   str (string)：The string to be reversed
 
-#### returns
+### returns
 
 -   (string)：The reversed string
 
-#### example
+### example
 
 ```js
 reverse("hello"); // 'olleh'
 reverse(""); // ''
 ```
 
-### startsWith
+## startsWith
 
 Determines whether a string begins with the specified string or regular expression matching string
 
-#### params
+### params
 
 -   str (string)：The string to be judged
 
@@ -239,11 +235,11 @@ Determines whether a string begins with the specified string or regular expressi
 
 -   [startPosition] (number)：The position to start the judgment
 
-#### returns
+### returns
 
 -   (boolean)：Returns `true` if the string begins with the specified string or a string matched by a regular expression, otherwise returns `false`
 
-#### example
+### example
 
 ```js
 startsWith("Hello World!", "Hello"); // true
@@ -254,11 +250,11 @@ startsWith("Hello World!", /World/); // false
 startsWith("Hello World!", /World/, 6); // true
 ```
 
-### endsWith
+## endsWith
 
 Determines whether a string ends with a specified string or a string matched by a regular expression
 
-#### params
+### params
 
 -   str (string)：The string to be judged
 
@@ -266,11 +262,11 @@ Determines whether a string ends with a specified string or a string matched by 
 
 -   [endPosition] (number)：The position to end the judgment
 
-#### returns
+### returns
 
 -   (boolean)：Returns `true` if the string ends with a specified string or a string matched by a regular expression, otherwise returns `false`
 
-#### example
+### example
 
 ```js
 endsWith("Hello World!", "World!"); // true
@@ -281,11 +277,11 @@ endsWith("Hello World!", /World/); // false
 endsWith("Hello World!", /Hello/, 5); // true
 ```
 
-### getTermLeft
+## getTermLeft
 
 获取字符串中匹配项左侧的字符串
 
-#### params
+### params
 
 -   str (string)：要获取的字符串
 
@@ -293,11 +289,11 @@ endsWith("Hello World!", /Hello/, 5); // true
 
 -   [beforeWhichTimes=1] (number)：匹配到几次后停止，默认为 1, 如果数字大于匹配到的次数，则返回最后一个匹配项左侧的字符串
 
-#### returns
+### returns
 
 -   (string)：返回匹配项左侧的字符串
 
-#### example
+### example
 
 ```js
 getTermLeft("abcde", "c"); // "ab"
@@ -308,11 +304,11 @@ getTermLeft("abc1de2", /\d/, 2); // "abc1de"
 getTermLeft("abc1de2", /\d/, 3); // "abc1de"
 ```
 
-### getTermRight
+## getTermRight
 
 Get the string on the right of the matching item in the string
 
-#### params
+### params
 
 -   str (string)：The string to get
 
@@ -320,11 +316,11 @@ Get the string on the right of the matching item in the string
 
 -   [beforeWhichTimes=1] (number)：Stop after matching several times, the default is 1, if the number is greater than the number of matches, the string to the right of the last match is returned, if you want to take the first matching item from the right, you can pass in -1
 
-#### returns
+### returns
 
 -   (string)：Returns the string on the right of the matching item
 
-#### example
+### example
 
 ```js
 getTermRight("abcde", "c"); // "de"
@@ -335,20 +331,20 @@ getTermRight("abc1de2", /\d/, 2); // ""
 getTermRight("abc1de2", /\d/, 3); // ""
 ```
 
-### getRangeByTerm
+## getRangeByTerm
 
 Get the string in a range of strings
 
-#### params
+### params
 
 -   str (string)：The string to be processed
 -   term ([string | RegExp, string | RegExp])：The string or regular expression range to be matched
 
-#### returns
+### returns
 
 -   (string)：Returns the string in the matching range
 
-#### example
+### example
 
 ```js
 getRangeByTerm("abcde", ["b", "d"]); // "c"
@@ -356,22 +352,22 @@ getRangeByTerm("abcde", ["d", "b"]); // "c"
 getRangeByTerm("a1bcd2e", [/\d/, /\d/]); // "bcd"
 ```
 
-### charToCodePoint
+## charToCodePoint
 
 Returns the Unicode code point of a string.
 
-#### params
+### params
 
 -   str (string)：The string to be converted
 -   [options] (Object)：Optional parameters
     -   [separator=""] (string)：separator
     -   [base=16] (2 | 8 | 10 | 16)：base
 
-#### returns
+### returns
 
 -   (string)：Unicode code point
 
-#### example
+### example
 
 ```js
 charToCodePoint("Hello"); // "0x480x650x6c0x6c0x6f"
@@ -379,22 +375,22 @@ charToCodePoint("Hello World!", { separator: " " }); // "0x48 0x65 0x6c 0x6c 0x6
 charToCodePoint("Hello World!", { base: 2, separator: " " }); // "0b1001000 0b1100101 0b1101100 0b1101100 0b1101111 0b100000 0b1010111 0b1101111 0b1110010 0b1101100 0b1100100 0b100001"
 ```
 
-### trimLineStart
+## trimLineStart
 
 Delete the spaces before the line, keep the indentation level, if it is multiple lines, then delete the minimum number of common spaces for all lines
 
-#### params
+### params
 
 -   str (string)：Convert the string
 -   options(object): configuration item
     -   removeFirstEmptyLine (boolean)：Whether to delete the empty line of the first line. The default value is false
     -   removeLastEmptyLine (boolean)：Whether to delete the empty line of the last line. The default value is false
 
-#### returns
+### returns
 
 -   (string)：Returns the string after deleting the spaces before the line format
 
-#### example
+### example
 
 ```js
 trimLineStart("  123"); // "123"
@@ -402,19 +398,19 @@ trimLineStart("  123\n  456"); // "123\n456"
 trimLineStart("  123\n    456"); // "123\n  456"
 ```
 
-### strToNum
+## strToNum
 
 string to number
 
-#### params
+### params
 
 -   text (string)：The string to convert.
 
-#### returns
+### returns
 
 -   (number)：The converted number.
 
-#### example
+### example
 
 ```js
 strToNum("123"); // 123
@@ -424,19 +420,19 @@ strToNum("fdsf12fd3.4fsdf56.7fds89"); // 123.456789
 strToNum("-fdsf12fd3.4fsdf56.7fds89"); // -123.456789
 ```
 
-### isEmail
+## isEmail
 
 Determine whether a string is an email address
 
-#### params
+### params
 
 -   email (string): email address
 
-#### returns
+### returns
 
 -   (boolean): is email address
 
-#### example
+### example
 
 ```js
 isEmail("example@abc.com") => true
@@ -445,31 +441,29 @@ isEmail("a.b.example@abc.com") => true
 isEmail("a..example@abc.com") => false
 ```
 
-## array Methods
-
-### shuffle
+## shuffle
 
 Shuffle an array
 
-#### params
+### params
 
 -   list (array): The array to shuffle
 
-#### returns
+### returns
 
 -   (array): Returns the new shuffled array
 
-#### example
+### example
 
 ```js
 shuffle([1, 2, 3, 4, 5]); // [2, 4, 1, 3, 5]
 ```
 
-### range
+## range
 
 Create an array of numbers in the range [start, end] with step.
 
-#### params
+### params
 
 -   [start=0] (number): Start of range
 -   [end=0] (number): End of range
@@ -479,11 +473,11 @@ If only one argument is provided a range from 0 to start is created. start < 0 w
 
 If two arguments are provided a range from start to end is created. start < end when step defaults to 1, start > end when step defaults to -1.
 
-#### returns
+### returns
 
 -   (Array): Returns the range of numbers.
 
-#### example
+### example
 
 ```js
 range(10); // => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -496,13 +490,11 @@ range(1, 10, 7); // => [1, 8]
 range(1, -10, -3); // => [1, -2, -5, -8]
 ```
 
-## number Methods
-
-### conversionBase
+## conversionBase
 
 Converts a number to a string of the specified base.
 
-#### params
+### params
 
 | name      | type               | default | description              |
 | --------- | ------------------ | ------- | ------------------------ |
@@ -514,11 +506,11 @@ If hasPrefix is true, when base is 2, the prefix of the return value is '0b'; wh
 
 When num is NaN, or converted to NaN after type conversion, it will be treated as 0.
 
-#### returns
+### returns
 
 -   (string)：The converted string.
 
-#### example
+### example
 
 ```js
 conversionBase(10, 2); // -> '0b1010'
@@ -527,20 +519,20 @@ conversionBase(10, 2, false); // -> "1010"
 conversionBase(-10, 2); // -> "-0b1010"
 ```
 
-### thousandth
+## thousandth
 
 Converts a number to a thousandth format
 
-#### params
+### params
 
 -   num (number): The number to convert
 -   [maximumFractionDigits=20] (number): The maximum number of digits after the decimal point
 
-#### returns
+### returns
 
 -   (string): The converted string with thousandth format
 
-#### example
+### example
 
 ```js
 thousandth(1000000); // "1,000,000"
@@ -548,32 +540,30 @@ thousandth(1000000.1234); // "1,000,000.1234"
 thousandth(1000000.1234, 2); // "1,000,000.12"
 ```
 
-#### references
+### references
 
 -   MDN [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
 
-### sum
+## sum
 
 Sum up.
 
-#### params
+### params
 
 -   values (...Array): The array or parameter list to sum up.
 
-#### returns
+### returns
 
 -   (number): The sum.
 
-#### example
+### example
 
 ```js
 sum([1, 2, 3, 4, 5]); // 15
 sum(1, 2, 3, 4, 5); // 15
 ```
 
-## file Methods
-
-### toB64
+## toB64
 
 Convert input to base64 string.
 
@@ -582,39 +572,39 @@ Convert input to base64 string.
 > This functino is supported in browser environment only when input is `File` or `Blob`.
 > Not supported in node.js environment. Because `FileReader` is not a global object in node.js.
 
-#### params
+### params
 
 -   input (File | Blob | string | number): input
 
-#### returns
+### returns
 
 -   (Promise<string>): promise of the base64 string
 
-#### examples
+### examples
 
 ```javascript
 toB64("hello world"); // "aGVsbG8gd29ybGQ="
 ```
 
-### dataUrlToBlob
+## dataUrlToBlob
 
 Convert data url string to Blob object
 
-#### params
+### params
 
 -   data (string)：data url string
 
-#### returns
+### returns
 
 -   (Promise<Blob>)：promise of Blob object
 
-#### notes
+### notes
 
 Usesd `fetch` API, so compatibility should be considered when using in node.js environment. `fetch` API is supported in node.js v18.0.0 and above.
 
 See: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 
-### toDataUrl
+## toDataUrl
 
 Convert input to data url string
 
@@ -623,18 +613,18 @@ Convert input to data url string
 > This functino is supported in browser environment only when input is `File` or `Blob`.
 > Not supported in node.js environment. Because `FileReader` is not a global object in node.js.
 
-#### params
+### params
 
 -   input (File | Blob | string | number): input
 -   [options] (object): optional
     -   [options.mimeType="text/plain"] (string): specify the mime type of data url
     -   [options.base64=true] (boolean): whether to return base64 string
 
-#### returns
+### returns
 
 -   (Promise<string>): promise of the data url string
 
-#### examples
+### examples
 
 ```javascript
 toDataUrl("hello world"); // "data:text/plain;base64,aGVsbG8gd29ybGQ="
@@ -642,13 +632,11 @@ toDataUrl("hello world", { base64: false }); // "data:text/plain,hello world"
 toDataUrl("hello world", { mime: "text/html" }); // "data:text/html;base64,aGVsbG8gd29ybGQ="
 ```
 
-## function Methods
-
-### fori
+## fori
 
 Loop execution function.
 
-#### params
+### params
 
 -   collection (\*): The target to be looped through.
 -   iteratee (Iteratee): The function to be executed on each iteration of the loop.
@@ -662,26 +650,26 @@ Iteratee:
 -   i (number): The index of the current iteration.
 -   target (\_): The target of the current iteration. If the target is an object, this value is Object.entries(\_).
 
-#### returns
+### returns
 
 -   (Array | Promise\<Array>): Returns the results of the loop. If the target is an async iterator, the return value is a Promise.
 
-### throttle
+## throttle
 
 Throttle function.
 
 When the function is called, if it is in an idle state, the function is executed immediately and enters a waiting state. If the function is called again during the waiting time, the current call value is saved until the waiting time ends. If the function is called multiple times, the last call value will overwrite the previous call values. After the waiting time ends, if there is a saved call value, the function is executed and enters a waiting state again. If there is no saved call value, it enters an idle state and waits for the next call.
 
-#### params
+### params
 
 -   func (function): The function to be throttled.
 -   delay (number): The waiting time.
 
-#### returns
+### returns
 
 -   (function): The throttled function.
 
-#### example
+### example
 
 ```js
 // 1 2 3 4 5 6 7 8 9 10
@@ -697,23 +685,23 @@ throttle((a) => console.log(a), 3000);
 // ...
 ```
 
-### chain
+## chain
 
 Open a chainable sequence of methods. This sequence can be used to apply a sequence of methods to the wrapped object.
 Must be terminated by value() method to retrieve the final value.
 
-#### params
+### params
 
 -   [self=this] (object): The object of chainable sequence, default is this.
 -   [?initValue] (\*): The initial value, which will be passed as the first parameter in the next call to the chainable method.
 
 If only one parameter is passed in and the parameter is not an object, the parameter will be used as the initValue value. If an object is passed in, the object will be used as the self value.
 
-#### returns
+### returns
 
 -   (Proxy): The proxy object
 
-#### example
+### example
 
 ```js
 chain(xttUtils, "Hello World!")
@@ -732,19 +720,19 @@ xttUtils
 	.value(); // true
 ```
 
-### compose
+## compose
 
 Compose functions from right to left.
 
-#### params
+### params
 
 -   fns (...Function): All functions to compose must be single-parameter functions, and the last function can be a multi-parameter function
 
-#### returns
+### returns
 
 -   (Function): The function after composition
 
-#### example
+### example
 
 ```js
 const _ = xttUtils.curry.placeholder;
@@ -753,22 +741,22 @@ const getTermRight = xttUtils.curry(xttUtils.getTermRight, _, " ", 1);
 compose(isEndsWith, getTermRight)("Hello World!"); // true
 ```
 
-### curry
+## curry
 
 Curry a function
 
 If you want to use placeholder, please use `curry.placeholder` property
 
-#### params
+### params
 
 -   fn (Function): The function to curry
 -   [args] (...any)：The arguments to curry
 
-#### returns
+### returns
 
 -   (Function | any)：Curried function, if the parameters are enough, return the result of the function execution
 
-#### example
+### example
 
 ```js
 const add = (a, b, c) => a + b + c;
@@ -784,28 +772,26 @@ curriedAdd(_, _, 3)(_, 2)(1); // 6
 curry(add, 10, 20, 30, 4); // 60
 ```
 
-## date Methods
-
-### formatDate
+## formatDate
 
 Format date
 
 > This function is only for simple processing. If you need more complex formatting, it is recommended to use [day.js](https://day.js.org/en/)
 
-#### params
+### params
 
 -   date (Date|string|number): Date
 -   format (string|object): Format string or format options
     -   format (string): Format string, default is 'YYYY-MM-DD hh:mm:ss', available values refer to the format list below
     -   lang (string): Language, default is 'en'
 
-#### returns
+### returns
 
 -   (string|Function): Formatted date
 
 If only the date parameter is passed, it returns a partially applied function with a fixed date. The format parameter can be passed in later, which can be used to format the same date multiple times. If the format parameter is passed in during the initial call, the formatted date is returned directly.
 
-#### example
+### example
 
 ```js
 formatDate("2023-01-01", "YYYY-MM-DD hh:mm:ss"); // => '2023-01-01 00:00:00'
@@ -814,7 +800,7 @@ formatDate("2023-01-01", "dddd"); // => 'Sunday'
 formatDate("2023-01-01", { format: "dddd", lang: "zh-CN" }); // => '星期日'
 ```
 
-##### format
+#### format
 
 Supported format placeholders:
 
@@ -855,32 +841,30 @@ Supported format placeholders:
 | zh   | ddd    | 周一   | 周二    | 周三      | 周四     | 周五   | 周六     | 周日   |
 | zh   | dddd   | 星期一 | 星期二  | 星期三    | 星期四   | 星期五 | 星期六   | 星期日 |
 
-#### references
+### references
 
 -   MDN [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
 
-## html Methods
-
-### css
+## css
 
 Set or get the style of an element
 
-#### get
+### get
 
-##### params
+#### params
 
 | param   | type        | default | description |
 | ------- | ----------- | ------- | ----------- |
 | element | HTMLElement | -       | element     |
 | styles  | string      | -       | style name  |
 
-##### returns
+#### returns
 
 -   (string): style value
 
-#### set
+### set
 
-##### params
+#### params
 
 | param   | type             | default | description |
 | ------- | ---------------- | ------- | ----------- |
@@ -892,15 +876,15 @@ If element and styles are passed in as object types, multiple styles of the elem
 
 If element and styles are passed in as string types and value is passed in as string types, the style of the element is set
 
-##### returns
+#### returns
 
 -   (HTMLElement): element
 
-#### notes
+### notes
 
 If the element passed in is not of type HTMLElement, a TypeError will be thrown
 
-#### example
+### example
 
 ```js
 css(document.body, "font-size", "16px"); // -> document.body
