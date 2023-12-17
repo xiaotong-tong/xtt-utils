@@ -21,4 +21,4 @@ declare module "xtt-utils/conversionBase" {
 	export type { conversionBase as default };
 }
 
-export default conversionBase;
+export type { conversionBase, conversionBase as default };

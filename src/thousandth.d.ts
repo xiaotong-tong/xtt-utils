@@ -11,11 +11,11 @@
 declare function thousandth(num: number, maximumFractionDigits?: number): string;
 
 declare module "xtt-utils" {
-	export { thousandth };
+	export type { thousandth };
 }
 
 declare module "xtt-utils/thousandth" {
-	export { thousandth as default };
+	export type { thousandth as default };
 }
 
-export default thousandth;
+export type { thousandth, thousandth as default };

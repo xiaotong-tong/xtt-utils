@@ -35,4 +35,4 @@ declare module "xtt-utils/css" {
 	export type { css as default };
 }
 
-export default css;
+export type { css, css as default };

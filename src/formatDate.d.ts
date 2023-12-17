@@ -60,4 +60,4 @@ declare module "xtt-utils/formatDate" {
 	export type { formatDate as default };
 }
 
-export default formatDate;
+export type { formatDate, formatDate as default };

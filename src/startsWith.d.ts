@@ -16,11 +16,11 @@
 declare function startsWith(str: string, prefix: string | RegExp, startPosition?: number): boolean;
 
 declare module "xtt-utils" {
-	export { startsWith };
+	export type { startsWith };
 }
 
 declare module "xtt-utils/startsWith" {
-	export { startsWith as default };
+	export type { startsWith as default };
 }
 
-export default startsWith;
+export type { startsWith, startsWith as default };

@@ -33,4 +33,4 @@ declare module "xtt-utils/fori" {
 	export type { fori as default };
 }
 
-export default fori;
+export type { fori, fori as default };

@@ -24,4 +24,4 @@ declare module "xtt-utils/getTermRight" {
 	export type { getTermRight as default };
 }
 
-export default getTermRight;
+export type { getTermRight, getTermRight as default };

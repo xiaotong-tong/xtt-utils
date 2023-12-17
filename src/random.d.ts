@@ -21,4 +21,4 @@ declare module "xtt-utils/random" {
 	export type { random as default };
 }
 
-export default random;
+export type { random, random as default };

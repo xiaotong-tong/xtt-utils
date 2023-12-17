@@ -21,4 +21,4 @@ declare module "xtt-utils/chain" {
 	export type { chain as default };
 }
 
-export default chain;
+export type { chain, chain as default };

@@ -19,4 +19,4 @@ declare module "xtt-utils/compose" {
 	export type { compose as default };
 }
 
-export default compose;
+export type { compose, compose as default };

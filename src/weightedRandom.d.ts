@@ -12,11 +12,11 @@
 declare function weightedRandom(randomList: any[] | { [key: string]: number }, weightedList?: number[]): any;
 
 declare module "xtt-utils" {
-	export { weightedRandom };
+	export type { weightedRandom };
 }
 
 declare module "xtt-utils/weightedRandom" {
-	export { weightedRandom as default };
+	export type { weightedRandom as default };
 }
 
-export default weightedRandom;
+export type { weightedRandom, weightedRandom as default };

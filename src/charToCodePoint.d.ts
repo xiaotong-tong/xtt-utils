@@ -21,4 +21,4 @@ declare module "xtt-utils/charToCodePoint" {
 	export type { charToCodePoint as default };
 }
 
-export default charToCodePoint;
+export type { charToCodePoint, charToCodePoint as default };

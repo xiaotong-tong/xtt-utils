@@ -31,4 +31,4 @@ declare module "xtt-utils/curry" {
 	export type { curry as default };
 }
 
-export default curry;
+export type { curry, curry as default };

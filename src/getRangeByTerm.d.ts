@@ -19,4 +19,4 @@ declare module "xtt-utils/getRangeByTerm" {
 	export type { getRangeByTerm as default };
 }
 
-export default getRangeByTerm;
+export type { getRangeByTerm, getRangeByTerm as default };

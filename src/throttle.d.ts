@@ -8,11 +8,11 @@
 declare function throttle<A extends any[], R>(func: (...args: A) => R, delay: number): (...args: A) => void;
 
 declare module "xtt-utils" {
-	export { throttle };
+	export type { throttle };
 }
 
 declare module "xtt-utils/throttle" {
-	export { throttle as default };
+	export type { throttle as default };
 }
 
-export default throttle;
+export type { throttle, throttle as default };

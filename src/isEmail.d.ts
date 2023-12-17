@@ -21,4 +21,4 @@ declare module "xtt-utils/isEmail" {
 	export type { isEmail as default };
 }
 
-export default isEmail;
+export type { isEmail, isEmail as default };

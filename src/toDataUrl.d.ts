@@ -17,11 +17,11 @@ declare function toDataUrl(
 ): Promise<string>;
 
 declare module "xtt-utils" {
-	export { toDataUrl };
+	export type { toDataUrl };
 }
 
 declare module "xtt-utils/toDataUrl" {
-	export { toDataUrl as default };
+	export type { toDataUrl as default };
 }
 
-export default toDataUrl;
+export type { toDataUrl, toDataUrl as default };

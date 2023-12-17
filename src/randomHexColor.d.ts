@@ -18,4 +18,4 @@ declare module "xtt-utils/randomHexColor" {
 	export type { randomHexColor as default };
 }
 
-export default randomHexColor;
+export type { randomHexColor, randomHexColor as default };

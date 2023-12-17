@@ -17,4 +17,4 @@ declare module "xtt-utils/dataUrlToBlob" {
 	export type { dataUrlToBlob as default };
 }
 
-export default dataUrlToBlob;
+export type { dataUrlToBlob, dataUrlToBlob as default };

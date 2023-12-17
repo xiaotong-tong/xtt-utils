@@ -10,11 +10,11 @@
 declare function reverse(text: string): string;
 
 declare module "xtt-utils" {
-	export { reverse };
+	export type { reverse };
 }
 
 declare module "xtt-utils/reverse" {
-	export { reverse as default };
+	export type { reverse as default };
 }
 
-export default reverse;
+export type { reverse, reverse as default };

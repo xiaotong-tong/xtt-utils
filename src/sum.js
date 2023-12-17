@@ -2,11 +2,12 @@
  * @description Sums up
  * @description-cn 求和
  * @category Number
- * @param {...number} values  The array or parameter list to sum up.
- * @returns {number} Returns the sum
+ * @param {(number|string)[]} values  The array or parameter list to sum up.
+ * @returns {number | string} Returns the sum
  * @example
  * sum([1, 2, 3]) // 6
  * sum(1, 2, 3) // 6
+ * sum(["1", 2, 3]) // "123"
  */
 
 const sum = (...values) => {

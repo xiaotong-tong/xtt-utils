@@ -20,11 +20,11 @@ declare function trimLineStart(
 ): string;
 
 declare module "xtt-utils" {
-	export { trimLineStart };
+	export type { trimLineStart };
 }
 
 declare module "xtt-utils/trimLineStart" {
-	export { trimLineStart as default };
+	export type { trimLineStart as default };
 }
 
-export default trimLineStart;
+export type { trimLineStart, trimLineStart as default };

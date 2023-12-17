@@ -27,4 +27,4 @@ declare module "xtt-utils/randomList" {
 	export type { randomList as default };
 }
 
-export default randomList;
+export type { randomList, randomList as default };

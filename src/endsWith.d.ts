@@ -23,4 +23,4 @@ declare module "xtt-utils/endsWith" {
 	export type { endsWith as default };
 }
 
-export default endsWith;
+export type { endsWith, endsWith as default };
