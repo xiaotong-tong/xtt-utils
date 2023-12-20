@@ -3,7 +3,6 @@ import { emailGrep } from "./_internal/grep.js";
 /**
  * Determine whether a string is an email address
  * @description-cn 判断字符串是否是邮箱
- * @category String
  * @param {string} email - The string to search within.
  * @returns {boolean} Returns true if value is an email, else false.
  * @example

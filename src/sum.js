@@ -1,7 +1,6 @@
 /**
  * @description Sums up
  * @description-cn 求和
- * @category Number
  * @param {(number|string)[]} values  The array or parameter list to sum up.
  * @returns {number | string} Returns the sum
  * @example

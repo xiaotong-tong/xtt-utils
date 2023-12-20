@@ -1,7 +1,6 @@
 /**
  * Determine whether a string is an email address
  * @description-cn 判断字符串是否是邮箱格式
- * @category String
  * @param {string} email - The string to search within.
  * @returns {boolean} Returns true if value is an email, else false.
  * @example
