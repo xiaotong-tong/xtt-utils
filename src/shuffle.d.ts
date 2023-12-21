@@ -10,11 +10,11 @@
 declare function shuffle<T>(list: T[]): T[];
 
 declare module "xtt-utils" {
-	export type { shuffle };
+	export { shuffle };
 }
 
 declare module "xtt-utils/suffle" {
-	export type { shuffle as default };
+	export { shuffle as default };
 }
 
-export type { shuffle, shuffle as default };
+export { shuffle, shuffle as default };

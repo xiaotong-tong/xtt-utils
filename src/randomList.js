@@ -6,7 +6,6 @@ import { _formatIntRange } from "./_internal/formatIntRange.js";
 /**
  * @description Generate a list of random numbers
  * @description-cn 生成一个随机数列表
- * @category Random
  * @param {number} [min=1] The minimum value of the range
  * @param {number} [max=10] The maximum value of the range
  * @param {number|object} [option] Options for generating the list. If it is a number, it represents the number of items in the list.
@@ -78,4 +77,7 @@ const randomList = (min, max, option) => {
 	}
 };
 
-export default randomList;
+export {
+	randomList,
+	randomList as default
+}

@@ -1,7 +1,6 @@
 /**
  * @description Open chainable sequence, you must call the value method to get the final value
  * @description-cn 开启链式调用，必须调用 value 方法获取最终的值
- * @category Function
  * @param {object} [self=this] The object of the chainable sequence, default is this
  * @param {*} [initValue] The initial value of the chainable sequence
  *
@@ -45,4 +44,7 @@ function chain(self, initValue) {
 	return proxyed;
 }
 
-export default chain;
+export {
+	chain,
+	chain as default
+}

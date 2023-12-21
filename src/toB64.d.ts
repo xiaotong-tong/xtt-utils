@@ -8,11 +8,11 @@
 declare function toB64(input: File | Blob | string | number): Promise<string>;
 
 declare module "xtt-utils" {
-	export type { toB64 };
+	export { toB64 };
 }
 
 declare module "xtt-utils/toB64" {
-	export type { toB64 as default };
+	export { toB64 as default };
 }
 
-export type { toB64, toB64 as default };
+export { toB64, toB64 as default };

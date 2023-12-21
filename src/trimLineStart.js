@@ -1,7 +1,6 @@
 /**
  * @description-en Delete the leading spaces of the line, keep the indent level, if it is multiple lines, then delete the minimum common space number of all lines
  * @description-cn 删除行前的空格，保留缩进层级，如果是多行，那么会删除所有行的最小共有空格数
- * @category String
  * @param {string} str
  * @param {object} options
  * @param {boolean} [options.removeFirstEmptyLine=false] Whether to delete the empty line of the first line. The default value is false
@@ -41,4 +40,7 @@ const trimLineStart = (str, options) => {
 	return str.replace(new RegExp(`^[ \\t]{${minSapceNum}}`, "gm"), "");
 };
 
-export default trimLineStart;
+export {
+	trimLineStart,
+	trimLineStart as default
+}

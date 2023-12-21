@@ -3,7 +3,6 @@ import random from "./random.js";
 /**
  * @description Shuffle an array
  * @description-cn 乱序数组
- * @category Array
  * @template T
  * @param {T[]} list The array to shuffle
  * @returns {T[]} Returns the new shuffled array
@@ -29,4 +28,7 @@ const shuffle = (list) => {
 	return copy;
 };
 
-export default shuffle;
+export {
+	shuffle,
+	shuffle as default
+}

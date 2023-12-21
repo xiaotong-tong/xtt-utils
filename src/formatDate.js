@@ -11,7 +11,6 @@
 /**
  * @description Format a date
  * @description-cn 格式化日期
- * @category Date
  * @param {Date | string | number} date The date to format.
  * @param {string | object} [format] If format is a string, it will be automatically changed to { format: input }
  * @param {string} [format.format="YYYY-MM-DD hh:mm:ss"] format string like 'YYYY-MM-DD hh:mm:ss'
@@ -120,4 +119,7 @@ const formatDate = (date, format) => {
 	return formatFn;
 };
 
-export default formatDate;
+export {
+	formatDate,
+	formatDate as default
+}

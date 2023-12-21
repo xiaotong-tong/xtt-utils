@@ -3,7 +3,6 @@ import random from "./random.js";
 /**
  * @description Generates a random hexadecimal color value
  * @description-cn 生成一个随机的十六进制颜色值
- * @category Random
  * @param {object} [options] The options object
  * @param {boolean} [options.alpha=false] Whether to include alpha channel
  * @returns {string} Returns the random hexadecimal color value
@@ -23,4 +22,7 @@ const randomHexColor = (options) => {
 	);
 };
 
-export default randomHexColor;
+export {
+	randomHexColor,
+	randomHexColor as default
+}

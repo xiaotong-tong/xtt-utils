@@ -14,11 +14,11 @@
 declare function charToCodePoint(str: string, options?: { separator?: string; base?: 2 | 8 | 10 | 16 }): string;
 
 declare module "xtt-utils" {
-	export type { charToCodePoint };
+	export { charToCodePoint };
 }
 
 declare module "xtt-utils/charToCodePoint" {
-	export type { charToCodePoint as default };
+	export { charToCodePoint as default };
 }
 
-export type { charToCodePoint, charToCodePoint as default };
+export { charToCodePoint, charToCodePoint as default };

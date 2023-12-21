@@ -1,8 +1,8 @@
 import { _toNumber } from "./_internal/toNumber.js";
+
 /**
  * @description Converts a number to a string of the specified base
  * @description-cn 将数字转换为指定进制的字符串
- * @category Number
  * @param {number} num The number to convert
  * @param {2 | 8 | 10 | 16} [base=10] The base to which to convert the number. Must be one of 2, 8, 10, or 16. Defaults to 10.
  * @param {boolean} [hasPrefix=true] Whether to add the base identifier to the string. Defaults to true.
@@ -40,4 +40,7 @@ const conversionBase = (num, base, hasPrefix) => {
 	return num.toString(base);
 };
 
-export default conversionBase;
+export {
+	conversionBase,
+	conversionBase as default
+}

@@ -24,11 +24,11 @@ declare const curry: {
 };
 
 declare module "xtt-utils" {
-	export type { curry };
+	export { curry };
 }
 
 declare module "xtt-utils/curry" {
-	export type { curry as default };
+	export { curry as default };
 }
 
-export type { curry, curry as default };
+export { curry, curry as default };

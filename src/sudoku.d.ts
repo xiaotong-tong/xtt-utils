@@ -34,19 +34,19 @@ declare function generateSudoku(square?: number): number[][];
 declare function isValidSudokuBoard(board: number[][]): boolean;
 
 declare module "xtt-utils" {
-	export type { generateSudokuBoard, isValidSudokuBoard, generateSudoku };
+	export { generateSudokuBoard, isValidSudokuBoard, generateSudoku };
 }
 
 declare module "xtt-utils/generateSudokuBoard" {
-	export type { generateSudokuBoard as default };
+	export { generateSudokuBoard as default };
 }
 
 declare module "xtt-utils/generateSudoku" {
-	export type { generateSudoku as default };
+	export { generateSudoku as default };
 }
 
 declare module "xtt-utils/isValidSudokuBoard" {
-	export type { isValidSudokuBoard as default };
+	export { isValidSudokuBoard as default };
 }
 
-export type { generateSudokuBoard, isValidSudokuBoard, generateSudoku };
+export { generateSudokuBoard, isValidSudokuBoard, generateSudoku };

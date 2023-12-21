@@ -16,11 +16,11 @@ declare function sum<T extends (NestedArray<number> | NestedArray<string>)[]>(
 ): T extends NestedArray<number>[] ? number : string;
 
 declare module "xtt-utils" {
-	export type { sum };
+	export { sum };
 }
 
 declare module "xtt-utils/sum" {
-	export type { sum as default };
+	export { sum as default };
 }
 
-export type { sum, sum as default };
+export { sum, sum as default };

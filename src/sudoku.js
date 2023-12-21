@@ -179,7 +179,6 @@ class sudoku {
 /**
  * @description generate a sudoku board
  * @description-cn 随机生成一个数独终盘
- * @category Random
  * @returns {number[][]} Returns a sudoku board
  * @example
  * generateSudokuBoard() // -> [[...], ...] // 9 * 9
@@ -192,7 +191,6 @@ export const generateSudokuBoard = () => {
 /**
  * @description generate a sudoku board with spaces
  * @description-cn 随机生成一个数独游戏初始化盘面
- * @category Random
  * @param {number} [square=44] The number of given squares in the board
  * @returns {number[][]} Returns a sudoku board with spaces, the spaces value is 0
  * @example
@@ -206,7 +204,6 @@ export const generateSudoku = (square) => {
 /**
  * @description validate a sudoku board
  * @description-cn 验证一个数独终盘是否合法
- * @category Random
  * @param {number[][]} [board] The sudoku board
  * @returns {boolean} Returns true if the board is valid, else false
  * @example

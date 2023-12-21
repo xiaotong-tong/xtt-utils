@@ -4,7 +4,6 @@ import fori from "./fori.js";
 /**
  * @description Returns the Unicode code point of a string.
  * @description-cn 返回一个字符串的 Unicode 编码点。
- * @category String
  * @param {string} str The string to convert
  * @param {Object} [options] The options object
  * @param {string} [options.separator=""] The separator of the converted result, default value is ""
@@ -26,4 +25,7 @@ const charToCodePoint = (str, options) => {
 	return fori(str, (char) => conversionBase(char.codePointAt(0), base)).join(separator);
 };
 
-export default charToCodePoint;
+export {
+	charToCodePoint,
+	charToCodePoint as default
+}

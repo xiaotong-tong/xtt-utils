@@ -10,7 +10,6 @@
 /**
  * @description Loop through the target
  * @description-cn 循环遍历目标
- * @category Function
  * @param {*} collection The target to be looped through
  * @param {Iteratee} iteratee The function to be executed on each iteration of the loop
  * @param {object} [options] The options for the loop
@@ -80,4 +79,7 @@ const fori = (collection, iteratee, options) => {
 	return results;
 };
 
-export default fori;
+export {
+	fori,
+	fori as default
+}

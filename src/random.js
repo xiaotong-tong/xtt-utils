@@ -3,7 +3,6 @@ import { _formatIntRange } from "./_internal/formatIntRange.js";
 /**
  * @description Generate a random integer between min and max (inclusive)
  * @description-cn 生成一个介于 min 和 max 之间的随机整数
- * @category Random
  * @param {number} [min = 1] minimum value
  * @param {number} [max = 100] maximum value
  * @returns {number} Returns the random integer
@@ -32,4 +31,7 @@ const random = (min, max) => {
 	return min + Math.floor(Math.random() * (max - min + 1));
 };
 
-export default random;
+export {
+	random,
+	random as default
+}

@@ -14,11 +14,11 @@
 declare function conversionBase(num: number, base?: 2 | 8 | 10 | 16, hasPrefix?: boolean): string;
 
 declare module "xtt-utils" {
-	export type { conversionBase };
+	export { conversionBase };
 }
 
 declare module "xtt-utils/conversionBase" {
-	export type { conversionBase as default };
+	export { conversionBase as default };
 }
 
-export type { conversionBase, conversionBase as default };
+export { conversionBase, conversionBase as default };

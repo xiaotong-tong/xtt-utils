@@ -16,11 +16,11 @@
 declare function endsWith(str: string, suffix: string | RegExp, endPosition?: number): boolean;
 
 declare module "xtt-utils" {
-	export type { endsWith };
+	export { endsWith };
 }
 
 declare module "xtt-utils/endsWith" {
-	export type { endsWith as default };
+	export { endsWith as default };
 }
 
-export type { endsWith, endsWith as default };
+export { endsWith, endsWith as default };

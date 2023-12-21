@@ -42,4 +42,7 @@ const toDataUrl = async (input, options) => {
 	}
 };
 
-export default toDataUrl;
+export {
+	toDataUrl,
+	toDataUrl as default
+}

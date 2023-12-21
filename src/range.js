@@ -3,7 +3,6 @@ import { _toNumber } from "./_internal/toNumber.js";
 /**
  * @description Create an array of numbers in the range [start, end] with step.
  * @description-cn 创建一个在 [start, end] 范围内的数字数组，步长为 step
- * @category Array
  * @param {number} [start=0] The start of the range.
  * @param {number} [end] The end of the range.
  * @param {number} [step=1] The value to increment or decrement by.
@@ -68,4 +67,7 @@ const range = (start, end, step) => {
 	return res;
 };
 
-export default range;
+export {
+	range,
+	range as default
+}

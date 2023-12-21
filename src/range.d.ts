@@ -18,11 +18,11 @@
 declare function range(start?: number, end?: number, step?: number): number[];
 
 declare module "xtt-utils" {
-	export type { range };
+	export { range };
 }
 
 declare module "xtt-utils/range" {
-	export type { range as default };
+	export { range as default };
 }
 
-export type { range, range as default };
+export { range, range as default };

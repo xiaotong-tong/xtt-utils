@@ -1,7 +1,6 @@
 /**
  * @description Currying function
  * @description-cn 函数柯里化
- * @category Function
  * @param {Function} fn The function to be curried
  * @param  {...any} [args] The arguments of the function to be curried
  * @returns {Function | any} Curried function, if the parameters are enough, return the result of the function execution
@@ -38,4 +37,7 @@ const curry = (fn, ...args) => {
  */
 curry.placeholder = Symbol("placeholder");
 
-export default curry;
+export {
+	curry,
+	curry as default
+}

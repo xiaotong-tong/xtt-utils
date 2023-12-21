@@ -1,7 +1,6 @@
 /**
  * @description Get the string in a range of strings.
  * @description-cn 获取字符串中某个范围内的字符串。
- * @category String
  * @param {string} str the string to search.
  * @param {[string | RegExp, string | RegExp]} term the string or regular expression to match the range of the string.
  * @returns {string} Returns the string in a range of strings.
@@ -31,4 +30,7 @@ const getRangeByTerm = (str, term) => {
 	}
 };
 
-export default getRangeByTerm;
+export {
+	getRangeByTerm,
+	getRangeByTerm as default
+}

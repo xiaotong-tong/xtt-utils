@@ -14,11 +14,11 @@
 declare function chain<T>(self?: T, initValue?: any): T;
 
 declare module "xtt-utils" {
-	export type { chain };
+	export { chain };
 }
 
 declare module "xtt-utils/chain" {
-	export type { chain as default };
+	export { chain as default };
 }
 
-export type { chain, chain as default };
+export { chain, chain as default };

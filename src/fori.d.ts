@@ -26,11 +26,11 @@ declare function fori(
 ): any[] | Promise<any[]>;
 
 declare module "xtt-utils" {
-	export type { fori };
+	export { fori };
 }
 
 declare module "xtt-utils/fori" {
-	export type { fori as default };
+	export { fori as default };
 }
 
-export type { fori, fori as default };
+export { fori, fori as default };

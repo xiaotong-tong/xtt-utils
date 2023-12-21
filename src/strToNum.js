@@ -1,7 +1,6 @@
 /**
  * @description string to number
  * @description-cn 将字符串转换为数字
- * @category String
  * @param {string} str
  * @returns {number}
  * @example
@@ -44,4 +43,7 @@ const strToNum = (str) => {
 	}
 };
 
-export default strToNum;
+export {
+	strToNum,
+	strToNum as default
+}

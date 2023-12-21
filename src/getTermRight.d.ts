@@ -17,11 +17,11 @@
 declare function getTermRight(str: string, searchTerm: string | RegExp, afterWhichTimes?: number): string;
 
 declare module "xtt-utils" {
-	export type { getTermRight };
+	export { getTermRight };
 }
 
 declare module "xtt-utils/getTermRight" {
-	export type { getTermRight as default };
+	export { getTermRight as default };
 }
 
-export type { getTermRight, getTermRight as default };
+export { getTermRight, getTermRight as default };

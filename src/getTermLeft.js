@@ -3,7 +3,6 @@ import startsWith from "./startsWith.js";
 /**
  * @description-en Get the string on the left of the matching item in the string
  * @description-cn 获取字符串中匹配项左侧的字符串
- * @category String
  * @param {string} str the string to search
  * @param {string | RegExp} searchTerm the string or regular expression to match the string
  * @param {number} [beforeWhichTimes=1] the number of times to match before stopping, default is 1,
@@ -53,4 +52,7 @@ const getTermLeft = (str, searchTerm, beforeWhichTimes) => {
 	return result.slice(0, beforeWhichTimes).join("");
 };
 
-export default getTermLeft;
+export {
+	getTermLeft,
+	getTermLeft as default
+}

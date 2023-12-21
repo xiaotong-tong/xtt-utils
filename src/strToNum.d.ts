@@ -11,11 +11,11 @@
 declare function strToNum(str: string): number;
 
 declare module "xtt-utils" {
-	export type { strToNum };
+	export { strToNum };
 }
 
 declare module "xtt-utils/strToNum" {
-	export type { strToNum as default };
+	export { strToNum as default };
 }
 
-export type { strToNum, strToNum as default };
+export { strToNum, strToNum as default };

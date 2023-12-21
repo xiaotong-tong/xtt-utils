@@ -4,7 +4,6 @@ import sum from "./sum.js";
 /**
  * @description Get a random item from a list of random numbers based on the weight list.
  * @description-cn 获取权重随机数
- * @category Random
  * @param {any[] | Object<string,number>} randomList The list of items to choose from.
  * @param {number[]} [weightedList] The list of weights to apply to each item.
  * When randomList is an object, the weightedList will be ignored. The keys of the object are the items to choose from, and the values are the weights to apply to each item.
@@ -44,4 +43,7 @@ function weightedRandom(randomList, weightedList) {
 	return randomList[0];
 }
 
-export default weightedRandom;
+export {
+	weightedRandom,
+	weightedRandom as default
+}

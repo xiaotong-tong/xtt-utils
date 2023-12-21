@@ -53,11 +53,11 @@ type FormatFn = (
 declare function formatDate(date: Date): FormatFn;
 
 declare module "xtt-utils" {
-	export type { formatDate };
+	export { formatDate };
 }
 
 declare module "xtt-utils/formatDate" {
-	export type { formatDate as default };
+	export { formatDate as default };
 }
 
-export type { formatDate, formatDate as default };
+export { formatDate, formatDate as default };

@@ -18,4 +18,7 @@ const toB64 = async (input) => {
 	}
 };
 
-export default toB64;
+export {
+	toB64,
+	toB64 as default
+}

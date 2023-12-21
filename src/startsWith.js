@@ -1,7 +1,6 @@
 /**
  * @description Determines whether a string starts with the string or regular expression specified.
  * @description-cn 判断字符串是否以指定的字符串或正则表达式匹配的字符串开头。
- * @category String
  * @param {string} str The string to search.
  * @param {string | RegExp} prefix The string or regular expression to match the beginning of the string.
  * @param {number} [startPosition] The index at which to begin search.
@@ -37,4 +36,7 @@ const startsWith = (str, prefix, startPosition) => {
 	return false;
 };
 
-export default startsWith;
+export {
+	startsWith,
+	startsWith as default
+}

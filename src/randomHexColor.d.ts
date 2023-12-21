@@ -11,11 +11,11 @@
 declare function randomHexColor(options?: { alpha?: boolean }): string;
 
 declare module "xtt-utils" {
-	export type { randomHexColor };
+	export { randomHexColor };
 }
 
 declare module "xtt-utils/randomHexColor" {
-	export type { randomHexColor as default };
+	export { randomHexColor as default };
 }
 
-export type { randomHexColor, randomHexColor as default };
+export { randomHexColor, randomHexColor as default };

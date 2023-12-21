@@ -17,4 +17,7 @@ const sum = (...values) => {
 	return values.flat(Infinity).reduce((a, b) => a + b);
 };
 
-export default sum;
+export {
+	sum,
+	sum as default
+}

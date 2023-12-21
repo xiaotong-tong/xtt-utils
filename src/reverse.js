@@ -1,7 +1,6 @@
 /**
  * @description Reverse a string.
  * @description-cn 反转字符串
- * @category String
  * @param {string} text
  * @returns {string} reverse text
  * @example
@@ -21,4 +20,7 @@ const reverse = (text) => {
 	return resText;
 };
 
-export default reverse;
+export {
+	reverse,
+	reverse as default
+}

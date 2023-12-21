@@ -14,11 +14,11 @@
 declare function random(min?: number, max?: number): number;
 
 declare module "xtt-utils" {
-	export type { random };
+	export { random };
 }
 
 declare module "xtt-utils/random" {
-	export type { random as default };
+	export { random as default };
 }
 
-export type { random, random as default };
+export { random, random as default };

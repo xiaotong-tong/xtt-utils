@@ -12,11 +12,11 @@
 declare function getRangeByTerm(str: string, term: [string | RegExp, string | RegExp]): string;
 
 declare module "xtt-utils" {
-	export type { getRangeByTerm };
+	export { getRangeByTerm };
 }
 
 declare module "xtt-utils/getRangeByTerm" {
-	export type { getRangeByTerm as default };
+	export { getRangeByTerm as default };
 }
 
-export type { getRangeByTerm, getRangeByTerm as default };
+export { getRangeByTerm, getRangeByTerm as default };

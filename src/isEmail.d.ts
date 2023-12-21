@@ -13,11 +13,11 @@
 declare function isEmail(email: string): boolean;
 
 declare module "xtt-utils" {
-	export type { isEmail };
+	export { isEmail };
 }
 
 declare module "xtt-utils/isEmail" {
-	export type { isEmail as default };
+	export { isEmail as default };
 }
 
-export type { isEmail, isEmail as default };
+export { isEmail, isEmail as default };

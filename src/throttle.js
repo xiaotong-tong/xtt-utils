@@ -1,7 +1,6 @@
 /**
  * @description throttle function
  * @description-cn 节流函数
- * @category Function
  * @param { Function } func  The function to be throttled
  * @param { number} delay The delay time
  * @return { Function } Returns the throttled function
@@ -31,4 +30,7 @@ const throttle = (func, delay) => {
 	return res;
 };
 
-export default throttle;
+export {
+	throttle,
+	throttle as default
+}

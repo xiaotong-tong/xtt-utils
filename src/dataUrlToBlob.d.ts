@@ -10,11 +10,11 @@
 declare function dataUrlToBlob(data: string): Promise<Blob>;
 
 declare module "xtt-utils" {
-	export type { dataUrlToBlob };
+	export { dataUrlToBlob };
 }
 
 declare module "xtt-utils/dataUrlToBlob" {
-	export type { dataUrlToBlob as default };
+	export { dataUrlToBlob as default };
 }
 
-export type { dataUrlToBlob, dataUrlToBlob as default };
+export { dataUrlToBlob, dataUrlToBlob as default };

@@ -20,4 +20,7 @@ const isEmail = (email) => {
 	return emailGrep.test(email);
 };
 
-export default isEmail;
+export {
+	isEmail,
+	isEmail as default
+}

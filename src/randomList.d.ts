@@ -20,11 +20,11 @@ declare function randomList(
 ): number[];
 
 declare module "xtt-utils" {
-	export type { randomList };
+	export { randomList };
 }
 
 declare module "xtt-utils/randomList" {
-	export type { randomList as default };
+	export { randomList as default };
 }
 
-export type { randomList, randomList as default };
+export { randomList, randomList as default };

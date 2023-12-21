@@ -28,11 +28,11 @@ declare function css(element: HTMLElement, styles: string): string;
 declare function css(element: HTMLElement, styles: { [Prop: string]: string } | string, value?: string): HTMLElement;
 
 declare module "xtt-utils" {
-	export type { css };
+	export { css };
 }
 
 declare module "xtt-utils/css" {
-	export type { css as default };
+	export { css as default };
 }
 
-export type { css, css as default };
+export { css, css as default };

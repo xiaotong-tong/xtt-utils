@@ -1,7 +1,6 @@
 /**
  * @description Get the string right of the matching item in the string.
  * @description-cn 获取字符串中匹配项右侧的字符串
- * @category String
  * @param {string} str The string to search
  * @param {string | RegExp} searchTerm The string or regular expression to match the right of the string.
  * @param {number} [afterWhichTimes] The number of times to match after stopping, default is 1,
@@ -48,4 +47,7 @@ const getTermRight = (str, searchTerm, afterWhichTimes) => {
 	return result.slice(afterWhichTimes).join("");
 };
 
-export default getTermRight;
+export {
+	getTermRight,
+	getTermRight as default
+}
