@@ -27,6 +27,10 @@
 const formatDate = (date, format) => {
 	const willFormatDate = date instanceof Date ? date : new Date(date);
 
+	if (willFormatDate.toString().startsWith("Invalid")) {
+		throw new Error(`${date} is a invalid date`)
+	}
+
 	const year = willFormatDate.getFullYear().toString();
 	const month = willFormatDate.getMonth() + 1 + "";
 	const day = willFormatDate.getDate().toString();
