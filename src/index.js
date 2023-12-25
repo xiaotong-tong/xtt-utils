@@ -19,7 +19,9 @@ import random from "./random.js";
 import randomList from "./randomList.js";
 import weightedRandom from "./weightedRandom.js";
 import randomHexColor from "./randomHexColor.js";
-import { generateSudokuBoard, generateSudoku, isValidSudokuBoard } from "./sudoku.js";
+import generateSudokuBoard from "./generateSudokuBoard.js";
+import generateSudoku from "./generateSudoku.js";
+import isValidSudokuBoard from "./isValidSudokuBoard.js";
 
 import reverse from "./reverse.js";
 import strToNum from "./strToNum.js";

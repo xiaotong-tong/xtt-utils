@@ -1,6 +1,6 @@
-import random from "./random.js";
-import randomList from "./randomList.js";
-import sum from "./sum.js";
+import random from "../random.js";
+import randomList from "../randomList.js";
+import sum from "../sum.js";
 
 class sudoku {
 	#board = [
@@ -176,40 +176,4 @@ class sudoku {
 	}
 }
 
-/**
- * @description generate a sudoku board
- * @description-cn 随机生成一个数独终盘
- * @returns {number[][]} Returns a sudoku board
- * @example
- * generateSudokuBoard() // -> [[...], ...] // 9 * 9
- */
-
-export const generateSudokuBoard = () => {
-	return new sudoku().generateBoard();
-};
-
-/**
- * @description generate a sudoku board with spaces
- * @description-cn 随机生成一个数独游戏初始化盘面
- * @param {number} [square=44] The number of given squares in the board
- * @returns {number[][]} Returns a sudoku board with spaces, the spaces value is 0
- * @example
- * generateSudoku() // -> [[...], ...] // 9 * 9
- */
-
-export const generateSudoku = (square) => {
-	return new sudoku().generate(square);
-};
-
-/**
- * @description validate a sudoku board
- * @description-cn 验证一个数独终盘是否合法
- * @param {number[][]} [board] The sudoku board
- * @returns {boolean} Returns true if the board is valid, else false
- * @example
- * isValidSudokuBoard([[...], ...]) // -> true
- */
-
-export const isValidSudokuBoard = (board) => {
-	return new sudoku().isValidBoard(board);
-};
+export default sudoku;
