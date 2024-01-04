@@ -1,3 +1,9 @@
+type Curry<P extends any[], R> = P extends [infer F, ...infer O]
+	? F extends any
+		? (arg: F) => Curry<O, R>
+		: never
+	: R;
+
 /**
  * @description Currying function
  * @description-cn 函数柯里化
@@ -19,7 +25,7 @@
  * curry(add, 10, 20, 30, 4); // 60
  */
 declare const curry: {
-	(fn: Function, ...args: any[]): Function | any;
+	<P extends any[], R>(fn: (...args: P) => R, ...args: P): Curry<P, R>;
 	placeholder: symbol;
 };
 
