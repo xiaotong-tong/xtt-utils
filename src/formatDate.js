@@ -27,7 +27,7 @@ const formatDate = (date, format) => {
 	const willFormatDate = date instanceof Date ? date : new Date(date);
 
 	if (willFormatDate.toString().startsWith("Invalid")) {
-		throw new Error(`${date} is a invalid date`)
+		throw new Error(`${date} is a invalid date`);
 	}
 
 	const year = willFormatDate.getFullYear().toString();
@@ -44,6 +44,10 @@ const formatDate = (date, format) => {
 	const padHour = hour.padStart(2, "0");
 	const padMinute = minute.padStart(2, "0");
 	const padSecond = second.padStart(2, "0");
+
+	// 12 小时制下的时
+	const hourOf12 = (hour % 12).toString();
+	const padHourOf12 = hourOf12.padStart(2, "0");
 
 	const formatFn = (format) => {
 		if (!format) {
@@ -76,9 +80,11 @@ const formatDate = (date, format) => {
 					case "DD":
 						return padDay;
 					case "h":
+						return hourOf12;
 					case "H":
 						return hour;
 					case "hh":
+						return padHourOf12;
 					case "HH":
 						return padHour;
 					case "m":
@@ -119,7 +125,4 @@ const formatDate = (date, format) => {
 	return formatFn;
 };
 
-export {
-	formatDate,
-	formatDate as default
-}
+export { formatDate, formatDate as default };

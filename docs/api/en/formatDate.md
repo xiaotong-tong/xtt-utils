@@ -38,8 +38,10 @@ Supported format placeholders:
 | MM          | 01-12           | Month, formatted to two digits         |
 | D           | 1-31            | Date                                   |
 | DD          | 01-31           | Date, formatted to two digits          |
-| h           | 0-23            | Hour                                   |
-| hh          | 00-23           | Hour, formatted to two digits          |
+| h           | 0-12            | Hour                                   |
+| hh          | 00-12           | Hour, formatted to two digits          |
+| H           | 0-23            | Hour                                   |
+| HH          | 00-23           | Hour, formatted to two digits          |
 | m           | 0-59            | Minute                                 |
 | mm          | 00-59           | Minute, formatted to two digits        |
 | s           | 0-59            | Second                                 |
